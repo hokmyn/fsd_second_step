@@ -11,7 +11,9 @@ html(lang='en')
 
     body(class=pageClass)
         .wrapper
-            include ../includes/modules/header
+            if title !== 'Ui-kit'
+                include ../includes/modules/header
             .content-wrapper
                 block content
-            include ../includes/modules/footer
+            if title !== 'Ui-kit'
+                include ../includes/modules/footer
