@@ -42,46 +42,35 @@ ul, li {
   list-style-type: none;
 }
 
-section, .section {
-  position: relative;
-  padding: 40px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
+// section, .section {
+//   position: relative;
+//   padding: 40px 0;
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 36px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 28px 0;
+//   }
+//   @media screen and (max-width: $desktopWidth) {
+//     padding: 20px 0;
+//   }
+// }
+
+.logo {
+  position: absolute;
+  @include size(48);
+  left: 30px;
+  top: 30px;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
+.page-section {
+  width: 1440px;
   margin: 0 auto;
-  min-height: 100vh;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.container {
-  width: 100%;
-  flex: 0 0 auto;
+  padding-top: 145px;
+  padding-left: 150px;
   position: relative;
-  margin: 0 auto;
-  max-width: $desktopWidth;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
+  display: flex;
+  justify-content: space-between;
 }
+
+
