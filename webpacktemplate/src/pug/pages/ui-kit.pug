@@ -3,47 +3,27 @@ extends ../layout/main
 block variables
     - var title = 'Ui-kit';
     - var description = 'Ui-kit';
-    - var pageClass = 'uikit-page';
-    
+    - var pageClass = 'uikit-page';    
+
+
 block content    
     section.colors-and-type.page-section
         +logo     
         .colors-list
             .colors-list__item
-                .colors-list__image.colors-list__image_shade100
-                .colors-list__text
-                    span.colors-list__title Dark Shade 100%
-                    p #1F2041
+                +color-dark_item(100)
             .colors-list__item
-                .colors-list__image.colors-list__image_shade75
-                .colors-list__text
-                    span.colors-list__title Dark Shade 75%
-                    p #1F2041
+                +color-dark_item(75)
             .colors-list__item
-                .colors-list__image.colors-list__image_shade50
-                .colors-list__text
-                    span.colors-list__title Dark Shade 50%
-                    p #1F2041
+                +color-dark_item(50)
             .colors-list__item
-                .colors-list__image.colors-list__image_shade25
-                .colors-list__text
-                    span.colors-list__title Dark Shade 25%
-                    p #1F2041
+                +color-dark_item(25)
+            .colors-list__item                
+                +color-dark_item(5)
             .colors-list__item
-                .colors-list__image.colors-list__image_shade5
-                .colors-list__text
-                    span.colors-list__title Dark Shade 5%
-                    p #1F2041
+                +color_item("purple", "#BC9CFF")                
             .colors-list__item
-                .colors-list__image.colors-list__image_purple
-                .colors-list__text
-                    span.colors-list__title Purple
-                    p #BC9CFF
-            .colors-list__item
-                .colors-list__image.colors-list__image_green
-                .colors-list__text
-                    span.colors-list__title Green
-                    p #6FCF97
+                +color_item("green", "#6FCF97")
         .type-list
             .type-list__item
                 .type-list__item_left.type-list__item_h1 h1

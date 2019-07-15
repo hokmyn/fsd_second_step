@@ -58,7 +58,7 @@ ul, li {
 
 .logo {
   position: absolute;
-  @include size(48);
+  @include size(48px);
   left: 30px;
   top: 30px;
 }
@@ -73,4 +73,37 @@ ul, li {
   justify-content: space-between;
 }
 
+.colors-list__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
 
+.colors-list__image {
+  @include size(70px);
+  margin-right: 40px;
+  display: inline-block;
+  border-radius: 6px;
+}
+
+.colors-list__image_shade100 {
+  background-color: $shade100-color;
+}
+.colors-list__image_shade75 {
+  background-color: $shade75-color;
+}
+.colors-list__image_shade50 {
+  background-color: $shade50-color;
+}
+.colors-list__image_shade25 {
+  background-color: $shade25-color;
+}
+.colors-list__image_shade5 {
+  background-color: $shade100-color;
+}
+.colors-list__image_purple {
+  background-color: $purple-color;
+}
+.colors-list__image_green {
+  background-color: $green-color;
+}

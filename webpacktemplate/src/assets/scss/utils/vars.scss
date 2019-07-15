@@ -14,13 +14,13 @@ $phoneWidth              : 480px;
 $smPhoneWidth            : 320px;
 
 // Main color
-$default-color           : #ffffff;
-$primary-color           : #444ce0;
-$success-color           : #26de81;
-$danger-color            : #fc5c65;
-$warning-color           : #fed330;
-$light-color             : #999999;
-$purple-color            : #8854d0;
+$shade100-color          : #1F2041;
+$shade75-color           : rgba(31, 32, 65, 0.75);
+$shade50-color           : rgba(31, 32, 65, 0.5);
+$shade25-color           : rgba(31, 32, 65, 0.25);
+$shade5-color            : rgba(31, 32, 65, 0.05);
+$green-color             : #6FCF97;
+$purple-color            : #BC9CFF;
 
 // Neutral Color
 $neutral-primary         : #303133;
