@@ -14,10 +14,11 @@ mixin color-dark_item(perOfShade)
   .colors-list__text
     span.colors-list__title Dark Shade #{perOfShade}%
     br
-    span #1F2041
+    span.colors-list__content #1F2041
+
 mixin color_item(color, hex)
   div(class=`colors-list__image colors-list__image_` + color)
   .colors-list__text
     span.colors-list__title #{color}
     br
-    span #{hex}
+    span.colors-list__content #{hex}

@@ -1,5 +1,6 @@
 @import "utils/vars";
 @import "utils/mixins";
+@import "utils/fonts";
 
 html {
   line-height: $mainLineHeight;
@@ -19,16 +20,11 @@ html {
 
 body {
   margin: 0;
-  padding: 0;  
-	font-size: $mainFontSize;
-  font-weight: $mainFontWeight;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-p {
+  padding: 0;
   font-family: Montserrat, Helvetica, Arial, sans-serif;
 }
+
+
 
 *, *:before, *:after { box-sizing: border-box; }
 
@@ -77,6 +73,17 @@ ul, li {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.colors-list {
+  font-family: "Quicksand-Bold";
+  text-transform: capitalize;
+}
+
+.colors-list__content {
+  font-family: "Quicksand-Regular";
 }
 
 .colors-list__image {
@@ -104,6 +111,16 @@ ul, li {
 .colors-list__image_purple {
   background-color: $purple-color;
 }
-.colors-list__image_green {
+.colors-list__image_green {  
   background-color: $green-color;
+}
+
+.type-list__item {
+  display: flex;
+  align-items: top;
+  margin-bottom: 50px;  
+}
+
+.type-list__item_left {
+  margin-right: 30px;
 }
