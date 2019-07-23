@@ -187,11 +187,11 @@ ul, li {
   grid-row: span 2;
 }
 
-.text-field_smallWrap {
+.text-field_smallMargin {
   margin-bottom: $marginSmall;
 }
 
-.text-field_bigWrap {
+.text-field_bigMargin {
   margin-bottom: $marginBig;
 }
 
@@ -271,27 +271,30 @@ ul, li {
   font-feature-settings: 'liga';
   }
 
-  .arrow_down {
+  .arrow {
     @include size(44px);
     justify-content: center;
     display: flex;
     align-items: center;
     position: absolute;
     top: 25px;
-    right: 0px;
+    right: 0px;    
+  }
+
+  .arrow_down {
     color: $shade50-color;
   }
 
-  .select_smallWrap {
+  .select_smallMargin {
     margin-bottom: $marginSmall;
   }
 
-  .select_bigWrap {
+  .select_bigMargin {
     margin-bottom: $marginBig;
     display: inline-block;    
   }
   
-  .select_leftWrap {
+  .select_rightMargin {
     margin-right: 20px;
   }
 
@@ -315,6 +318,19 @@ ul, li {
 
   .form-element__input_subscrition {
     @include size(266px, 44px);
+  }
+
+  .text-field_rel {
+    position: relative;
+    display: inline-block;
+  }
+
+  .arrow-forward {
+    color: #8BA4F9;
+  }
+
+  .form-elements__block4 {
+    padding-top: 100px;
   }
   
   

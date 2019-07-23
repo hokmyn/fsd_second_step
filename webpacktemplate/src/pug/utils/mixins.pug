@@ -28,30 +28,31 @@ mixin type_item(tag, text)
     .type-list__item_left #{tag}
     .type-list__item_right #{text}
 
-mixin text-field(wrap_size, label_text, type, input_class, placeholder_text)
-  div(class="text-field_" + wrap_size + "Wrap")
-    label(for= type,class="form-element__text") #{label_text}
-    br
-    input(type=type,id=type, class=input_class, placeholder=placeholder_text)
+mixin text-field(label_text, type, input_class, placeholder_text)
+  label(for= type,class="form-element__text") #{label_text}
+  br
+  input(type=type,id=type, class=input_class, placeholder=placeholder_text)
 
-mixin dropdown(wrap_size, text, select_class, option_text)
-  div(class = "select_wrap select_" + wrap_size + "Wrap" )
-    span.form-element__text #{text}
-    br
-    select(class=select_class)
-      option(selected="selected") #{option_text}
+mixin dropdown(text, select_class, option_text)  
+  span.form-element__text #{text}
+  br
+  select(class=select_class)
+    option(selected="selected") #{option_text}
 
-mixin dropdown_date(wrap_size, wrap_side, text, select_class, option_text)
-  div(class = "select_wrap select_" + wrap_size + "Wrap select_" + wrap_side )
-    span.form-element__text #{text}
-    br
-    select(class=select_class)
-      option(selected="selected") #{option_text}
-    +arrow-down
+mixin dropdown_date(text, select_class, option_text)
+  span.form-element__text #{text}
+  br
+  select(class=select_class)
+    option(selected="selected") #{option_text}
+  +arrow-down
 
 mixin arrow-down
-  .arrow_down
-    <i class="material-icons select-arrow">keyboard_arrow_down</i>
+  .arrow.arrow_down
+    <i class="material-icons arrow_down">keyboard_arrow_down</i>
+
+mixin arrow-forward
+  .arrow
+    <i class="material-icons arrow-forward">arrow_forward</i>
 
 
 
