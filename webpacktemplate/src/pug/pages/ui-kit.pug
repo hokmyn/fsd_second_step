@@ -49,7 +49,7 @@ block content
             div(class = "select_wrap select_bigMargin")
                 +dropdown_date("date dropdown", "form-element__select form-element__select_date", "19.08.2019")       
             div(class = "select_wrap select_bigMargin")
-                +dropdown_date("filter date dropdown", "form-element__select form-element__select_filter", "19 авг - 23 авг")
+                +dropdown_date("filter date dropdown", "form-element__select form-element__select_mid", "19 авг - 23 авг")
             div(class="text-field_smallMargin text-field_rel")
                 +text-field("subscription text field", "email", "form-element__input form-element__input_subscrition", "Email")
                 +arrow-forward
@@ -57,8 +57,15 @@ block content
         .form-elements__block3
         .form-elements__block4
             div(class = "select_wrap select_smallMargin" )
-                +dropdown("dropdown", "form-element__select", "Сколько гостей")
+                +dropdown("dropdown", "form-element__select form-element__select_mid", "2 спальни, 2 кровати...")
                 +arrow-down
+            div(class = "select_wrap select_expanded")
+                +dropdown_expanded("dropdown", "2 спальни, 2 кровати...", "form-element__select_mid", "amenities-list", "спальни", "кровати", "ванные комнаты", 2, 2, 0)
+            div(class = "select_wrap form-elements__checkboxes" )
+                span.form-element__text expandable checkbox list
+                +arrow-down
+            div(class = "select_wrap form-elements__checkboxes form-elements__checkboxes_expanded")
+                +checkbox_expanded("expandable checkbox list", "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
         .form-elements__block5
         .form-elements__block6
         .form-elements__block7
