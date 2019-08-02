@@ -179,8 +179,9 @@ ul, li, input {
 
 .form-elements {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 320px 320px 1fr;
   grid-template-rows: repeat(3,auto);
+  column-gap: 72px;
 }
 
 .form-elements__block8 {
@@ -422,35 +423,35 @@ ul, li, input {
     margin-top: 49px;
   }
 
-  .checkboxes-list__content {
-    display: none;
+  .form-elements__checkboxes_content {
+    display: block;
     font-size: 14px;
     line-height: 18px;
     color: $shade50-color;
     z-index: 100;
   }
 
-  #checkboxes-list__input_title:checked + div {
+  #checkboxes-item__input_title:checked + div {
     transform: rotate(-180deg);
   }
 
-  #checkboxes-list__input_title:checked ~ div ~ div {
+  #checkboxes-item__input_title:checked ~ div ~ div {
     display: block;
   }
 
-  .checkboxes-list__title {
+  .form-elements__checkboxes_title {
     margin-bottom: 17px;
     display: inline-block;
     width: 100%;
   }
 
-  .checkboxes-list__item {
+  .form-elements__checkboxes_item {
     position: relative;
     height: 30px;
     padding-left: 30px;
   }
 
-  .checkboxes-list__label::before {
+  .form-elements__checkboxes_label::before {
     content: "";
     position: absolute;
     @include size(20px);
@@ -459,7 +460,7 @@ ul, li, input {
     left: 0;
   }
 
-  input[name="additional-amenities"]:checked + label::after {
+  input[id^="checkbox"]:checked + label::after {
     content: "";
     @include size(8px, 6px);
     transform: rotate(-45deg);
@@ -469,5 +470,44 @@ ul, li, input {
     left: 6px;
     top: 5px;
   }
+
+  .title_margin {
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+  .number-information__item {
+    display: flex;
+    justify-content: flex-start;
+    width: 280px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
+    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+    padding-bottom: 17px;
+    margin-bottom: 23px;
+  }
   
+  .number-information__pic {
+    @include size(48px);
+    color: $purple-color;
+  }
+
+  .face {
+    font-size: 48px;
+  }
+
+  .number-information__content {
+    padding-left: 10px;
+  }
+
+  .number-information__title {    
+    font-family: "Montserrat-Bold";
+  }
+
+  .form-elements__block2 {
+    margin-left: 98px;
+  }
+
   
+

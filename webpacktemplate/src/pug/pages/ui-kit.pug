@@ -54,21 +54,33 @@ block content
                 +text-field("subscription text field", "email", "form-element__input form-element__input_subscrition", "Email")
                 +arrow-forward
         .form-elements__block2
+            div(class = "select_bigMargin")
+                span.form-element__text.title_margin checkbox buttons
+                +checkbox_expanded("additional-options", 2, "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
+            div(class = "select_bigMargin")
+                span.form-element__text.title_margin radio buttons
+
         .form-elements__block3
         .form-elements__block4
             div(class = "select_wrap select_smallMargin" )
                 +dropdown("dropdown", "form-element__select form-element__select_mid", "2 спальни, 2 кровати...")
                 +arrow-down
             div(class = "select_wrap select_expanded")
-                +dropdown_expanded("dropdown", "2 спальни, 2 кровати...", "form-element__select_mid", "amenities-list", "спальни", "кровати", "ванные комнаты", 2, 2, 0)
+                +dropdown_expanded("dropdown", "2 спальни, 2 кровати...", "form-element__select_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
             div(class = "select_wrap form-elements__checkboxes" )
                 span.form-element__text expandable checkbox list
                 +arrow-down
-            div(class = "select_wrap form-elements__checkboxes form-elements__checkboxes_expanded")
-                +checkbox_expanded("expandable checkbox list", "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
+            div(class = "select_wrap select_bigMargin form-elements__checkboxes form-elements__checkboxes_expanded")
+                label(for="form-elements__checkboxes__input_title" class="form-element__text form-elements__checkboxes_title") expandable checkbox list
+                input(type="checkbox" id="checkboxes-item__input_title")
+                +arrow-down
+                +checkbox_expanded("additional-amenities", 1, "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
         .form-elements__block5
         .form-elements__block6
         .form-elements__block7
+            div(class="number-information__list")
+                +number-information__item("insert_emoticon", "Комфорт", "Шумопоглащающие стены")
+                +number-information__item("location_city", "Удобство", "Окно в каждой из спален")
         .form-elements__block8
 
 

@@ -54,62 +54,45 @@ mixin arrow-forward
   .arrow
     <i class="material-icons arrow-forward">arrow_forward</i>
 
-mixin dropdown_expanded(text, label_text, label_class, list_class, option_text1, option_text2, option_text3, number_value1, number_value2, number_value3)  
+mixin dropdown_expanded(text, label_text, label_class, list_class, number_value, ...option_texts)  
   span.form-element__text #{text}
   br
   label(for="form-element__input_hidden" class="form-element__select " + label_class) #{label_text}
   +arrow-down
   input(type="checkbox" id="form-element__input_hidden")                
   div(class="options-list form-element__text " + list_class)
-      .option-item
-          span #{option_text1}
+      each option_text, index in option_texts
+        .option-item
+          span #{option_text}
           .option-counter
             span.minus -
-            span.number #{number_value1}
+            span.number #{number_value}
             span.plus +
-      .option-item
-          span #{option_text2}
-          .option-counter
-            span.minus -
-            span.number #{number_value2}
-            span.plus +
-      .option-item
-          span #{option_text3}
-          .option-counter
-            span.minus.counter-disabled -
-            span.number #{number_value3}
-            span.plus +
-mixin checkbox_expanded(text, label_text1, label_text2, label_text3, label_text4, label_text5, label_text6, label_text7, label_text8)  
-  label(for="checkboxes-list__input_title" class="form-element__text checkboxes-list__title") #{text}
-  input(type="checkbox" id="checkboxes-list__input_title")
-  +arrow-down  
-  .checkboxes-list__content
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox1" name="additional-amenities" value=label_text1)
-      label(for="checkbox1" class="checkboxes-list__label") #{label_text1}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox2" name="additional-amenities" value=label_text2 checked)
-      label(for="checkbox2" class="checkboxes-list__label") #{label_text2}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox3" name="additional-amenities" value=label_text3 checked)
-      label(for="checkbox3" class="checkboxes-list__label") #{label_text3}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox4" name="additional-amenities" value=label_text4 checked)
-      label(for="checkbox4" class="checkboxes-list__label") #{label_text4}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox5" name="additional-amenities" value=label_text5)
-      label(for="checkbox5" class="checkboxes-list__label") #{label_text5}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox6" name="additional-amenities" value=label_text6)
-      label(for="checkbox6" class="checkboxes-list__label") #{label_text6}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox7" name="additional-amenities" value=label_text7)
-      label(for="checkbox7" class="checkboxes-list__label") #{label_text7}
-    .checkboxes-list__item
-      input(type="checkbox" id="checkbox8" name="additional-amenities" value=label_text8)
-      label(for="checkbox8" class="checkboxes-list__label") #{label_text8}
+      
 
+mixin checkbox_expanded(name, id_start, ...label_texts)    
+  .form-elements__checkboxes_content
+    each label_text, index in label_texts
+      .form-elements__checkboxes_item
+        input(type="checkbox" id="checkbox" + id_start + "_" + index name= name value=label_text)
+        label(for="checkbox" + id_start + "_" + index class="form-elements__checkboxes_label") #{label_text}
+        
+      
 
+mixin number-information__item(pic_text, title, text)
+  .number-information__item
+    .number-information__pic
+      <i class="material-icons face">#{pic_text}</i>
+    .number-information__content
+      span.number-information__title #{title}
+      br
+      span.number-information__text #{text}
+
+mixin radio_list
+  br
+  label(for="form-element__input_hidden" class="form-element__select " + label_class) #{label_text}
+  +arrow-down
+  input(type="checkbox" id="form-element__input_hidden")
 
 
 
