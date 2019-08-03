@@ -347,7 +347,7 @@ ul, li, input {
     color: $shade50-color;
   }
   
-  input[type="checkbox"] {
+  input[type="checkbox"], input[type="radio"] {
     display: none;
   }
 
@@ -479,10 +479,7 @@ ul, li, input {
   .number-information__item {
     display: flex;
     justify-content: flex-start;
-    width: 280px;
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
+    width: 280px;    
     border-bottom: 1px solid rgba(31, 32, 65, 0.1);
     padding-bottom: 17px;
     margin-bottom: 23px;
@@ -505,9 +502,114 @@ ul, li, input {
     font-family: "Montserrat-Bold";
   }
 
-  .form-elements__block2 {
-    margin-left: 98px;
+  .number-information__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
   }
 
+  .form-elements__block2 {
+    margin-left: 54px;
+  }
+
+  .radio_item {
+    position: relative;
+    display: inline-block;
+  }
+
+  .radio-list .radio_item:first-child {
+    margin-right: 20px;
+  }
+
+  .form-element__radio_label {
+    margin-left: 30px;    
+  }
+
+  .form-element__radio_label::before {
+    content: "";
+    position: absolute;
+    @include size(20px);
+    border: 1px solid $shade25-color;
+    border-radius: 50%;
+    left: 0;
+    top: 2px;
+  }
+
+  input[id^="radio"]:checked + label::after {
+    content: "";
+    @include size(12px);
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+
+  .spec-offer {
+    position: relative;
+  }
   
+
+  .form-element__offer_label {
+    margin-left: 50px;
+    margin-bottom: 14px;
+    display: inline-block;
+  }
+
+  .form-element__offer-on_label::before, .form-element__offer-off_label::before {
+    content: "";
+    position: absolute;
+    @include size(40px, 20px);
+    border: 1px solid #BC9CFF;
+    border-radius: 10px;
+    left: 0;
+    top: 2px;
+  }
+
+  .form-element__offer-on_label::after, .form-element__offer-off_label::after {
+    content: "";
+    @include size(12px);
+    position: absolute;
+    left: 24px;
+    top: 6px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  }
+
+  input[id="offer_on"]:checked + label::after {    
+    left: 4px;
+    background: $shade25-color;
+  }
+
+  input[id="offer_on"]:checked + label::before {    
+    border: 1px solid $shade25-color;
+  }
+
+  .form-element__offer-off_label::before {
+    top: 42px;
+    border-color: $shade25-color;
+  }
+
+  .form-element__offer-off_label::after {
+    background: $shade25-color;
+    left: 4px;
+    top: 46px;
+  }
+
+  .like-button {
+    @include size(40px, 20px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $shade25-color;
+    border-radius: 10px;
+    font-size: 10px;
+    line-height: 12px;
+    padding-right: 12px;
+    padding-left: 4px;
+  }
+
+  .like-button__heart {
+    font-size: 10px;    
+  }
 

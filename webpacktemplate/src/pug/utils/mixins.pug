@@ -68,7 +68,6 @@ mixin dropdown_expanded(text, label_text, label_class, list_class, number_value,
             span.minus -
             span.number #{number_value}
             span.plus +
-      
 
 mixin checkbox_expanded(name, id_start, ...label_texts)    
   .form-elements__checkboxes_content
@@ -76,8 +75,6 @@ mixin checkbox_expanded(name, id_start, ...label_texts)
       .form-elements__checkboxes_item
         input(type="checkbox" id="checkbox" + id_start + "_" + index name= name value=label_text)
         label(for="checkbox" + id_start + "_" + index class="form-elements__checkboxes_label") #{label_text}
-        
-      
 
 mixin number-information__item(pic_text, title, text)
   .number-information__item
@@ -88,11 +85,17 @@ mixin number-information__item(pic_text, title, text)
       br
       span.number-information__text #{text}
 
-mixin radio_list
-  br
-  label(for="form-element__input_hidden" class="form-element__select " + label_class) #{label_text}
-  +arrow-down
-  input(type="checkbox" id="form-element__input_hidden")
+mixin radio_items(...label_texts)
+  each label_text, index in label_texts
+    .radio_item
+      input(type="radio" id="radio" + index name="gender")
+      label(for="radio" + index class="form-element__radio_label number-information__text") #{label_text}
+
+mixin like_button(value, btn_class="")
+  div(class="like-button " + btn_class)
+    <i class="material-icons like-button__heart">favorite_border</i>
+    span.like-button__value #{value}
+      
 
 
 

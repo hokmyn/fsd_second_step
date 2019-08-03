@@ -59,7 +59,23 @@ block content
                 +checkbox_expanded("additional-options", 2, "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
             div(class = "select_bigMargin")
                 span.form-element__text.title_margin radio buttons
-
+                .radio-list
+                    +radio_items("Мужчина", "Женщина")
+            div(class = "select_bigMargin")
+                span.form-element__text.title_margin toggle
+                .spec-offer
+                    input(type="checkbox" id="offer_on" name="offer_on")
+                    label(for="offer_on" class="form-element__offer-on_label form-element__offer_label number-information__text") Получать спецпредложения
+                    br
+                    input(type="checkbox" id="offer_off" name="offer_off")
+                    label(for="offer_off" class="form-element__offer-off_label form-element__offer_label number-information__text") Получать спецпредложения
+            div(class = "select_bigMargin")
+                span.form-element__text.title_margin like button
+                br
+                +like_button(2)
+                br
+                +like_button(12, "marked")
+                    
         .form-elements__block3
         .form-elements__block4
             div(class = "select_wrap select_smallMargin" )
