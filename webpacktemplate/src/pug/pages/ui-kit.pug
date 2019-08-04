@@ -72,10 +72,17 @@ block content
             div(class = "select_bigMargin")
                 span.form-element__text.title_margin like button
                 br
-                +like_button(2)
+                .form-elements__like-buttons
+                    +like_button(2, "", "favorite_border")
+                    +like_button(12, "marked", "favorite")
+            div(class = "select_bigMargin")
+                span.form-element__text.title_margin rate button
                 br
-                +like_button(12, "marked")
-                    
+                .rate-buttons
+                    .rate-buttons_left
+                        +rate_buttons(4)
+                    .rate-buttons_right
+                        +rate_buttons(5)                 
         .form-elements__block3
         .form-elements__block4
             div(class = "select_wrap select_smallMargin" )
@@ -92,6 +99,8 @@ block content
                 +arrow-down
                 +checkbox_expanded("additional-amenities", 1, "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
         .form-elements__block5
+            div(class = "select_wrap select_expanded")
+                +dropdown_expanded("dropdown", "Сколько гостей", "form-element__select_big", "guests", 0, "взрослые", "дети", "младенцы")
         .form-elements__block6
         .form-elements__block7
             div(class="number-information__list")

@@ -321,6 +321,11 @@ ul, li, input {
     line-height: 24px;
   }
 
+  .form-element__select_big {
+    @include size(320px, 44px);
+    line-height: 18px;
+  }
+
   .form-element__input_subscrition {
     @include size(266px, 44px);
   }
@@ -334,7 +339,7 @@ ul, li, input {
     color: #8BA4F9;
   }
 
-  .form-elements__block4 {
+  .form-elements__block4, .form-elements__block5 {
     padding-top: 100px;
   }
 
@@ -596,6 +601,12 @@ ul, li, input {
     top: 46px;
   }
 
+  .form-elements__like-buttons {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+  }
+
   .like-button {
     @include size(40px, 20px);
     display: flex;
@@ -607,9 +618,55 @@ ul, li, input {
     line-height: 12px;
     padding-right: 12px;
     padding-left: 4px;
+    color: $shade25-color;
+  }
+
+  .marked {
+    border: 1px solid $purple-color;
+    padding-right: 10px;
+    color: $purple-color;    
   }
 
   .like-button__heart {
     font-size: 10px;    
   }
+
+  .rate-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .rate-buttons_left, .rate-buttons_right {
+    @include size(120px, 24px);
+  }
+
+  .rate-buttons_left {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .rate_buttons__star {
+    color: $purple-color;
+    line-height: 20px;
+    font-size: 24px;
+    display: inline-block;
+    @include size(24px, 24px);
+  }
+
+  .guests {
+    width: 320px;
+  }
+
+  .select-btns {
+    margin-top: 20px;
+    margin-bottom: 13px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .select-btns__submit {
+    color: $purple-color;
+    
+  }
+
 

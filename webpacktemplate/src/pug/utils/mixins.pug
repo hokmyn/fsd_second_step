@@ -61,13 +61,16 @@ mixin dropdown_expanded(text, label_text, label_class, list_class, number_value,
   +arrow-down
   input(type="checkbox" id="form-element__input_hidden")                
   div(class="options-list form-element__text " + list_class)
-      each option_text, index in option_texts
-        .option-item
-          span #{option_text}
-          .option-counter
-            span.minus -
-            span.number #{number_value}
-            span.plus +
+    each option_text, index in option_texts
+      .option-item
+        span #{option_text}
+        .option-counter
+          span.minus -
+          span.number #{number_value}
+          span.plus +
+    if list_class === "guests"
+      .select-btns
+        span.select-btns__submit применить
 
 mixin checkbox_expanded(name, id_start, ...label_texts)    
   .form-elements__checkboxes_content
@@ -91,10 +94,17 @@ mixin radio_items(...label_texts)
       input(type="radio" id="radio" + index name="gender")
       label(for="radio" + index class="form-element__radio_label number-information__text") #{label_text}
 
-mixin like_button(value, btn_class="")
+mixin like_button(value, btn_class="", icon_name)
   div(class="like-button " + btn_class)
-    <i class="material-icons like-button__heart">favorite_border</i>
+    <i class="material-icons like-button__heart">#{icon_name}</i>
     span.like-button__value #{value}
+
+mixin rate_buttons(marked_count)
+  - for (var x = 1; x <= 5; x++)
+    if x <= marked_count
+      <i class="material-icons rate_buttons__star">star_rate</i>
+    else
+      <i class="material-icons rate_buttons__star">star_border</i>
       
 
 
