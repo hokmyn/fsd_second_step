@@ -56,7 +56,7 @@ block content
         .form-elements__block2
             div(class = "select_bigMargin")
                 span.form-element__text.title_margin checkbox buttons
-                +checkbox_expanded("additional-options", 2, "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
+                +checkbox_expanded("additional-options", "", 2, "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
             div(class = "select_bigMargin")
                 span.form-element__text.title_margin radio buttons
                 .radio-list
@@ -88,7 +88,7 @@ block content
             div(class = "select_wrap select_smallMargin" )
                 +dropdown("dropdown", "form-element__select form-element__select_mid", "2 спальни, 2 кровати...")
                 +arrow-down
-            div(class = "select_wrap select_expanded")
+            div(class = "select_wrap")
                 +dropdown_expanded("dropdown", "2 спальни, 2 кровати...", "form-element__select_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
             div(class = "select_wrap form-elements__checkboxes" )
                 span.form-element__text expandable checkbox list
@@ -97,15 +97,19 @@ block content
                 label(for="form-elements__checkboxes__input_title" class="form-element__text form-elements__checkboxes_title") expandable checkbox list
                 input(type="checkbox" id="checkboxes-item__input_title")
                 +arrow-down
-                +checkbox_expanded("additional-amenities", 1, "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
+                +checkbox_expanded("additional-amenities", "", 1, "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")
         .form-elements__block5
-            div(class = "select_wrap select_expanded")
+            div(class = "select_wrap select-guests_expanded")
                 +dropdown_expanded("dropdown", "Сколько гостей", "form-element__select_big", "guests", 0, "взрослые", "дети", "младенцы")
+            div(class="rich-checkbox")
+                span.form-element__text.title_margin rich checkbox buttons
+                +checkbox_expanded("accessibility", "label-access", 3, "Широкий коридор", "Помощник для инвалидов")(content0="fdff", content1="dfffd")
         .form-elements__block6
         .form-elements__block7
             div(class="number-information__list")
                 +number-information__item("insert_emoticon", "Комфорт", "Шумопоглащающие стены")
                 +number-information__item("location_city", "Удобство", "Окно в каждой из спален")
+            
         .form-elements__block8
 
 

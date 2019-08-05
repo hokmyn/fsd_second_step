@@ -452,8 +452,8 @@ ul, li, input {
 
   .form-elements__checkboxes_item {
     position: relative;
-    height: 30px;
     padding-left: 30px;
+    margin-bottom: 12px;
   }
 
   .form-elements__checkboxes_label::before {
@@ -665,8 +665,26 @@ ul, li, input {
   }
 
   .select-btns__submit {
-    color: $purple-color;
-    
+    color: $purple-color;    
+  }
+
+  .select-guests_expanded {
+    margin-bottom: 98px;
+  }
+
+  .rich-checkbox {
+    margin-top: 168px;
+  }
+
+  .label-descr {
+    margin-top: 5px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .label-access {
+    font-family: "Montserrat-Bold";
+    color: $shade75-color;
   }
 
 

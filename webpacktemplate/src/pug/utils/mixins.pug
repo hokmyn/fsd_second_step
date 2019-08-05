@@ -1,3 +1,9 @@
+- 
+  var contentForRichCheckbox = [
+      "Ширина коридоров в номере не менее 91 см",
+      "На 1 этаже вас встретит специалист и проводит до номера"
+  ];
+
 mixin item(title, descr)
   .item
     h2.item-title= title
@@ -72,12 +78,14 @@ mixin dropdown_expanded(text, label_text, label_class, list_class, number_value,
       .select-btns
         span.select-btns__submit применить
 
-mixin checkbox_expanded(name, id_start, ...label_texts)    
+mixin checkbox_expanded(name, label_additional_class="", checkbox_num, ...label__texts)    
   .form-elements__checkboxes_content
-    each label_text, index in label_texts
+    each label__text, index in label__texts
       .form-elements__checkboxes_item
-        input(type="checkbox" id="checkbox" + id_start + "_" + index name= name value=label_text)
-        label(for="checkbox" + id_start + "_" + index class="form-elements__checkboxes_label") #{label_text}
+        input(type="checkbox" id="checkbox" + checkbox_num + "_" + index name= name value=label__text)
+        label(for="checkbox" + checkbox_num + "_" + index class="form-elements__checkboxes_label " + label_additional_class) #{label__text}
+        if name === "accessibility"
+          div.label-descr= contentForRichCheckbox[index] 
 
 mixin number-information__item(pic_text, title, text)
   .number-information__item
