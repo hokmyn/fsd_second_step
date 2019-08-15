@@ -59,7 +59,7 @@ ul, li, input {
   top: 30px;
 }
 
-.page-section_colors {
+.colors-and-types{
   width: 1440px;
   margin: 0 auto;
   padding-top: 145px;
@@ -70,133 +70,137 @@ ul, li, input {
   justify-content: space-between;
 }
 
-.colors-list__item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-  font-size: 19px;
-  line-height: 29px;
-}
-
 .colors-list {
   font-family: "Quicksand-Bold";
   text-transform: capitalize;
 }
 
-.colors-list__content {
+.colors-list__item { 
+  margin-bottom: 20px;  
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.color-item__content {
   font-family: "Quicksand-Regular";
 }
 
-.colors-list__image {
+.color-item__image {
   @include size(70px);
   margin-right: 40px;
   display: inline-block;
   border-radius: 6px;
 }
 
-.colors-list__image_shade100 {
+.color-item__image_shade100 {
   background-color: $shade100-color;
 }
-.colors-list__image_shade75 {
+.color-item__image_shade75 {
   background-color: $shade75-color;
 }
-.colors-list__image_shade50 {
+.color-item__image_shade50 {
   background-color: $shade50-color;
 }
-.colors-list__image_shade25 {
+.color-item__image_shade25 {
   background-color: $shade25-color;
 }
-.colors-list__image_shade5 {
+.color-item__image_shade5 {
   background-color: $shade100-color;
 }
-.colors-list__image_purple {
+.color-item__image_purple {
   background-color: $purple-color;
 }
-.colors-list__image_green {  
+.color-item__image_green {  
   background-color: $green-color;
 }
 
-.type-list__item {
+.types-list__item {
   margin-bottom: 50px;  
 }
 
-.type-list__item div:first-child {
+.types-list__item div:first-child {
   display: flex;
   align-items: top;
 }
 
-.type-list__item_left {
+.type-item__left {
   margin-right: 30px;
   text-transform: uppercase;
   color: $shade25-color;
 }
 
-.type-list__item_h1 {
+.type-item__h1 {
   font-size: 24px;
   line-height: 29px;
-  .type-list__item_right {
+  .type-item__right {
     font-family: "Quicksand-Bold";
     max-width: 336px;
     line-height: 30px;
   }
 }
 
-.type-list__item_h2 {
+.type-item__h2 {
   font-size: 19px;
   line-height: 23px;
-  .type-list__item_right {
+  .type-item__right {
     font-family: "Quicksand-Bold";
     max-width: 282px;
     line-height: 24px;
   }
 }
 
-.type-list__item_h3 {
+.type-item__h3 {
   font-size: 12px;
   line-height: 15px;
-  .type-list__item_right {
+  .type-item__right {
     font-family: "Montserrat-Bold";
   }
 }
 
-.type-list__item_body {
+.type-item__body {
   font-size: 14px;
   line-height: 24px;
-  .type-list__item_left {
+  .type-item__left {
     text-transform: capitalize;
   }  
-  .type-list__item_right {
+  .type-item__right {
     max-width: 301px;
     color: $shade75-color;
   }
 }
 
-.page-section_form {
+.form-elements {
+  display: grid;
+  grid-template-columns: 320px 374px 1fr;
+  grid-template-rows: repeat(3,auto);
+  column-gap: 72px;
   padding-top: 143px;
   padding-left: 141px;
   padding-right: 141px;
 }
 
-.form-elements {
-  display: grid;
-  grid-template-columns: 320px 320px 1fr;
-  grid-template-rows: repeat(3,auto);
-  column-gap: 72px;
+.block-with-two-cols {
+  grid-column: 2 / span 2;
+  padding-top: 10px;
 }
 
-.form-elements__block8 {
-  grid-row: span 2;
-}
-
-.text-field_smallMargin {
+.field_smallMargin {
   margin-bottom: $marginSmall;
+  position: relative;
+  display: inline-block;
 }
 
-.text-field_bigMargin {
+.field_bigMargin {
   margin-bottom: $marginBig;
+  display: inline-block; 
 }
 
-.form-element__text {
+.label-text {
   text-transform: uppercase;
   font-size: 12px;
   line-height: 15px;
@@ -204,7 +208,7 @@ ul, li, input {
   font-family: "Montserrat-Bold";
 }
 
-.form-element__input {
+.block__input {
   @include size(320px, 44px);
   background: #FFFFFF;
   border: 1px solid $shade25-color;
@@ -217,39 +221,56 @@ ul, li, input {
   font-family: $mainFont;
 }
 
-.form-element__input::placeholder {
+.block__input::placeholder {
   font-size: 14px;
   line-height: 18px;
   font-family: $mainFont;
   color: $shade25-color;
 }
 
-.form-element__input_hover {
+.block__input_hover {
   border: 1px solid $shade50-color;
   line-height: 24px;  
 }
 
-.form-element__input_hover::placeholder {
+.block__input_hover::placeholder {
   color: $shade75-color;
 }
 
-.select_wrap {
+.select-wrap {
   position: relative;
   display: inline-block;
 }
 
-.form-element__select {
+.select {
   @include size(320px, 44px);
   appearance: none;
   border: 1px solid $shade25-color;
   color: $shade75-color;
   font-size: 14px;
   line-height: 24px;
-  outline: none;
-  padding-left: 15px;
+  outline: none;  
   font-family: $mainFont;
   border-radius: 2px;
-  display: inline-block;  
+  display: inline-block; 
+  background: transparent; 
+}
+
+.select-expanded__label {
+  padding-left: 15px;
+  display: block;
+  border-color: $shade50-color;    
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  line-height: 42px;
+  font-size: 14px;
+  color: $shade75-color;  
+}
+
+.select-expanded__options {
+  position: absolute;
+  top: 77px;
+  margin-top: -8px;
 }
 
 .material-icons {
@@ -289,102 +310,86 @@ ul, li, input {
   .arrow_down {
     color: $shade50-color;
   }
-
-  .select_smallMargin {
-    margin-bottom: $marginSmall;
-  }
-
-  .select_bigMargin {
-    margin-bottom: $marginBig;
-    display: inline-block;    
-  }
   
-  .select_rightMargin {
+  .field_rightMargin {
     margin-right: 20px;
   }
 
-  .form-element__input_date {
+  .block__input_date {
     border: 1px solid $shade25-color;
   }
 
-  .form-element__input_date::placeholder {
+  .block__input_date::placeholder {
     line-height: 24px;
-  }
+  }  
 
-  .form-element__select_date {
+  .field_small {
     @include size(150px, 44px);
-    line-height: 18px;
   }
 
-  .form-element__select_mid {
-    @include size(266px, 44px);
-    line-height: 24px;
-  }
-
-  .form-element__select_big {
-    @include size(320px, 44px);
-    line-height: 18px;
-  }
-
-  .form-element__input_subscrition {
+  .field_mid {
     @include size(266px, 44px);
   }
 
-  .text-field_rel {
-    position: relative;
-    display: inline-block;
+  .field_big {
+    @include size(320px, 44px);    
   }
 
-  .arrow-forward {
+  .block__input_subscrition {
+    @include size(266px, 44px);
+    background: transparent;
+  }
+
+  .arrow_forward {
     color: #8BA4F9;
   }
 
-  .form-elements__block4, .form-elements__block5 {
+  .block-with-pad {
     padding-top: 100px;
-  }
-
-  label[for="form-element__input_hidden"] {
-    border-color: $shade50-color;    
-    border-top-left-radius: 2px;
-    border-top-right-radius: 2px;
-    line-height: 44px;
-    font-size: 14px;
-    color: $shade50-color;
   }
   
   input[type="checkbox"], input[type="radio"] {
     display: none;
   }
 
-  #form-element__input_hidden:checked + div {
+  #guests-list:checked + div, #amenities-list:checked + div {
     display: block;
     box-shadow: 0px 10px 20px $shade5-color;
   }
 
   .options-list {
     padding: 13px 7px 0 15px;
-    border: 1px solid $shade50-color;
-    margin-top: -8px;
+    border: 1px solid $shade50-color;    
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     border-top: none;
-    display: block;
-    position: absolute;
-    top: 77px;    
+    display: block;        
     z-index: 100;
     box-shadow: 0px 10px 20px $shade5-color;
     background-color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    color: $shade100-color;
+    font-family: "Montserrat-Bold";
   }
 
   .amenities-list {
     @include size(266px, 122px);
   }
 
+  .guests-list {
+    width: 320px;
+  }
+
   .option-item {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 7px;
+    align-items: center;    
+  }
+
+  .options-list__item {
+    margin-bottom: 7px;;
   }
 
   .option-counter {
@@ -392,7 +397,7 @@ ul, li, input {
     align-items: center;
   } 
 
-  .minus, .plus {
+  .option-counter__item {
     display: inline-block;
     @include size(30px, 30px);
     border: 1px solid $shade50-color;
@@ -402,11 +407,11 @@ ul, li, input {
     line-height: 30px;
   }
 
-  .minus {
+  .option-counter__minus-wrap {
     margin-right: 12px;
   }
 
-  .plus {
+  .option-counter__plus-wrap {
     margin-left: 12px;
   }
 
@@ -415,20 +420,23 @@ ul, li, input {
     color: $shade25-color;
   }
 
-  .form-elements__checkboxes {
-    margin-top: 176px;
+  .checkboxes {
     width: 266px;
   }
 
-  .form-elements__checkboxes .arrow {
+  .block__checkboxes {
+    margin-top: 176px;    
+  }
+
+  .checkboxes .arrow {
     top: -8px;
   }
 
-  .form-elements__checkboxes_expanded {
+  .block__checkboxes_expanded {
     margin-top: 49px;
   }
 
-  .form-elements__checkboxes_content {
+  .checkboxes__content {
     display: block;
     font-size: 14px;
     line-height: 18px;
@@ -436,27 +444,21 @@ ul, li, input {
     z-index: 100;
   }
 
-  #checkboxes-item__input_title:checked + div {
+  #input-title:checked + div {
     transform: rotate(-180deg);
   }
 
-  #checkboxes-item__input_title:checked ~ div ~ div {
+  #input-title:checked ~ div ~ div {
     display: block;
   }
 
-  .form-elements__checkboxes_title {
-    margin-bottom: 17px;
-    display: inline-block;
-    width: 100%;
-  }
-
-  .form-elements__checkboxes_item {
+  .checkboxes__item {
     position: relative;
     padding-left: 30px;
     margin-bottom: 12px;
   }
 
-  .form-elements__checkboxes_label::before {
+  .checkboxes__label::before {
     content: "";
     position: absolute;
     @include size(20px);
@@ -476,7 +478,7 @@ ul, li, input {
     top: 5px;
   }
 
-  .title_margin {
+  .title-margin {
     margin-bottom: 16px;
     display: inline-block;
   }
@@ -501,36 +503,30 @@ ul, li, input {
 
   .number-information__content {
     padding-left: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
   }
 
   .number-information__title {    
     font-family: "Montserrat-Bold";
   }
 
-  .number-information__text {
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
-  }
-
-  .form-elements__block2 {
+  .form-elements__block {
     margin-left: 54px;
   }
 
-  .radio_item {
+  .radio-list__item {
     position: relative;
     display: inline-block;
+    padding-left: 30px;
   }
 
-  .radio-list .radio_item:first-child {
+  .radio-list__item:first-child {
     margin-right: 20px;
   }
 
-  .form-element__radio_label {
-    margin-left: 30px;    
-  }
-
-  .form-element__radio_label::before {
+  .radio-item__label::before {
     content: "";
     position: absolute;
     @include size(20px);
@@ -552,16 +548,20 @@ ul, li, input {
 
   .spec-offer {
     position: relative;
-  }
-  
+    max-width: 270px;
+  }  
 
-  .form-element__offer_label {
+  .spec-offer__label {
     margin-left: 50px;
-    margin-bottom: 14px;
-    display: inline-block;
+    margin-bottom: 14px;    
   }
 
-  .form-element__offer-on_label::before, .form-element__offer-off_label::before {
+  .offer-label {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .offer-label::before {
     content: "";
     position: absolute;
     @include size(40px, 20px);
@@ -571,7 +571,7 @@ ul, li, input {
     top: 2px;
   }
 
-  .form-element__offer-on_label::after, .form-element__offer-off_label::after {
+  .offer-label::after {
     content: "";
     @include size(12px);
     position: absolute;
@@ -590,18 +590,18 @@ ul, li, input {
     border: 1px solid $shade25-color;
   }
 
-  .form-element__offer-off_label::before {
+  .offer-label_off::before {
     top: 42px;
     border-color: $shade25-color;
   }
 
-  .form-element__offer-off_label::after {
+  .offer-label_off::after {
     background: $shade25-color;
     left: 4px;
     top: 46px;
   }
 
-  .form-elements__like-buttons {
+  .like-buttons {
     width: 90px;
     display: flex;
     justify-content: space-between;
@@ -621,7 +621,7 @@ ul, li, input {
     color: $shade25-color;
   }
 
-  .marked {
+  .like-button_marked {
     border: 1px solid $purple-color;
     padding-right: 10px;
     color: $purple-color;    
@@ -645,21 +645,20 @@ ul, li, input {
     margin-right: 20px;
   }
 
-  .rate_buttons__star {
+  .rate-buttons__star {
     color: $purple-color;
     line-height: 20px;
     font-size: 24px;
     display: inline-block;
-    @include size(24px, 24px);
-  }
+    @include size(24px);
+  }  
 
-  .guests {
-    width: 320px;
-  }
-
-  .select-btns {
+  .options-list__btns {
     margin-top: 20px;
     margin-bottom: 13px;
+  }
+
+  .select-btns {    
     display: flex;
     justify-content: flex-end;
   }
@@ -668,7 +667,7 @@ ul, li, input {
     color: $purple-color;    
   }
 
-  .select-guests_expanded {
+  .block__select-guests {
     margin-bottom: 98px;
   }
 
@@ -685,6 +684,53 @@ ul, li, input {
   .label-access {
     font-family: "Montserrat-Bold";
     color: $shade75-color;
+  }
+
+  .comments {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .comments__div_left, .comments__div_right {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .comments__div_left {
+    align-items: center;
+  }
+
+  
+
+  .img_wrap {
+    @include size(48px);
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    margin-bottom: 12px;
+  }
+
+  .comments__img {
+    position: absolute;
+    top: -10px;
+  }
+
+  .comments__date {
+    margin-bottom: 10px;
+  }
+
+  .comments__text {
+    width: 653px;
+  }
+
+  .range-slider__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
   }
 
 

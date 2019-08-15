@@ -15,75 +15,74 @@ mixin logo()
     path(d="M36.7068 19.7653C36.7068 20.5418 36.0715 21.177 35.295 21.177C31.9421 21.177 28.9421 22.8712 27.1774 25.4476C26.7892 24.4594 26.3303 23.5418 25.7656 22.6947C28.095 20.0123 31.5186 18.3535 35.295 18.3535C36.0715 18.3535 36.7068 18.9888 36.7068 19.7653Z" fill="#1F2041" fill-opacity="0.25")
     path(d="M24 48C10.7647 48 0 37.2353 0 24C0 10.7647 10.7647 0 24 0C37.2353 0 48 10.7647 48 24C48 37.2353 37.2353 48 24 48ZM24 2.82353C12.3176 2.82353 2.82353 12.3176 2.82353 24C2.82353 35.6824 12.3176 45.1765 24 45.1765C35.6824 45.1765 45.1765 35.6824 45.1765 24C45.1765 12.3176 35.6824 2.82353 24 2.82353Z" fill="#1F2041" fill-opacity="0.25")
 
-mixin color-dark_item(perOfShade)
-  div(class=`colors-list__image colors-list__image_shade` + perOfShade)
-  .colors-list__text
-    span.colors-list__title Dark Shade #{perOfShade}%
+mixin dark_item(perOfShade)
+  div(class=`color-item__image color-item__image_shade` + perOfShade)
+  .color-item__text
+    span.color-item__title Dark Shade #{perOfShade}%
     br
-    span.colors-list__content #1F2041
+    span.color-item__content #1F2041
 
 mixin color_item(color, hex)
-  div(class=`colors-list__image colors-list__image_` + color)
-  .colors-list__text
-    span.colors-list__title #{color}
+  div(class=`color-item__image color-item__image_` + color)
+  .color-item__text
+    span.color-item__title #{color}
     br
-    span.colors-list__content #{hex}
+    span.color-item__content #{hex}
 
 mixin type_item(tag, text)
-  div(class="type-list__item_" + tag)
-    .type-list__item_left #{tag}
-    .type-list__item_right #{text}
+  div(class="type-item__" + tag)
+    .type-item__left #{tag}
+    .type-item__right #{text}
 
 mixin text-field(label_text, type, input_class, placeholder_text)
-  label(for= type,class="form-element__text") #{label_text}
+  label(for= type, class="label-text") #{label_text}
   br
   input(type=type,id=type, class=input_class, placeholder=placeholder_text)
 
-mixin dropdown(text, select_class, option_text)  
-  span.form-element__text #{text}
+mixin dropdown(text, label_wrap, label_text, list_name)
+  span.label-text #{text}
   br
-  select(class=select_class)
-    option(selected="selected") #{option_text}
-
-mixin dropdown_date(text, select_class, option_text)
-  span.form-element__text #{text}
-  br
-  select(class=select_class)
-    option(selected="selected") #{option_text}
-  +arrow-down
+  div(class="select " + label_wrap)
+    label(for= list_name class="select-expanded__label") #{label_text}
+    +arrow-down  
 
 mixin arrow-down
   .arrow.arrow_down
-    <i class="material-icons arrow_down">keyboard_arrow_down</i>
+    <i class="material-icons">keyboard_arrow_down</i>
 
 mixin arrow-forward
-  .arrow
-    <i class="material-icons arrow-forward">arrow_forward</i>
+  .arrow.arrow_forward
+    <i class="material-icons">arrow_forward</i>
 
-mixin dropdown_expanded(text, label_text, label_class, list_class, number_value, ...option_texts)  
-  span.form-element__text #{text}
+mixin dropdown_expanded(text, label_text, label_wrap, list_name, number_value, ...option_texts)  
+  span.label-text #{text}
   br
-  label(for="form-element__input_hidden" class="form-element__select " + label_class) #{label_text}
-  +arrow-down
-  input(type="checkbox" id="form-element__input_hidden")                
-  div(class="options-list form-element__text " + list_class)
+  div(class="select " + label_wrap)
+    label(for= list_name class="select-expanded__label") #{label_text}
+    +arrow-down
+  input(type="checkbox" id= list_name)                
+  div(class="select-expanded__options options-list " + list_name)
     each option_text, index in option_texts
-      .option-item
-        span #{option_text}
-        .option-counter
-          span.minus -
-          span.number #{number_value}
-          span.plus +
-    if list_class === "guests"
-      .select-btns
-        span.select-btns__submit применить
+      .options-list__item
+        .option-item
+          span #{option_text}
+          .option-counter
+            .option-counter__minus-wrap
+              span.option-counter__item -
+            span.option-counter__number #{number_value}
+            .option-counter__plus-wrap
+              span.option-counter__item +
+    if list_name === "guests-list"
+      .options-list__btns
+        .select-btns
+          span.select-btns__submit применить
 
 mixin checkbox_expanded(name, label_additional_class="", checkbox_num, ...label__texts)    
-  .form-elements__checkboxes_content
+  .checkboxes__content
     each label__text, index in label__texts
-      .form-elements__checkboxes_item
+      .checkboxes__item
         input(type="checkbox" id="checkbox" + checkbox_num + "_" + index name= name value=label__text)
-        label(for="checkbox" + checkbox_num + "_" + index class="form-elements__checkboxes_label " + label_additional_class) #{label__text}
+        label(for="checkbox" + checkbox_num + "_" + index class="checkboxes__label " + label_additional_class) #{label__text}
         if name === "accessibility"
           div.label-descr= contentForRichCheckbox[index] 
 
@@ -98,9 +97,9 @@ mixin number-information__item(pic_text, title, text)
 
 mixin radio_items(...label_texts)
   each label_text, index in label_texts
-    .radio_item
+    .radio-list__item.radio-item
       input(type="radio" id="radio" + index name="gender")
-      label(for="radio" + index class="form-element__radio_label number-information__text") #{label_text}
+      label(for="radio" + index class="radio-item__label number-information__text") #{label_text}
 
 mixin like_button(value, btn_class="", icon_name)
   div(class="like-button " + btn_class)
@@ -110,9 +109,27 @@ mixin like_button(value, btn_class="", icon_name)
 mixin rate_buttons(marked_count)
   - for (var x = 1; x <= 5; x++)
     if x <= marked_count
-      <i class="material-icons rate_buttons__star">star_rate</i>
+      <i class="material-icons rate-buttons__star">star_rate</i>
     else
-      <i class="material-icons rate_buttons__star">star_border</i>
+      <i class="material-icons rate-buttons__star">star_border</i>
+
+mixin users-comments(img_name, like_value, btn_class="", icon_name, username, date, text)
+  .comments
+    .comments__div_left
+      .img_wrap
+        img(src="../../assets/img/users/" + img_name + ".svg", class="comments__img")
+      +like_button(like_value, btn_class="", icon_name)
+    .comments__div_right.number-information__content
+      .comments__username.number-information__title #{username}
+      .comments__date #{date}
+      .comments__text #{text}
+
+
+    
+
+
+
+
       
 
 
