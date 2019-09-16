@@ -1,0 +1,252 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.colors-and-types{
+  width: 1440px;
+  margin: 0 auto;
+  padding-top: 145px;
+  padding-left: 150px;
+  padding-right: 190px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors-list {
+  font-family: "Quicksand-Bold";
+  text-transform: capitalize;
+}
+
+.colors-list__item { 
+  margin-bottom: 20px;  
+}
+
+.types-list__item {
+  margin-bottom: 50px;  
+}
+
+.form-elements {
+  display: grid;
+  grid-template-columns: 320px 374px 1fr;
+  grid-template-rows: repeat(3,auto);
+  column-gap: 72px;
+  padding-top: 143px;
+  padding-left: 141px;
+  padding-right: 141px;
+}
+
+.form-elements__block {
+  margin-left: 54px;
+}
+
+.block-with-two-cols {
+  grid-column: 2 / span 2;
+  padding-top: 10px;
+}
+
+.field_smallMargin {
+  margin-bottom: $marginSmall;
+  position: relative;
+  display: inline-block;
+}
+
+.field_bigMargin {
+  margin-bottom: $marginBig;
+  display: inline-block; 
+}
+
+.select-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.select {
+  @include size(320px, 44px);
+  appearance: none;
+  border: 1px solid $shade25-color;
+  color: $shade75-color;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;  
+  font-family: $mainFont;
+  border-radius: 2px;
+  display: inline-block; 
+  background: transparent; 
+}
+
+.select-expanded__label {
+  padding-left: 15px;
+  display: block;
+  border-color: $shade50-color;    
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  line-height: 42px;
+  font-size: 14px;
+  color: $shade75-color;  
+}
+
+.select-expanded__options {
+  position: absolute;
+  top: 77px;
+  margin-top: -8px;
+}
+  
+  .field_rightMargin {
+    margin-right: 20px;
+  }   
+
+  .field_small {
+    @include size(150px, 44px);
+  }
+
+  .field_mid {
+    @include size(266px, 44px);
+  }
+
+  .field_big {
+    @include size(320px, 44px);    
+  }  
+
+  .block-with-pad {
+    padding-top: 100px;
+  }
+  
+  input[type="checkbox"], input[type="radio"] {
+    display: none;
+  }
+
+  #guests-list:checked + div, #amenities-list:checked + div {
+    display: block;
+    box-shadow: 0px 10px 20px $shade5-color;
+  }
+
+  .options-list {
+    padding: 13px 7px 0 15px;
+    border: 1px solid $shade50-color;    
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top: none;
+    display: block;        
+    z-index: 100;
+    box-shadow: 0px 10px 20px $shade5-color;
+    background-color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    color: $shade100-color;
+    font-family: "Montserrat-Bold";
+  }
+
+  .amenities-list {
+    @include size(266px, 122px);
+  }
+
+  .guests-list {
+    width: 320px;
+  }
+
+  .option-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+  }
+
+  .options-list__item {
+    margin-bottom: 7px;;
+  }
+
+  .option-counter {
+    display: flex;
+    align-items: center;
+  } 
+
+  .option-counter__item {
+    display: inline-block;
+    @include size(30px, 30px);
+    border: 1px solid $shade50-color;
+    border-radius: 50%;
+    color: $shade50-color;
+    text-align: center;
+    line-height: 30px;
+  }
+
+  .option-counter__minus-wrap {
+    margin-right: 12px;
+  }
+
+  .option-counter__plus-wrap {
+    margin-left: 12px;
+  }
+
+  .counter-disabled {
+    border-color: $shade25-color;
+    color: $shade25-color;
+  }  
+
+  .block__checkboxes {
+    margin-top: 176px;    
+  }
+
+  .checkboxes .arrow {
+    top: -8px;
+  }
+
+  .block__checkboxes_expanded {
+    margin-top: 49px;
+  }
+
+  .title-margin {
+    margin-bottom: 16px;
+    display: inline-block;
+  }
+
+.number-content {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
+
+    &__title {    
+        font-family: "Montserrat-Bold";
+    }
+}
+
+  .spec-offer {    
+    max-width: 270px;
+  } 
+
+  .like-buttons {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+  } 
+
+  .options-list__btns {
+    margin-top: 20px;
+    margin-bottom: 13px;
+  }
+
+  .select-btns {    
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .select-btns__submit {
+    color: $purple-color;    
+  }
+
+  .block__select-guests {
+    margin-bottom: 98px;
+  }
+
+  .block__rich-checkbox {
+    margin-top: 168px;
+  } 
+
+  .range-slider__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
+  }

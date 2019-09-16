@@ -1,0 +1,40 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.comments-item {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comments-image, .comments-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.comments-image {
+    align-items: center;
+}  
+
+.comments-image__wrap {
+    @include size(48px);
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+    margin-bottom: 12px;
+}
+
+.comments__user-img {
+    position: absolute;
+    top: -10px;
+}
+
+.comments-content__date {
+    margin-bottom: 10px;
+}
+
+.comments-content__text {
+    width: 653px;
+}

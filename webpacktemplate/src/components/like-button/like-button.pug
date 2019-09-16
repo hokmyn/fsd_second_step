@@ -1,0 +1,6 @@
+
+
+mixin like-button(value, btn_class="", icon_name)
+    div(class="like-button " + btn_class)
+        <i class="material-icons like-button__heart">#{icon_name}</i>
+        span.like-button__value #{value}

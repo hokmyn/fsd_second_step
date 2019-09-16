@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+@import "../../styles/fonts";
+
+.label-text {
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 15px;
+    color: $shade100-color;
+    font-family: "Montserrat-Bold";
+}

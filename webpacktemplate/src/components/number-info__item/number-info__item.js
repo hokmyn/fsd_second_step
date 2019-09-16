@@ -1,0 +1,1 @@
+import './number-info__item.scss';

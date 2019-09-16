@@ -1,0 +1,9 @@
+mixin number-info__item(pic_text, title, text)
+    .number-info__item-wrap
+        .number-info-item
+            .number-info-item__pic
+                <i class="material-icons face">#{pic_text}</i>
+            .number-info-item__content.number-content
+                span.number-content__title #{title}
+                br
+                span.number-content__text #{text}

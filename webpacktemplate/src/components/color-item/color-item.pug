@@ -1,0 +1,7 @@
+mixin color-item(colorName, hex, imageClass)
+  .color-item
+    div(class=`color-item__image color-item__image_` + imageClass)
+    .color-item__text
+      span.color-item__title #{colorName}
+      br
+      span.color-item__content #{hex}

@@ -3,17 +3,26 @@ const fs = require('fs');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
 const PATHS = {
     src: path.join(__dirname, '../src'),
     dist: path.join(__dirname, '../dist'),
     assets: 'assets/'
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/pages`;
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES = [];
+
+const PAGES_DIR = `${PATHS.src}/pages`;
+fs
+	.readdirSync(PAGES_DIR)
+	.filter((file) => {
+		return file.indexOf('main') !== 0;
+	})
+	.forEach((file) => {
+		PAGES.push(file.split('/', 2));
+	});
 
 module.exports = {
-
     externals: {
         paths: PATHS
     },
@@ -87,13 +96,17 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
 			{ from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img`},
-			{ from: `${PATHS.src}/fonts`, to: `${PATHS.assets}fonts`},
+			{ from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}fonts`},
             { from: `${PATHS.src}/static`, to: '' }
 		]),
+		new webpack.ProvidePlugin({
+			$: 'jquery',
+			jQuery: 'jquery'
+		  }),
 		
 		...PAGES.map(page => new HtmlWebpackPlugin({
-			template: `${PAGES_DIR}/${page}`,
-			filename: `./${page.replace(/\.pug/,'.html')}`
+			template: `${PAGES_DIR}/${page}/${page}.pug`,
+			filename: `${page}.html`
 		}))
 	],
 }

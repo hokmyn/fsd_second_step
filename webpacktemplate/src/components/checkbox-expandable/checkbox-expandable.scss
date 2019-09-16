@@ -1,0 +1,7 @@
+#expandableCheckboxTitle:checked + div {
+    transform: rotate(-180deg);
+}
+
+#expandableCheckboxTitle:checked ~ div ~ div {
+    display: block;
+}

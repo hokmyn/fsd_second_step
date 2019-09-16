@@ -1,0 +1,45 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.block__input {
+	@include size(320px, 44px);
+	background: #FFFFFF;
+	border: 1px solid $shade25-color;
+	box-sizing: border-box;
+	border-radius: 4px;
+	-webkit-appearance: none;
+	outline: 0;
+	box-shadow: none;
+	padding-left: 15px;
+	font-family: $mainFont;
+}
+  
+.block__input::placeholder {
+	font-size: 14px;
+	line-height: 18px;
+	font-family: $mainFont;
+	color: $shade25-color;
+}
+  
+.block__input_hover {
+	border: 1px solid $shade50-color;
+	line-height: 24px;  
+}
+  
+.block__input_hover::placeholder {
+	color: $shade75-color;
+}
+
+.block__input_date {
+    border: 1px solid $shade25-color;
+}
+
+.block__input_date::placeholder {
+    line-height: 24px;
+}
+
+.block__input_subscrition {
+    @include size(266px, 44px);
+    background: transparent;
+}

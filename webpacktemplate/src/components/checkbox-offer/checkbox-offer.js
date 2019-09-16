@@ -1,0 +1,1 @@
+import './checkbox-offer.scss';

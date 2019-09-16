@@ -1,0 +1,16 @@
+
+
+
+mixin checkbox-expanded(name, label_additional_class="", ...label_texts)
+    -
+        var contentForRichCheckbox = [
+            "Ширина коридоров в номере не менее 91 см",
+            "На 1 этаже вас встретит специалист и проводит до номера"
+        ];    
+    .checkboxes-content
+        each label_text, index in label_texts
+            .checkboxes-content__item
+                input(type="checkbox" id="checkbox_" + name + "_" + index name= name value=label_text)
+                label(for="checkbox_" + name + "_" + index class="checkboxes-label " + label_additional_class) #{label_text}
+                if name === "accessibility"
+                    div.label-descr= contentForRichCheckbox[index] 

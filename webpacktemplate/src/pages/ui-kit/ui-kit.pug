@@ -1,0 +1,156 @@
+extends ../main/main
+
+include ../../components/arrow/arrow
+include ../../components/checkbox-expandable/checkbox-expandable 
+include ../../components/checkbox-expanded/checkbox-expanded 
+include ../../components/color-item/color-item 
+include ../../components/comments-item/comments-item 
+include ../../components/dropdown/dropdown
+include ../../components/dropdown-expanded/dropdown-expanded
+include ../../components/label-text/label-text 
+include ../../components/like-button/like-button 
+include ../../components/logo/logo 
+include ../../components/number-info__item/number-info__item 
+include ../../components/radio-items/radio-items 
+include ../../components/rate-buttons/rate-buttons 
+include ../../components/text-field/text-field 
+include ../../components/type-item/type-item
+include ../../components/checkbox-offer/checkbox-offer
+
+
+block title 
+	| Ui-kit page
+
+block content
+	section.colors-and-types
+		+logo     
+		.colors-list
+			.colors-list__item
+				+color-item("Dark Shade 100%", "#1F2041", "shade100")
+			.colors-list__item
+				+color-item("Dark Shade 75%", "#1F2041", "shade75")
+			.colors-list__item
+				+color-item("Dark Shade 50%", "#1F2041", "shade50")
+			.colors-list__item
+				+color-item("Dark Shade 25%","#1F2041", "shade25")
+			.colors-list__item                
+				+color-item("Dark Shade 5%", "#1F2041", "shade5")
+			.colors-list__item
+				+color-item("purple", "#BC9CFF", "purple")                
+			.colors-list__item
+				+color-item("green", "#6FCF97", "green")
+		.types-list
+			.types-list__item
+				+type-item("h1", "This one is sub-section or widget title")                
+			.types-list__item
+				+type-item("h2", "Next one is the item title inside widgets")
+			.types-list__item
+				+type-item("h3", "This is a label or cta text")
+			.types-list__item
+				+type-item("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
+	
+	section.form-elements
+		.block
+			div(class="field_smallMargin")
+				+label-text("text field")
+				+text-field("email", "block__input", "Email")
+			div(class="field_smallMargin")
+				+label-text("text field")
+				+text-field("email", "block__input block__input_hover","This is pretty awesome")
+			div(class = "select-wrap field_smallMargin" )
+				+label-text("dropdown")
+				+dropdown("field_big", "Сколько гостей", "guests-list")
+				+arrow("keyboard_arrow_down", "arrow_down")
+			div(class="field_bigMargin")
+				+label-text("masked text field")
+				+text-field("text", "block__input block__input_date", "ДД.ММ.ГГГГ")
+			div(class = "select-wrap field_bigMargin field_rightMargin")
+				+label-text("date dropdown")
+				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+			div(class = "select-wrap field_bigMargin")
+				+label-text("date dropdown")
+				+dropdown("field_small", "19.08.2019", "date-list")       
+			div(class = "select-wrap field_bigMargin")
+				+label-text("filter date dropdown")
+				+dropdown("field_mid", "19 авг - 23 авг", "date-list")
+			div(class="field_smallMargin")
+				+label-text("subscription text field")
+				+text-field("email", "block__input block__input_subscrition", "Email")
+				+arrow("arrow_forward", "arrow_forward")
+
+		.form-elements__block.block
+			div(class = "field_bigMargin")
+				.title-margin 
+					+label-text("checkbox buttons")
+				+checkbox-expanded("additional-options", "", "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
+			div(class = "field_bigMargin")
+				.title-margin 
+					+label-text("radio buttons")
+				.radio-list
+					+radio-items("Мужчина", "Женщина")
+			div(class = "field_bigMargin")
+				.title-margin 
+					+label-text("toggle")
+				.spec-offer
+					+checkbox-offer("checked")
+					br
+					+checkbox-offer("")
+			div(class = "field_bigMargin")
+				.title-margin 
+					+label-text("like button")
+				br
+				.like-buttons
+					+like-button(2, "", "favorite_border")
+					+like-button(12, "like-button_marked", "favorite")
+			div(class = "field_bigMargin")
+				.title-margin 
+					+label-text("rate button")
+				br
+				.rate-buttons
+					.rate-buttons_left
+						+rate-buttons(4)
+					.rate-buttons_right
+						+rate-buttons(5)   
+
+		.block
+			.field_mid
+				.range-slider__title
+					+label-text("range slider")
+					span.range-slider__values 5 000 &#8381; - 10 000 &#8381;
+				.range-slider
+			.buttons
+				.title-margin 
+					+label-text("buttons")
+		.block
+			.block-with-pad
+				div(class = "select-wrap field_smallMargin" )
+					+dropdown("dropdown", "field_mid", "2 спальни, 2 кровати...", "amenities-list")
+					+arrow("keyboard_arrow_down", "arrow_down")
+				div(class = "select-wrap")
+					+dropdown-expanded("dropdown", "2 спальни, 2 кровати...", "field_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
+				div(class = "select-wrap checkboxes block__checkboxes")
+					+label-text("expandable checkbox list")
+					+arrow("keyboard_arrow_down", "arrow_down")
+				div(class = "select-wrap field_bigMargin checkboxes block__checkboxes_expanded")
+					+checkbox-expandable()
+                    
+		.block.form-elements__block
+			.block-with-pad
+				div(class = "select-wrap block__select-guests select-expanded")
+					+dropdown-expanded("dropdown", "Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
+				div(class="block__rich-checkbox")
+					.title-margin
+						+label-text("rich checkbox buttons")
+					+checkbox-expanded("accessibility", "label-access", "Широкий коридор", "Помощник для инвалидов")
+		
+		.block
+		
+		.block
+			div(class="number-info")
+				+number-info__item("insert_emoticon", "Комфорт", "Шумопоглащающие стены")
+				+number-info__item("location_city", "Удобство", "Окно в каждой из спален")            
+		
+		.block
+			.block-with-two-cols
+				.comments
+					+comments-item("image", 12, "marked", "favorite", "Мурад Сарафанов", "5 дней назад", "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей ")

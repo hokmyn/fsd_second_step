@@ -1,0 +1,7 @@
+mixin checkbox-offer(isChecked)
+    .checkbox-offer
+        if isChecked
+            input(type="checkbox" id="offer" name="offer" checked)
+        else
+            input(type="checkbox" id="offer" name="offer")
+        label(for="offer" class="offer-label checkbox-offer__label") Получать спецпредложения

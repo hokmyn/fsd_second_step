@@ -1,0 +1,9 @@
+include ../arrow/arrow
+include ../checkbox-expanded/checkbox-expanded
+
+mixin checkbox-expandable()
+    .title-margin    
+        label(for="expandableCheckboxTitle" class="label-text") expandable checkbox list
+        input(type="checkbox" id="expandableCheckboxTitle")
+        +arrow("keyboard_arrow_down", "arrow_down")
+    +checkbox-expanded("additional-amenities", "", "Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь")

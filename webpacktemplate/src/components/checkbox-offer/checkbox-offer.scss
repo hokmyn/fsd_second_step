@@ -1,0 +1,46 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.checkbox-offer {
+    position: relative;
+}
+
+.checkbox-offer__label {
+    margin-left: 50px;
+    margin-bottom: 14px;    
+}
+
+.offer-label {
+    display: inline-block;
+    width: 100%;
+    &::before {
+        content: "";
+        position: absolute;
+        @include size(40px, 20px);
+        border: 1px solid $shade25-color;
+        border-radius: 10px;
+        left: 0;
+        top: 2px;
+    }
+    &::after {
+        content: "";
+        @include size(12px);
+        position: absolute;
+        left: 4px;
+        top: 6px;
+        border-radius: 50%;
+        background: $shade25-color;
+    }
+}
+
+input[id="offer"]:checked + label::after {    
+    left: 24px;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+}
+
+input[id="offer"]:checked + label::before {    
+    border: 1px solid #BC9CFF;
+}
+
+
+
