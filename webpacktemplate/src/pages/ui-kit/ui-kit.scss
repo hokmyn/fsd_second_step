@@ -70,8 +70,7 @@
   line-height: 24px;
   outline: none;  
   font-family: $mainFont;
-  border-radius: 2px;
-  display: inline-block; 
+  border-radius: 2px; 
   background: transparent; 
 }
 
@@ -102,6 +101,7 @@
 
   .field_mid {
     @include size(266px, 44px);
+    position: relative;
   }
 
   .field_big {

@@ -4,14 +4,19 @@
 
 .types-list__item div:first-child {
     display: flex;
-    align-items: top;
-  }
+}
   
-  .type-item__left {
-    margin-right: 30px;
+.type-item__left {
     text-transform: uppercase;
     color: $shade25-color;
-  }
+    width: 38px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.type-item__right {
+  margin-left: 30px;
+}
 
   .type-item__h1 {
     font-size: 24px;
@@ -19,17 +24,15 @@
     .type-item__right {
       font-family: "Quicksand-Bold";
       max-width: 336px;
-      line-height: 30px;
     }
   }
-  
+   
   .type-item__h2 {
     font-size: 19px;
     line-height: 23px;
     .type-item__right {
       font-family: "Quicksand-Bold";
       max-width: 282px;
-      line-height: 24px;
     }
   }
   
