@@ -1,11 +1,11 @@
 include ../arrow/arrow
 
-mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, ...option_texts)  
+mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, ...option_texts)   
     span.label-text #{text}
     br
     div(class="select " + label_wrap)
         label(for= list_name class="select-expanded__label") #{label_text}
-        +arrow("keyboard_arrow_down", "arrow_down")
+    +arrow("keyboard_arrow_down", "arrow_down")
     input(type="checkbox" id= list_name)                
     div(class="select-expanded__options options-list " + list_name)
         each option_text, index in option_texts

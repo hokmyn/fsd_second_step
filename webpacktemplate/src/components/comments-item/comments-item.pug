@@ -1,4 +1,4 @@
-include ../like-button/like-button
+include ../like-button/like-button 
 
 mixin comments-item(img_name, like_value, btn_class="", icon_name, username, date, text)
     .comments-item
@@ -6,7 +6,7 @@ mixin comments-item(img_name, like_value, btn_class="", icon_name, username, dat
             .comments-image__wrap
                 img(src="../../assets/img/users/" + img_name + ".svg", class="comments__user-img")
             +like-button(like_value, btn_class="", icon_name)
-    .comments-content.number-content
-        .comments-content__username.number-content__title #{username}
-        .comments-content__date #{date}
-        .comments-content__text #{text}
+        .comments-content.number-content
+            .comments-content__username.number-content__title #{username}
+            .comments-content__date #{date}
+            .comments-content__text #{text}
