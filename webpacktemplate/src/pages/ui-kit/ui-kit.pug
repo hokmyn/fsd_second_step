@@ -117,15 +117,20 @@ block content
 						+rate-buttons(5)   
 
 		.block
-			.field_mid
-				.range-slider__title
-					+label-text("range slider")
-					span.range-slider__values 5 000 &#8381; - 10 000 &#8381;
+			.field_bigMargin
 				.range-slider
-					+range-slider
+					div(class="range-slider__title slider-title") 
+						+label-text("range slider")
+						span.slider-title__values 5 000 &#8381; - 10 000 &#8381;
+					.range-slider__content
+						+range-slider
 			.buttons
 				.title-margin 
 					+label-text("buttons")
+				.buttons-main
+					.buttons-main__row
+					.buttons-main__row
+
 		.block
 			.block-with-pad
 				div(class = "select-wrap field_smallMargin" )
