@@ -17,6 +17,7 @@ include ../../components/text-field/text-field
 include ../../components/type-item/type-item
 include ../../components/checkbox-offer/checkbox-offer
 include ../../components/range-slider/range-slider
+include ../../components/button/button
 
 
 block title 
@@ -61,26 +62,26 @@ block content
 			div(class = "field_smallMargin" )
 				+label-text("dropdown")
 				+dropdown("field_big", "Сколько гостей", "guests-list")
-				+arrow("keyboard_arrow_down", "arrow_down")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_bigMargin")
 				+label-text("masked text field")
 				+text-field("text", "block__input block__input_date", "ДД.ММ.ГГГГ")
 			div(class = "select-wrap field_bigMargin field_rightMargin")
 				+label-text("date dropdown")
 				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
-				+arrow("keyboard_arrow_down", "arrow_down")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class = "select-wrap field_bigMargin")
 				+label-text("date dropdown")
 				+dropdown("field_small", "19.08.2019", "date-list")
-				+arrow("keyboard_arrow_down", "arrow_down")       
+				+arrow({ name: "keyboard_arrow_down", color: "black"})       
 			div(class = "select-wrap field_bigMargin")
 				+label-text("filter date dropdown")
 				+dropdown("field_mid", "19 авг - 23 авг", "date-list")
-				+arrow("keyboard_arrow_down", "arrow_down")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_mid")
 				+label-text("subscription text field")
 				+text-field("email", "block__input block__input_subscrition", "Email")
-				+arrow("arrow_forward", "arrow_forward")
+				+arrow({ name: "arrow_forward", color: "gradient"} )
 
 		.form-elements__block.block
 			div(class = "field_bigMargin")
@@ -128,20 +129,30 @@ block content
 				.title-margin 
 					+label-text("buttons")
 				.buttons-main
+					.buttons-main__row.buttons-flex
+						+button({text: 'click me', type: 'fill', size: 'small'})
+						+button({text: 'click me', type: 'fill', size: 'small', isHovered: true})
+					.buttons-main__row.buttons-flex
+						+button({text: 'click me', type: 'transp', size: 'small'})
+						+button({text: 'click me', type: 'transp', size: 'small', isHovered: true})
 					.buttons-main__row
-					.buttons-main__row
+						+button({text: 'click me', type: 'wthBoder'})
+						+button({text: 'click me', type: 'wthBoder', isHovered: true})
+					.field_bigMargin
+						+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
+						+arrow({ name: "arrow_forward", color: "white"} )
 
 		.block
 			.block-with-pad
 				div(class = "select-wrap field_smallMargin" )
 					+label-text("dropdown")
 					+dropdown("field_mid", "2 спальни, 2 кровати...", "amenities-list")
-					+arrow("keyboard_arrow_down", "arrow_down")
+					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap")
 					+dropdown-expanded("dropdown", "2 спальни, 2 кровати...", "field_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
 				div(class = "select-wrap checkboxes block__checkboxes")
 					+label-text("expandable checkbox list")
-					+arrow("keyboard_arrow_down", "arrow_down")
+					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap field_bigMargin checkboxes block__checkboxes_expanded")
 					+checkbox-expandable()
                     

@@ -53,7 +53,8 @@
 
 .field_bigMargin {
   margin-bottom: $marginBig;
-  display: inline-block; 
+  display: inline-block;
+  position: relative;
 }
 
 .select-wrap {
@@ -250,4 +251,17 @@
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 23px;
+  }
+
+  .buttons-main {
+    width: 218px;
+  }
+
+  .buttons-main__row {    
+    margin-bottom: 30px;
+  }
+
+  .buttons-flex {
+    display: flex;
+    justify-content: space-between;
   }

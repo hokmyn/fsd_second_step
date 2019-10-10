@@ -1,5 +1,15 @@
+//-
+  options.name - название стрелки ("arrow_forward", "keyboard_arrow_down")
+  options.color - цвет стрелки ('gradient', 'white')
+  
 
-
-mixin arrow(name, arrow_class)
-  div(class="arrow " + arrow_class)
-    <i class="material-icons">#{name}</i>
+mixin arrow(options)
+  if !options
+        - options = {}
+  -
+        var classes = '';
+        classes += options.name ? ' ' +  options.name : '';
+        classes += options.color ? ' arrow_' +  options.color : '';
+  
+  div(class=classes)
+    i.material-icons options.name

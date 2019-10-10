@@ -1,2 +1,27 @@
-mixin button()
+//-
+  options.text - текст
+  options.size - размер ('', 'small', 'big')
+  options.type - тип ('fill', 'transp', 'wthBoder')
+  options.isHovered - наведение курсора (bool)
+  
+mixin button(options)
+    if !options
+        - options = {}
+    -
+        var classes = '';
+        classes += options.type ? ' button_' + options.type : '';
+        classes += options.size ? ' button_' + options.size : '';
+        classes += options.isHovered ? ' button_hovered' : '';
+    if (options.type === 'transp')
+        if(!options.isHovered)
+            .transp-wrap
+                button.button(class=classes)= options.text
+        else
+            div(class="transp-wrap transp-wrap-hover")
+                button.button(class=classes)= options.text
+    else
+        button.button(class=classes)= options.text
+
+
+
     
