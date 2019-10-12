@@ -18,6 +18,7 @@ include ../../components/type-item/type-item
 include ../../components/checkbox-offer/checkbox-offer
 include ../../components/range-slider/range-slider
 include ../../components/button/button
+include ../../components/pagination/pagination
 
 
 block title 
@@ -141,6 +142,9 @@ block content
 					.field_bigMargin
 						+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
 						+arrow({ name: "arrow_forward", color: "white"} )
+				.title-margin 
+					+label-text("pagination")
+				+pagination
 
 		.block
 			.block-with-pad

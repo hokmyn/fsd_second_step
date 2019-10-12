@@ -11,5 +11,5 @@ mixin arrow(options)
         classes += options.name ? ' ' +  options.name : '';
         classes += options.color ? ' arrow_' +  options.color : '';
   
-  div(class=classes)
-    i.material-icons options.name
+  div.arrow(class=classes)
+    i.material-icons #{options.name}
