@@ -1,0 +1,10 @@
+//-
+  options.text - массив с текстами пунктов
+  
+  
+mixin bullet-list(options)
+    if !options
+        - options = {}
+    ul.bullet-list
+        each text in options.texts 
+            li.bullet-list__item #{text}

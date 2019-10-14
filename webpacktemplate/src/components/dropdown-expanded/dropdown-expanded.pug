@@ -5,7 +5,7 @@ mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, .
     br
     div(class="select " + label_wrap)
         label(for= list_name class="select-expanded__label") #{label_text}
-    +arrow("keyboard_arrow_down", "arrow_down")
+    +arrow({ name: "keyboard_arrow_down", color: "black"})
     input(type="checkbox" id= list_name)                
     div(class="select-expanded__options options-list " + list_name)
         each option_text, index in option_texts
@@ -13,8 +13,8 @@ mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, .
                 .option-item
                     span #{option_text}
                     .option-counter
-                        .option-counter__minus-wrap
-                            span.option-counter__item -
+                        .option-counter__minus-wrap.counter-disabled
+                            span.option-counter__item.counter-disabled -
                         span.option-counter__number #{number_value}
                         .option-counter__plus-wrap
                             span.option-counter__item +
@@ -22,3 +22,4 @@ mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, .
             .options-list__btns
                 .select-btns
                     span.select-btns__submit применить
+                    span.select-btns__clear очистить

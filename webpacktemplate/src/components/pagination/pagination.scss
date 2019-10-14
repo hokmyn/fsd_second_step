@@ -2,10 +2,10 @@
 @import "../../styles/mixins";
 
 #pagination {
+    margin-bottom: 10px;
     & ul {
         display: flex;
         align-items: center;
-        
     }
     & li {
         display: flex;
@@ -16,5 +16,25 @@
     }
     & .active {
         background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        color: #fff;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
     }
+    & .page-link {
+        color: $shade50-color;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 15px;
+    }
+    & .next {
+        @include size(40px);
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border-radius: 22px;
+    }
+}
+
+.pagination .arrow {
+    top: -1px;
+    right: 23px;
 }
