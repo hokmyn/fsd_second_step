@@ -19,15 +19,14 @@
     border: 1px solid $shade25-color;
     border-radius: 50%;
     left: 0;
-    top: 2px;
 }
 
 input[id^="radio"]:checked + label::after {
     content: "";
     @include size(12px);
     position: absolute;
-    left: 4px;
-    top: 6px;
+    left: 4.5px;
+    top: 5px;
     border-radius: 50%;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

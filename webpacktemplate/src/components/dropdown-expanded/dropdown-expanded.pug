@@ -1,8 +1,15 @@
-include ../arrow/arrow
+//-
+  options.text - текст кнопки
+  options.size - размер ('', 'small', 'big')
+  options.type - тип ('fill', 'transp', 'wthBoder')
+  options.isHovered - наведение курсора (bool)
 
-mixin dropdown-expanded(text, label_text, label_wrap, list_name, number_value, ...option_texts)   
-    span.label-text #{text}
-    br
+include ../arrow/arrow
+include ../elem-title/elem-title
+
+
+mixin dropdown-expanded(label_text, label_wrap, list_name, number_value, ...option_texts)   
+        
     div(class="select " + label_wrap)
         label(for= list_name class="select-expanded__label") #{label_text}
     +arrow({ name: "keyboard_arrow_down", color: "black"})

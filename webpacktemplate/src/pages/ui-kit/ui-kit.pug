@@ -7,7 +7,7 @@ include ../../components/color-item/color-item
 include ../../components/comments-item/comments-item 
 include ../../components/dropdown/dropdown
 include ../../components/dropdown-expanded/dropdown-expanded
-include ../../components/label-text/label-text 
+include ../../components/elem-title/elem-title 
 include ../../components/like-button/like-button 
 include ../../components/logo/logo 
 include ../../components/number-info__item/number-info__item 
@@ -56,62 +56,62 @@ block content
 	section.form-elements
 		.block
 			div(class="field_smallMargin")
-				+label-text("text field")
+				+elem-title("text field")
 				+text-field("email", "block__input", "Email")
 			div(class="field_smallMargin")
-				+label-text("text field")
+				+elem-title("text field")
 				+text-field("email", "block__input block__input_hover","This is pretty awesome")
 			div(class = "field_smallMargin" )
-				+label-text("dropdown")
+				+elem-title("dropdown")
 				+dropdown("field_big", "Сколько гостей", "guests-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_bigMargin")
-				+label-text("masked text field")
+				+elem-title("masked text field")
 				+text-field("text", "block__input block__input_date", "ДД.ММ.ГГГГ")
 			div(class = "select-wrap field_bigMargin field_rightMargin")
-				+label-text("date dropdown")
+				+elem-title("date dropdown")
 				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class = "select-wrap field_bigMargin")
-				+label-text("date dropdown")
+				+elem-title("date dropdown")
 				+dropdown("field_small", "19.08.2019", "date-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})       
 			div(class = "select-wrap field_bigMargin")
-				+label-text("filter date dropdown")
+				+elem-title("filter date dropdown")
 				+dropdown("field_mid", "19 авг - 23 авг", "date-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_mid")
-				+label-text("subscription text field")
+				+elem-title("subscription text field")
 				+text-field("email", "block__input block__input_subscrition", "Email")
 				+arrow({ name: "arrow_forward", color: "gradient"} )
 
 		.form-elements__block.block
 			div(class = "field_bigMargin")
 				.title-margin 
-					+label-text("checkbox buttons")
+					+elem-title("checkbox buttons")
 				+checkbox-expanded("additional-options", "", "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
 			div(class = "field_bigMargin")
 				.title-margin 
-					+label-text("radio buttons")
+					+elem-title("radio buttons")
 				.radio-list
 					+radio-items("Мужчина", "Женщина")
 			div(class = "field_bigMargin")
 				.title-margin 
-					+label-text("toggle")
+					+elem-title("toggle")
 				.spec-offer
 					+checkbox-offer("checked")
 					br
 					+checkbox-offer("")
 			div(class = "field_bigMargin")
 				.title-margin 
-					+label-text("like button")
+					+elem-title("like button")
 				br
 				.like-buttons
 					+like-button(2, "", "favorite_border")
 					+like-button(12, "like-button_marked", "favorite")
 			div(class = "field_bigMargin")
 				.title-margin 
-					+label-text("rate button")
+					+elem-title("rate button")
 				br
 				.rate-buttons
 					.rate-buttons_left
@@ -123,13 +123,13 @@ block content
 			.field_bigMargin
 				.range-slider
 					div(class="range-slider__title slider-title") 
-						+label-text("range slider")
+						+elem-title("range slider")
 						span.slider-title__values 5 000 &#8381; - 10 000 &#8381;
 					.range-slider__content
 						+range-slider
 			.buttons
 				.title-margin 
-					+label-text("buttons")
+					+elem-title("buttons")
 				.buttons-main
 					.buttons-main__row.buttons-flex
 						+button({text: 'click me', type: 'fill', size: 'small'})
@@ -144,7 +144,7 @@ block content
 						+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
 						+arrow({ name: "arrow_forward", color: "white"} )
 				.title-margin 
-					+label-text("pagination")
+					+elem-title("pagination")
 			.pagination
 				+pagination
 				span.pagination-text 1 - 12 из 100+ вариантов аренды
@@ -152,33 +152,36 @@ block content
 		.block
 			.block-with-pad
 				div(class = "select-wrap field_smallMargin" )
-					+label-text("dropdown")
+					+elem-title("dropdown")
 					+dropdown("field_mid", "2 спальни, 2 кровати...", "amenities-list")
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap")
-					+dropdown-expanded("dropdown", "2 спальни, 2 кровати...", "field_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
+					+elem-title("dropdown")
+					+dropdown-expanded("2 спальни, 2 кровати...", "field_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
 				div(class = "select-wrap checkboxes block__checkboxes")
-					+label-text("expandable checkbox list")
+					+elem-title("expandable checkbox list")
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
-				div(class = "select-wrap field_bigMargin checkboxes block__checkboxes_expanded")
+				div(class = "select-wrap field_bigMargin checkboxes block__checkboxes-expanded")
 					+checkbox-expandable()
                     
 		.block.form-elements__block
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
-					+dropdown-expanded("dropdown", "Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
+					+elem-title("dropdown")
+					+dropdown-expanded("Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
 				div(class="block__rich-checkbox")
 					.title-margin
-						+label-text("rich checkbox buttons")
+						+elem-title("rich checkbox buttons")
 					+checkbox-expanded("accessibility", "label-access", "Широкий коридор", "Помощник для инвалидов")
 		
 		.block
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
-					+dropdown-expanded("dropdown", "Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
+					+elem-title("dropdown")
+					+dropdown-expanded("Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
 				div(class="block__bullet-list")
 					.title-margin
-						+label-text("bullet-list")
+						+elem-title("bullet-list")
 					+bullet-list({texts:["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия - после 13.00, а выезд - до 12.00"]})
 			
 		

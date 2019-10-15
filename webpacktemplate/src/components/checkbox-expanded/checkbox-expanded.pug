@@ -1,7 +1,20 @@
+//-
+  options.name - checkbox name
+  options.label_additional_class - дополнительный класс label ('label-access', '')
+  options.label_texts - массив с пунктами списка 
+  options.isExpandable - список чекбоксов сворачивается или нет (bool)
 
-
-
+  
 mixin checkbox-expanded(name, label_additional_class="", ...label_texts)
+
+    if !options
+        - options = {}
+    -
+        var classes = '';
+        classes += options.type ? ' button_' + options.type : '';
+        classes += options.size ? ' button_' + options.size : '';
+        classes += options.isHovered ? ' button_hovered' : '';
+
     -
         var contentForRichCheckbox = [
             "Ширина коридоров в номере не менее 91 см",

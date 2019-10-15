@@ -89,7 +89,7 @@
 .select-expanded__options {
   position: absolute;
   top: 77px;
-  margin-top: -8px;
+  margin-top: -13px;
 }
   
   .field_rightMargin {
@@ -170,6 +170,7 @@
     color: $shade50-color;
     text-align: center;
     line-height: 30px;
+    cursor: pointer;
   }
 
   .option-counter__minus-wrap {
@@ -181,20 +182,25 @@
   }
 
   .counter-disabled {
-    border-color: $shade25-color;
+    border-color: $shade5-color;
     color: $shade25-color;
   }  
 
   .block__checkboxes {
-    margin-top: 176px;    
+    margin-top: 184px;
   }
 
   .checkboxes .arrow {
-    top: -8px;
+    top: -15px;
   }
 
-  .block__checkboxes_expanded {
+  .block__checkboxes-expanded {
     margin-top: 49px;
+    height: 274px;
+  }
+
+  .block__checkboxes-expanded .arrow {
+    top: -10px;
   }
 
   .title-margin {
@@ -269,6 +275,7 @@
   .pagination {
     position: relative;
     margin-bottom: 10px;
+    width: 242px;
   }
 
   .pagination-text {
