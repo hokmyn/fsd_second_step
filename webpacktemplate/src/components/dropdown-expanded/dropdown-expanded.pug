@@ -1,31 +1,35 @@
 //-
-  options.text - текст кнопки
-  options.size - размер ('', 'small', 'big')
-  options.type - тип ('fill', 'transp', 'wthBoder')
-  options.isHovered - наведение курсора (bool)
+  options.text - текст по умолчанию
+  options.label_wrap - класс обертки dropdown ("field_mid","field_big")
+  options.list_name - класс основной части dropdown ('', 'small', 'big')
+  options.option_texts - массив с текстом option'ов
+  
 
 include ../arrow/arrow
-include ../elem-title/elem-title
+include ../elem-title/elem-title 
 
 
-mixin dropdown-expanded(label_text, label_wrap, list_name, number_value, ...option_texts)   
+mixin dropdown-expanded(options)   
         
-    div(class="select " + label_wrap)
-        label(for= list_name class="select-expanded__label") #{label_text}
+    if !options
+        - options = {}    
+    
+    div(class="select " + options.label_wrap)
+        label(for= options.list_name class="select-expanded__label") #{options.label_text}
     +arrow({ name: "keyboard_arrow_down", color: "black"})
-    input(type="checkbox" id= list_name)                
-    div(class="select-expanded__options options-list " + list_name)
-        each option_text, index in option_texts
+    input(type="checkbox" id= options.list_name)                
+    div(class="select-expanded__options options-list " + options.list_name)
+        each option_text, index in options.option_texts
             .options-list__item
                 .option-item
                     span #{option_text}
                     .option-counter
                         .option-counter__minus-wrap.counter-disabled
                             span.option-counter__item.counter-disabled -
-                        span.option-counter__number #{number_value}
+                        span.option-counter__number #{options.number_value[index]}
                         .option-counter__plus-wrap
                             span.option-counter__item +
-        if list_name === "guests-list"
+        if options.list_name === "guests-list"
             .options-list__btns
                 .select-btns
                     span.select-btns__submit применить

@@ -25,8 +25,8 @@ input[id^="radio"]:checked + label::after {
     content: "";
     @include size(12px);
     position: absolute;
-    left: 4.5px;
-    top: 5px;
+    left: 4px;
+    top: 4px;
     border-radius: 50%;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

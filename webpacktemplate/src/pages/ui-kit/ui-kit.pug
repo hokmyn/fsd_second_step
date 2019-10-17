@@ -89,7 +89,7 @@ block content
 			div(class = "field_bigMargin")
 				.title-margin 
 					+elem-title("checkbox buttons")
-				+checkbox-expanded("additional-options", "", "Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)")
+				+checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
 			div(class = "field_bigMargin")
 				.title-margin 
 					+elem-title("radio buttons")
@@ -157,7 +157,7 @@ block content
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap")
 					+elem-title("dropdown")
-					+dropdown-expanded("2 спальни, 2 кровати...", "field_mid", "amenities-list", 0, "спальни", "кровати", "ванные комнаты")
+					+dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", list_name: "amenities-list", number_value: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
 				div(class = "select-wrap checkboxes block__checkboxes")
 					+elem-title("expandable checkbox list")
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
@@ -168,17 +168,17 @@ block content
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
 					+elem-title("dropdown")
-					+dropdown-expanded("Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
+					+dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", list_name: "guests-list", number_value: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
 				div(class="block__rich-checkbox")
 					.title-margin
 						+elem-title("rich checkbox buttons")
-					+checkbox-expanded("accessibility", "label-access", "Широкий коридор", "Помощник для инвалидов")
+					+checkbox-expanded({name: "accessibility", label_additional_class: "label-access", label_texts: ["Широкий коридор", "Помощник для инвалидов"], isExpandable: false, richCheckboxContent: ["Ширина коридоров в номере не менее 91 см", "На 1 этаже вас встретит специалист и проводит до номера"]})
 		
 		.block
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
 					+elem-title("dropdown")
-					+dropdown-expanded("Сколько гостей", "field_big", "guests-list", 0, "взрослые", "дети", "младенцы")
+					+dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", list_name: "guests-list", number_value: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"]})
 				div(class="block__bullet-list")
 					.title-margin
 						+elem-title("bullet-list")

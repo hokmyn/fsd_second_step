@@ -2,6 +2,7 @@
     transform: rotate(-180deg);
 }
 
-#expandableCheckboxTitle:checked ~ div ~ div {
-    display: block;
+#expandableCheckboxTitle:checked~div~div {
+    display: none;
 }
+

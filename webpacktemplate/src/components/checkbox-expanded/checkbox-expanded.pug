@@ -3,27 +3,24 @@
   options.label_additional_class - дополнительный класс label ('label-access', '')
   options.label_texts - массив с пунктами списка 
   options.isExpandable - список чекбоксов сворачивается или нет (bool)
+  options.richCheckboxContent - массив с дополнительными параметрами для rich checkbox
 
   
-mixin checkbox-expanded(name, label_additional_class="", ...label_texts)
-
+mixin checkbox-expanded(options)
+    
     if !options
         - options = {}
     -
         var classes = '';
-        classes += options.type ? ' button_' + options.type : '';
-        classes += options.size ? ' button_' + options.size : '';
-        classes += options.isHovered ? ' button_hovered' : '';
 
-    -
-        var contentForRichCheckbox = [
-            "Ширина коридоров в номере не менее 91 см",
-            "На 1 этаже вас встретит специалист и проводит до номера"
-        ];    
-    .checkboxes-content
-        each label_text, index in label_texts
+        if(options.isExpandable)
+            classes += " checkbox-expandable"; 
+
+    div.checkboxes-content(class=classes)
+        each label_text, index in options.label_texts
             .checkboxes-content__item
-                input(type="checkbox" id="checkbox_" + name + "_" + index name= name value=label_text)
-                label(for="checkbox_" + name + "_" + index class="checkboxes-label " + label_additional_class) #{label_text}
-                if name === "accessibility"
-                    div.label-descr= contentForRichCheckbox[index] 
+                input(type="checkbox" id="checkbox_" + options.name + "_" + index name= options.name value= options.label_text)
+                label(for="checkbox_" + options.name + "_" + index class="checkboxes-label " + options.label_additional_class) #{label_text}
+                if options.name === "accessibility"
+                    div.label-descr= options.richCheckboxContent[index]
+                          
