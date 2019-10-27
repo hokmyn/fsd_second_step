@@ -157,7 +157,7 @@ block content
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap")
 					+elem-title("dropdown")
-					+dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", list_name: "amenities-list", number_value: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
+					+dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
 				div(class = "select-wrap checkboxes block__checkboxes")
 					+elem-title("expandable checkbox list")
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
@@ -168,7 +168,7 @@ block content
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
 					+elem-title("dropdown")
-					+dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", list_name: "guests-list", number_value: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+					+dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label_default", list_name: "guests-list_default", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
 				div(class="block__rich-checkbox")
 					.title-margin
 						+elem-title("rich checkbox buttons")
@@ -178,7 +178,7 @@ block content
 			.block-with-pad
 				div(class = "select-wrap block__select-guests select-expanded")
 					+elem-title("dropdown")
-					+dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", list_name: "guests-list", number_value: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+					+dropdown-expanded({label_text: "3 гостя", label_wrap: "field_big", label_id: "guests-label",list_name: "guests-list", number_values: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"]})
 				div(class="block__bullet-list")
 					.title-margin
 						+elem-title("bullet-list")

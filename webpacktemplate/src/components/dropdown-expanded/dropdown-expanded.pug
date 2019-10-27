@@ -1,8 +1,9 @@
 //-
-  options.text - текст по умолчанию
-  options.label_wrap - класс обертки dropdown ("field_mid","field_big")
-  options.list_name - класс основной части dropdown ('', 'small', 'big')
-  options.option_texts - массив с текстом option'ов
+  options.label_text - текст по умолчанию
+  options.label_wrap - класс обертки label ("field_mid","field_big")
+  options.label_id - id label'a ("guests-label", "guests-label_default", "amenities-label")
+  options.list_name - класс основной части dropdown ('guests-list_default', 'guests-list', 'amenities-list')
+  options.option_texts - массив со значениями option'ов
   
 
 include ../arrow/arrow
@@ -15,22 +16,20 @@ mixin dropdown-expanded(options)
         - options = {}    
     
     div(class="select " + options.label_wrap)
-        label(for= options.list_name class="select-expanded__label") #{options.label_text}
+        label(for= options.list_name id= options.label_id  class="select-expanded__label") #{options.label_text}
     +arrow({ name: "keyboard_arrow_down", color: "black"})
     input(type="checkbox" id= options.list_name)                
     div(class="select-expanded__options options-list " + options.list_name)
         each option_text, index in options.option_texts
             .options-list__item
                 .option-item
-                    span #{option_text}
-                    .option-counter
-                        .option-counter__minus-wrap.counter-disabled
-                            span.option-counter__item.counter-disabled -
-                        span.option-counter__number #{options.number_value[index]}
-                        .option-counter__plus-wrap
-                            span.option-counter__item +
-        if options.list_name === "guests-list"
+                    span #{option_text} 
+                    .option-counter                        
+                        span.option-counter__item.minus(class={counter_disabled: options.number_values[index] === 0}) -
+                        span.option-counter__number #{options.number_values[index]}                        
+                        span.option-counter__item.plus +
+        if (options.list_name === "guests-list" || options.list_name === "guests-list_default") 
             .options-list__btns
                 .select-btns
-                    span.select-btns__submit применить
                     span.select-btns__clear очистить
+                    span.select-btns__submit применить
