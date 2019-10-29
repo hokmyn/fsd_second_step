@@ -1,0 +1,36 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.cards {
+    @include size(1440px, 1350px);
+    padding: 150px 140px 140px;
+    display: grid;
+    grid-template-columns: 380px 380px 320px;
+    grid-template-rows: auto;
+    grid-gap: 40px;
+    background-color: #E5E5E5;
+    & .logo {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+}
+
+.card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 40px 30px 30px;
+    &_title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 30px;
+        color: #1F2041;
+        margin-bottom: 20px;
+        font-family: "Open Sans";
+    }
+}
+

@@ -1,8 +1,5 @@
 @import "../../styles/mixins";
 
 .logo {
-	position: absolute;
-	@include size(48px);
-	left: 30px;
-	top: 30px;
+	@include size(48px);	
 }
