@@ -1,6 +1,13 @@
 extends ../main/main
 
 include ../../components/logo/logo
+include ../../components/dropdown/dropdown
+include ../../components/elem-title/elem-title
+include ../../components/arrow/arrow
+include ../../components/button/button
+include ../../components/text-field/text-field
+include ../../components/radio-items/radio-items
+include ../../components/checkbox-offer/checkbox-offer
 
 block title 
 	| Cards
@@ -9,10 +16,47 @@ block content
 	section.cards
 		+logo
 		.card.card1
-			.card_title Найдем номера под ваши пожелания
-			
+			.card__title Найдем номера под ваши пожелания
+			div(class = "select-wrap field_smallMargin field_rightMargin")
+				+elem-title("прибытие")
+				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			div(class = "select-wrap field_smallMargin")
+				+elem-title("выезд")
+				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			div(class = "select-wrap field_midMargin")
+				+elem-title("гости")
+				+dropdown("field_big", "Сколько гостей", "guests-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			.field_midMargin
+				+button({text: 'подобрать номер', type: 'fill', size: 'big'})
+				+arrow({ name: "arrow_forward", color: "white"} )
 		.card.card2
 		.card.card3
 		.card.card4
+			.card__title Регистрация аккаунта
+			.card__input
+				+text-field("text", "block__input", "Имя")
+			.card__input
+				+text-field("text", "block__input", "Фамилия")
+			.field_smallMargin
+				+radio-items("Мужчина", "Женщина")
+			.field_smallMargin
+				+elem-title("дата рождения")
+				+text-field("text", "block__input block__input_date", "ДД.ММ.ГГГГ")
+			.field_smallMargin
+				+elem-title("данные для входа в сервис")
+				.card__input
+					+text-field("email", "block__input", "Email")
+				.card__input
+					+text-field("password", "block__input", "Пароль")
+				+checkbox-offer("")
+			.field_midMargin
+				+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
+				+arrow({ name: "arrow_forward", color: "white"} )
+			.field_midMargin.account
+				.account__text Уже есть аккаунт на Toxin
+				+button({text: 'войти', type: 'transp', size: 'small'})
 		.card.card5
 		.card.card6

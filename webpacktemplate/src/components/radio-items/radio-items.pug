@@ -1,7 +1,6 @@
-
-
-mixin radio-items(...label_texts) 
-    each label_text, index in label_texts
-        .radio-list__item.radio-item
-            input(type="radio" id="radio" + index name="gender")
-            label(for="radio" + index class="radio-item__label number-content__text") #{label_text}
+mixin radio-items(...label_texts)
+    .radio-list
+        each label_text, index in label_texts
+            .radio-list__item.radio-item
+                input(type="radio" id="radio" + index name="gender")
+                label(for="radio" + index class="radio-item__label number-content__text") #{label_text}

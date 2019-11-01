@@ -1,15 +1,21 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
+.radio-list {
+    display: flex;
+}
+
 .radio-list__item {
     position: relative;
-    display: inline-block;
     padding-left: 30px;
-  
-
     &:first-child {
         margin-right: 20px;
     }    
+}
+
+.radio-item {
+    font-size: 14px;
+    line-height: 20px;
 }
 
 .radio-item__label::before {
@@ -19,6 +25,7 @@
     border: 1px solid $shade25-color;
     border-radius: 50%;
     left: 0;
+    line-height: 24px;
 }
 
 input[id^="radio"]:checked + label::after {

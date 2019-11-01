@@ -5,14 +5,14 @@
     position: relative;
 }
 
-.checkbox-offer__label {
-    margin-left: 50px;
-    margin-bottom: 14px;    
-}
+
 
 .offer-label {
     display: inline-block;
     width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    margin-left: 50px;
     &::before {
         content: "";
         position: absolute;

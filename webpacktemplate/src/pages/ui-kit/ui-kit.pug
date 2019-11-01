@@ -99,9 +99,10 @@ block content
 				.title-margin 
 					+elem-title("toggle")
 				.spec-offer
-					+checkbox-offer("checked")
-					br
-					+checkbox-offer("")
+					.checkbox-offer__label
+						+checkbox-offer("checked")
+					.checkbox-offer__label
+						+checkbox-offer("")
 			div(class = "field_bigMargin")
 				.title-margin 
 					+elem-title("like button")
