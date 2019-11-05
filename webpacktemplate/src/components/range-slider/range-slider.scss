@@ -1,6 +1,10 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
+.range-slider {
+    width: 266px;
+}
+
 #slider-range {
         @include size(266px, 6px);
         background: #FFFFFF;

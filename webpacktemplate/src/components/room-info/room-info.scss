@@ -1,0 +1,29 @@
+@import "../../styles/vars";
+
+.room-info {
+    font-family: "Montserrat-Bold";
+    line-height: 18px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    &__number {
+        margin-right: 5px;
+        display: inline-block;
+    }
+}
+
+.room-number {
+    font-family: "Quicksand-Bold";
+    color: $shade100-color;
+}
+
+.room-class {
+    font-size: 12px;
+    line-height: 15px;
+    color: $purple-color;
+}
+
+.room-price {
+    color: $shade50-color;
+}

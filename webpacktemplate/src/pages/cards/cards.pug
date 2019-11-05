@@ -8,6 +8,8 @@ include ../../components/button/button
 include ../../components/text-field/text-field
 include ../../components/radio-items/radio-items
 include ../../components/checkbox-offer/checkbox-offer
+include ../../components/room-info/room-info
+include ../../components/datepicker/datepicker
 
 block title 
 	| Cards
@@ -25,14 +27,31 @@ block content
 				+elem-title("выезд")
 				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			.datepicker
+				+datepicker
 			div(class = "select-wrap field_midMargin")
 				+elem-title("гости")
 				+dropdown("field_big", "Сколько гостей", "guests-list")
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			.field_midMargin
+			.field_big
 				+button({text: 'подобрать номер', type: 'fill', size: 'big'})
 				+arrow({ name: "arrow_forward", color: "white"} )
 		.card.card2
+			.field_smallMargin
+				+room-info({number: "888", class:"люкс", price: "9 990"})
+			div(class = "select-wrap field_smallMargin field_rightMargin")
+				+elem-title("прибытие")
+				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			div(class = "select-wrap field_smallMargin")
+				+elem-title("выезд")
+				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			div(class = "select-wrap field_midMargin")
+				+elem-title("гости")
+				+dropdown("field_big", "3 гостя", "guests-list")
+				+arrow({ name: "keyboard_arrow_down", color: "black"})
+			
 		.card.card3
 		.card.card4
 			.card__title Регистрация аккаунта
@@ -55,7 +74,7 @@ block content
 			.field_midMargin
 				+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
 				+arrow({ name: "arrow_forward", color: "white"} )
-			.field_midMargin.account
+			.account
 				.account__text Уже есть аккаунт на Toxin
 				+button({text: 'войти', type: 'transp', size: 'small'})
 		.card.card5

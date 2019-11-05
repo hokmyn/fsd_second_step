@@ -1,0 +1,17 @@
+//-
+    options.number - room number
+    options.class - room class
+    options.price - room price
+
+mixin room-info(options)
+
+    if !options
+        - options = {}
+
+    .room-info
+        .room-info_left
+            .room-info__number
+                span.room-number №#{options.number}
+            span.room-class #{options.class}
+        .room-info_right
+            span.room-price #{options.price}&#8381; в сутки

@@ -2,8 +2,11 @@
 @import "../../styles/mixins";
 @import "../../styles/fonts";
 
-.colors-and-types{
+body {
   width: 1440px;
+}
+
+.colors-and-types{
   margin: 0 auto;
   padding-top: 145px;
   padding-left: 150px;
@@ -48,12 +51,10 @@
 .field_smallMargin {
   margin-bottom: $marginSmall;
   position: relative;
-  display: inline-block;
 }
 
 .field_bigMargin {
   margin-bottom: $marginBig;
-  display: inline-block;
   position: relative;
 }
 
@@ -68,6 +69,7 @@
 
   .field_small {
     @include size(150px, 44px);
+    
   }
 
   .field_mid {
@@ -76,7 +78,8 @@
   }
 
   .field_big {
-    @include size(320px, 44px);    
+    @include size(320px, 44px);
+    position: relative;
   }  
 
   .block-with-pad {
@@ -106,7 +109,6 @@
 
   .title-margin {
     margin-bottom: 16px;
-    display: inline-block;
     width: 100%;
   }
 
@@ -133,8 +135,7 @@
     width: 90px;
     display: flex;
     justify-content: space-between;
-  }
-  
+  }  
 
   .block__select-guests {
     margin-bottom: 98px;
