@@ -9,7 +9,7 @@ include ../../components/text-field/text-field
 include ../../components/radio-items/radio-items
 include ../../components/checkbox-offer/checkbox-offer
 include ../../components/room-info/room-info
-include ../../components/datepicker/datepicker
+include ../../components/date-dropdown/date-dropdown
 
 block title 
 	| Cards
@@ -19,16 +19,12 @@ block content
 		+logo
 		.card.card1
 			.card__title Найдем номера под ваши пожелания
-			div(class = "select-wrap field_smallMargin field_rightMargin")
+			div(class = "datepicker-wrap field_smallMargin field_rightMargin")
 				+elem-title("прибытие")
-				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			div(class = "select-wrap field_smallMargin")
+				+date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-arrival'})
+			div(class = "datepicker-wrap field_smallMargin")
 				+elem-title("выезд")
-				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			.datepicker
-				+datepicker
+				+date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-departure'})
 			div(class = "select-wrap field_midMargin")
 				+elem-title("гости")
 				+dropdown("field_big", "Сколько гостей", "guests-list")
@@ -39,14 +35,12 @@ block content
 		.card.card2
 			.field_smallMargin
 				+room-info({number: "888", class:"люкс", price: "9 990"})
-			div(class = "select-wrap field_smallMargin field_rightMargin")
+			div(class = "datepicker-wrap field_smallMargin field_rightMargin")
 				+elem-title("прибытие")
-				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			div(class = "select-wrap field_smallMargin")
+				+date-dropdown({placeholder_text: "19.08.2019", datepicker_class: 'booking-arrival'})
+			div(class = "datepicker-wrap field_smallMargin")
 				+elem-title("выезд")
-				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
+				+date-dropdown({placeholder_text: "23.08.2019", datepicker_class: 'booking-departure'})
 			div(class = "select-wrap field_midMargin")
 				+elem-title("гости")
 				+dropdown("field_big", "3 гостя", "guests-list")

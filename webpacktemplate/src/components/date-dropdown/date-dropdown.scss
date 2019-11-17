@@ -1,0 +1,11 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.date-dropdown .arrow {
+    top: 0px;
+    z-index: 2;
+}
+
+#datepickers-container .datepicker {
+    width: 318px;
+}

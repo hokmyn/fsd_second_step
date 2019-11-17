@@ -69,7 +69,7 @@ body {
 
   .field_small {
     @include size(150px, 44px);
-    
+    position: relative;
   }
 
   .field_mid {

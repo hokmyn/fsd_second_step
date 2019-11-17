@@ -1,0 +1,17 @@
+//-  
+  options.placeholder_text (string) - placeholder text
+  options.datepicker_class (string) - классы datepickera
+
+include ../text-field/text-field
+include ../arrow/arrow
+
+mixin date-dropdown(options)
+  if !options
+      - options = {}
+  -
+    let classes = '';
+    classes += options.datepicker_class ? options.datepicker_class : '';
+
+  div(class="date-dropdown field_small")
+      +text-field({type: "text", input_class: "input input_date " + classes, placeholder_text: options.placeholder_text})
+      +arrow({ name: "keyboard_arrow_down", color: "black"})

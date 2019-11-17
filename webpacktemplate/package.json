@@ -39,6 +39,7 @@
   "dependencies": {
     "@babel/core": "^7.5.0",
     "@babel/preset-env": "^7.5.0",
+    "air-datepicker": "^2.2.3",
     "babel-loader": "^8.0.6"
   }
 }
