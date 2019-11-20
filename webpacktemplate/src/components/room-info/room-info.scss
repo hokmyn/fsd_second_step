@@ -14,8 +14,11 @@
 }
 
 .room-number {
-    font-family: "Quicksand-Bold";
-    color: $shade100-color;
+    font-family: "OpenSans-Bold";
+    color: $shade100-color; 
+    font-size: 26px;
+    line-height: 10px;
+    font-weight: bold;
 }
 
 .room-class {

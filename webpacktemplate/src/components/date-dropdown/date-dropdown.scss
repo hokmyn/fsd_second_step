@@ -3,9 +3,29 @@
 
 .date-dropdown .arrow {
     top: 0px;
-    z-index: 2;
+    
 }
 
 #datepickers-container .datepicker {
-    width: 318px;
+    padding: 20px;
+    width: 278px;
+    & .datepicker--pointer {
+        display: none;
+    }
+    & .material-icons {
+        color: #BC9CFF;
+        
+    }
+    & .datepicker--nav {
+        padding: 0;
+    }
+    & .datepicker--nav-action {
+        @include size(24px);
+    }
+    & .datepicker--nav-title {
+        font-family: "OpenSans-Bold";
+        font-weight: bold;
+        font-size: 19px;
+        line-height: 24px;
+    }
 }
