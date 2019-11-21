@@ -13,11 +13,19 @@
         display: none;
     }
     & .material-icons {
-        color: #BC9CFF;
-        
+        color: #BC9CFF;        
+    }
+    & .datepicker--content {
+        padding: 0;
+        width: 280px;
     }
     & .datepicker--nav {
         padding: 0;
+        display: flex;
+        align-items: center;
+        border: none;
+        min-height: 24px;
+        margin-bottom: 32px;
     }
     & .datepicker--nav-action {
         @include size(24px);
@@ -27,5 +35,62 @@
         font-weight: bold;
         font-size: 19px;
         line-height: 24px;
+        color: #1F2041;
+    }
+    & .datepicker--days-names {
+        margin: 0;
+    }
+    & .datepicker--day-name {
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: capitalize;
+        color: $purple-color;
+        font-family: "Montserrat-Bold";
+        @include size(40px);
+    }
+    & .datepicker--cell {
+        @include size(40px);
+        font-family: Montserrat;
+        font-size: 12px;
+        line-height: 15px;
+        color: $shade50-color;
+    }
+    & .-other-month- {
+        color: $shade25-color;
+    }
+    & .-current- {
+        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+        border-radius: 22px;
+        color: #fff;
+    }
+    & .-range-from-,
+    & .-range-to- {
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: 22px;
+        color: #fff;
+        position: relative;
+    }
+    & .-range-from-:after,
+    & .-range-to-:before {
+        content: "";
+        position: absolute;
+        @include size(20px, 40px);
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);        
+        opacity: 0.25;
+    }
+    & .-range-from-:after {
+        right: 0;
+    }
+    & .-range-to-:before {
+        left: 0;
+    }
+    & .-in-range- {
+        opacity: 0.25;
+        color: $shade75-color;
+        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+        border-radius: none;
+    }
+    & .datepicker--buttons {
+        border-top: none;
     }
 }
