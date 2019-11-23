@@ -9,7 +9,7 @@ if (!$.fn.datepicker) {
 $("input[class*='-arrival'], input[class*='-departure']").attr("readonly", "true");
 
 let applyButton = document.createElement('span');
-$(applyButton).addClass("select-btns__submit");
+$(applyButton).addClass("select-btns__submit datepicker--button");
 $(applyButton).text("применить");
 
 $("input[class*='-arrival'").datepicker({
