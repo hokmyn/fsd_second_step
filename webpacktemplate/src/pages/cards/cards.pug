@@ -1,15 +1,11 @@
 extends ../main/main
 
 include ../../components/logo/logo
-include ../../components/dropdown/dropdown
-include ../../components/elem-title/elem-title
-include ../../components/arrow/arrow
-include ../../components/button/button
-include ../../components/text-field/text-field
-include ../../components/radio-items/radio-items
-include ../../components/checkbox-offer/checkbox-offer
-include ../../components/room-info/room-info
-include ../../components/date-dropdown/date-dropdown
+include ../../components/form-booking/form-booking
+include ../../components/form-select/form-select
+include ../../components/form-registration/form-registration
+include ../../components/form-enter/form-enter
+include ../../components/form-datepicker/form-datepicker
 
 block title 
 	| Cards
@@ -17,59 +13,17 @@ block title
 block content
 	section.cards
 		+logo
-		.card.card1
-			.card__title Найдем номера под ваши пожелания
-			div(class = "datepicker-wrap field_smallMargin field_rightMargin")
-				+elem-title("прибытие")
-				+date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-arrival'})
-			div(class = "datepicker-wrap field_smallMargin")
-				+elem-title("выезд")
-				+date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-departure'})
-			div(class = "select-wrap field_midMargin")
-				+elem-title("гости")
-				+dropdown("field_big", "Сколько гостей", "guests-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			.field_big
-				+button({text: 'подобрать номер', type: 'fill', size: 'big'})
-				+arrow({ name: "arrow_forward", color: "white"} )
-		.card.card2
-			.field_smallMargin
-				+room-info({number: "888", class:"люкс", price: "9 990"})
-			div(class = "datepicker-wrap field_smallMargin field_rightMargin")
-				+elem-title("прибытие")
-				+date-dropdown({placeholder_text: "19.08.2019", datepicker_class: 'booking-arrival'})
-			div(class = "datepicker-wrap field_smallMargin")
-				+elem-title("выезд")
-				+date-dropdown({placeholder_text: "23.08.2019", datepicker_class: 'booking-departure'})
-			div(class = "select-wrap field_midMargin")
-				+elem-title("гости")
-				+dropdown("field_big", "3 гостя", "guests-list")
-				+arrow({ name: "keyboard_arrow_down", color: "black"})
-			
-		.card.card3
-		.card.card4
-			.card__title Регистрация аккаунта
-			.card__input
-				+text-field("text", "block__input", "Имя")
-			.card__input
-				+text-field("text", "block__input", "Фамилия")
-			.field_smallMargin
-				+radio-items("Мужчина", "Женщина")
-			.field_smallMargin
-				+elem-title("дата рождения")
-				+text-field("text", "block__input block__input_date", "ДД.ММ.ГГГГ")
-			.field_smallMargin
-				+elem-title("данные для входа в сервис")
-				.card__input
-					+text-field("email", "block__input", "Email")
-				.card__input
-					+text-field("password", "block__input", "Пароль")
-				+checkbox-offer("")
-			.field_midMargin
-				+button({text: 'перейти к оплате', type: 'fill', size: 'big'})
-				+arrow({ name: "arrow_forward", color: "white"} )
-			.account
-				.account__text Уже есть аккаунт на Toxin
-				+button({text: 'войти', type: 'transp', size: 'small'})
-		.card.card5
-		.card.card6
+		.cards__column
+			.card
+				+form-select
+			.card
+				+form-registration
+		.cards__column
+			.card
+				+form-booking
+			.card
+				+form-enter
+		.cards__column
+			.field_bigMargin
+				+form-datepicker
+			.card.card6

@@ -3,7 +3,7 @@
 @import "../../styles/fonts";
 
 .field_midMargin {
-    margin-bottom: $marginSmall;
+    margin-bottom: $marginMid;
     position: relative;
     display: inline-block;
 }
@@ -11,12 +11,10 @@
 .cards {
     @include size(1440px, 1350px);
     padding: 150px 140px 140px;
-    display: grid;
-    grid-template-columns: 380px 380px 320px;
-    grid-template-rows: auto;
-    grid-gap: 40px;
     background-color: #E5E5E5;
     position: relative;
+    display: flex;
+    justify-content: space-between;
     & .logo {
         position: absolute;
         left: 30px;
@@ -25,6 +23,10 @@
     & .arrow{
         z-index: 1;
         cursor: text;
+    }
+    &__column {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -36,13 +38,16 @@
     border-radius: 4px;
     padding: 40px 29px 30px;
     position: relative;
+    width: 380px;
+    margin-bottom: 40px;
     &__title {
         font-weight: bold;
         font-size: 28px;
         line-height: 30px;
         color: #1F2041;
         margin-bottom: 20px;
-        font-family: "Open Sans";
+        font-family: "OpenSans-Bold";
+        margin-bottom: 20px;
     }
 }
 

@@ -1,0 +1,39 @@
+include ../../components/room-info/room-info
+include ../../components/text-field/text-field
+include ../../components/date-dropdown/date-dropdown
+include ../../components/arrow/arrow
+include ../../components/button/button
+
+mixin form-booking()
+    form.form-booking
+        .field_smallMargin
+            +room-info({number: "888", class:"люкс", price: "9 990"})
+        div(class = "datepicker-wrap field_smallMargin field_rightMargin")
+            +elem-title("прибытие")
+            +date-dropdown({placeholder_text: "19.08.2019", datepicker_class: 'booking-arrival'})
+        div(class = "datepicker-wrap field_smallMargin")
+            +elem-title("выезд")
+            +date-dropdown({placeholder_text: "23.08.2019", datepicker_class: 'booking-departure'})
+        div(class = "select-wrap field_midMargin")
+            +elem-title("гости")
+            +dropdown("field_big", "3 гостя", "guests-list")
+            +arrow({ name: "keyboard_arrow_down", color: "black"})        
+        .roomPrice-calc
+            .calcPrice-item
+                .calcPrice-item__text 9900&#8381; &#215; 4
+                .calcPrice-item__val 39 960&#8381;
+            .calcPrice-item
+                .calcPrice-item__text Сбор за услуги: скидка 2179&#8381;
+                .calcPrice-item__val 0&#8381;
+            .calcPrice-item
+                .calcPrice-item__text Сбор за дополнительные услуги
+                .calcPrice-item__val 300&#8381;
+            .calcPrice-item
+                .calcPrice-item__total-text Итого
+                .calcPrice-item__line
+                .calcPrice-item__total-val 38 081<span>&#8381;</span>
+        .field_big
+            +button({text: 'забронировать', type: 'fill', size: 'big'})
+            +arrow({ name: "arrow_forward", color: "white"} )
+
+                

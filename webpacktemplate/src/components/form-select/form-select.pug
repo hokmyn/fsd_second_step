@@ -1,0 +1,23 @@
+include ../../components/dropdown/dropdown
+include ../../components/elem-title/elem-title
+include ../../components/arrow/arrow
+include ../../components/button/button
+include ../../components/text-field/text-field
+include ../../components/date-dropdown/date-dropdown
+
+mixin form-select()
+    form.form-select
+        .card__title Найдем номера под ваши пожелания
+        div(class = "datepicker-wrap field_smallMargin field_rightMargin")
+            +elem-title("прибытие")
+            +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-arrival'})
+        div(class = "datepicker-wrap field_smallMargin")
+            +elem-title("выезд")
+            +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-departure'})
+        div(class = "select-wrap field_midMargin")
+            +elem-title("гости")
+            +dropdown("field_big", "Сколько гостей", "guests-list")
+            +arrow({ name: "keyboard_arrow_down", color: "black"})
+        .field_big
+            +button({text: 'подобрать номер', type: 'fill', size: 'big'})
+            +arrow({ name: "arrow_forward", color: "white"} )

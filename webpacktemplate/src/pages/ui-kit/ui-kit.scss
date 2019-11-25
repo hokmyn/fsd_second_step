@@ -63,54 +63,54 @@ body {
   display: inline-block;
 }
   
-  .field_rightMargin {
-    margin-right: 20px;
-  }   
+.field_rightMargin {
+  margin-right: 20px;
+}   
 
-  .field_small {
-    @include size(150px, 44px);
-    position: relative;
-  }
+.field_small {
+  @include size(150px, 44px);
+  position: relative;
+}
 
-  .field_mid {
-    @include size(266px, 44px);
-    position: relative;
-  }
+.field_mid {
+  @include size(266px, 44px);
+  position: relative;
+}
 
-  .field_big {
-    @include size(320px, 44px);
-    position: relative;
-  }  
+.field_big {
+  @include size(320px, 44px);
+  position: relative;
+}  
 
-  .block-with-pad {
-    padding-top: 100px;
-  }
-  
-  input[type="checkbox"], input[type="radio"] {
-    display: none;
-  }    
+.block-with-pad {
+  padding-top: 100px;
+}
 
-  .block__checkboxes {
-    margin-top: 184px;
-  }
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}    
 
-  .checkboxes .arrow {
-    top: -15px;
-  }
+.block__checkboxes {
+  margin-top: 184px;
+}
 
-  .block__checkboxes-expanded {
-    margin-top: 49px;
-    height: 274px;
-  }
+.checkboxes .arrow {
+  top: -15px;
+}
 
-  .block__checkboxes-expanded .arrow {
-    top: -8px;
-  }
+.block__checkboxes-expanded {
+  margin-top: 49px;
+  height: 274px;
+}
 
-  .title-margin {
-    margin-bottom: 16px;
-    width: 100%;
-  }
+.block__checkboxes-expanded .arrow {
+  top: -8px;
+}
+
+.title-margin {
+  margin-bottom: 16px;
+  width: 100%;
+}
 
 .number-content {
     padding-left: 10px;
