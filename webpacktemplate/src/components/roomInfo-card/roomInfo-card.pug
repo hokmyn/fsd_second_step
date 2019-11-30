@@ -1,0 +1,46 @@
+//-  
+  options.imageSrc (string) - image source
+  options.roomNumber (string) - room number
+  options.roomClass (string) - room class
+  options.roomPrice (string) - room price
+  options.markedStars (number) - count of marked stars
+  options.commentsNum (number) - count of comments
+
+include ../../components/arrow/arrow
+include ../../components/roomInfo-title/roomInfo-title
+include ../../components/rate-buttons/rate-buttons
+
+mixin roomInfo-card(options)
+
+    if !options
+        - options = {}
+
+    .roomInfo-card
+        .roomInfo-card__slider.room-slider
+            img.roomInfo-card__image(src= options.imageSrc, alt= options.roomNumber)
+            .room-slider__control
+                +arrow({ name: "keyboard_arrow_down", color: "white"})
+                +arrow({ name: "keyboard_arrow_down", color: "white"})
+            .room-slider__toggle
+                label
+                    input(type="radio" name="slide-toggle" value="1" checked)
+                    span
+                label
+                    input(type="radio" name="slide-toggle" value="2")
+                    span
+                label
+                    input(type="radio" name="slide-toggle" value="3")
+                    span
+                label
+                    input(type="radio" name="slide-toggle" value="4")
+                    span
+        .roomInfo-card__content.room-content
+            +roomInfo-title({number: options.roomNumber, class: options.roomClass, price: options.roomPrice})
+            .room-content__line
+            .room-content__rate
+                +rate-buttons({marked_count: options.markedStars})
+                .comments-count
+                    strong #{options.commentsNum}
+                    | &nbsp;отзывов
+
+        

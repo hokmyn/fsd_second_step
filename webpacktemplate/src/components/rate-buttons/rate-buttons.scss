@@ -4,6 +4,7 @@
 .rate-buttons {
     display: flex;
     justify-content: space-between;
+    width: 120px;
     &_left, &_right {
         @include size(120px, 24px);
     }

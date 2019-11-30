@@ -6,6 +6,7 @@ include ../../components/form-select/form-select
 include ../../components/form-registration/form-registration
 include ../../components/form-enter/form-enter
 include ../../components/form-datepicker/form-datepicker
+include ../../components/roomInfo-card/roomInfo-card
 
 block title 
 	| Cards
@@ -26,4 +27,19 @@ block content
 		.cards__column
 			.field_bigMargin
 				+form-datepicker
-			.card.card6
+			.cards__roomInfo
+				+roomInfo-card({
+					imageSrc:"../../assets/img/room-888.jpg",
+					roomNumber:"888",
+					roomClass: "люкс",
+					roomPrice: "9 990",
+					markedStars: 5,
+					commentsNum: 145})
+			.cards__roomInfo
+				+roomInfo-card({
+					imageSrc:"../../assets/img/room-840.jpg",
+					roomNumber:"840",
+					roomClass: "",
+					roomPrice: "9 990",
+					markedStars: 4,
+					commentsNum: 65})

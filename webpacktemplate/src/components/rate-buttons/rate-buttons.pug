@@ -1,8 +1,9 @@
 
 
-mixin rate-buttons(marked_count)
-    - for (var x = 1; x <= 5; x++)
-        if x <= marked_count
-            <i class="material-icons rate-buttons__star">star_rate</i>
-        else
-            <i class="material-icons rate-buttons__star">star_border</i>
+mixin rate-buttons(options)
+    .rate-buttons
+        - for (var x = 1; x <= 5; x++)
+            if x <= options.marked_count
+                <i class="material-icons rate-buttons__star">star_rate</i>
+            else
+                <i class="material-icons rate-buttons__star">star_border</i>

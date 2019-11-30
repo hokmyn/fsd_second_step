@@ -3,16 +3,16 @@
     options.class - room class
     options.price - room price
 
-mixin room-info(options)
+mixin roomInfo-title(options)
 
     if !options
         - options = {}
 
-    .room-info
-        .room-info_left
-            .room-info__number
+    .roomInfo-title
+        .roomInfo-title_left
+            .room-number
                 span №&nbsp;
-                span.room-number #{options.number}
+                span.number #{options.number}
             span.room-class #{options.class}
-        .room-info_right
+        .roomInfo-title_right
             span.room-price #{options.price}&#8381; в сутки
