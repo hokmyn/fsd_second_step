@@ -1,0 +1,17 @@
+extends ../main/main
+
+include ../../components/logo/logo
+include ../../components/header/header
+
+block title 
+	| Headers&footers
+
+block content
+	section.headers-and-footers
+		+logo({imgType: 'pages'})
+		.field_bigMargin
+			+header({isAuth: false})
+		.field_bigMargin
+			+header({isAuth: true})
+			
+			

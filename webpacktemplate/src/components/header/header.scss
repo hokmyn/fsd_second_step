@@ -1,0 +1,51 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.header {
+    height: 70px;
+    background: #fff;
+    width: 100%;
+    padding-left: 9.7%;
+    padding-right: 9.7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    @media screen and (max-width: 915px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    & .enter-buttons {
+        display: flex;
+        & div:first-child {
+            margin-right: 20px;
+        }
+    }
+    & .standart-nav {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    & .username {
+        padding-left: 30px;
+        border-left: 1px solid $shade25-color;
+        color: $shade25-color;
+    }
+    & .transp-wrap {
+        @include size(79px, 34px)
+    }
+    & .button_transp {
+        @include size(74px, 30px)
+    }
+    & .button_fill {
+        @include size(101px, 34px)
+    }
+    & i {
+        display: none;
+        @media screen and (max-width: 777px) {
+            display: inline-block;
+            margin-right: 10px;
+            color: $purple-color;
+        }
+    }
+}

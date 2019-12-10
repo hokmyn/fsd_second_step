@@ -1,0 +1,21 @@
+//-
+  options.isAuth (bool) - guest authorized or not
+
+include ../../components/logo/logo
+include ../../components/menu/menu
+include ../../components/button/button
+
+mixin header(options)
+    if !options
+        - options = {}
+
+    header.header
+        +logo({imgType: 'h&f'})
+        .standart-nav
+            +menu()
+            if(options.isAuth)
+                .username Cosmin Negoita
+            else
+                .enter-buttons
+                    +button({text: 'login', type: 'transp', size: ''})
+                    +button({text: 'register', type: 'fill', size: ''})

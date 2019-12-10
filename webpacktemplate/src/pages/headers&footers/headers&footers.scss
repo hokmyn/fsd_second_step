@@ -1,0 +1,16 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.headers-and-footers {
+    position: relative;
+    width: 100%;
+    padding-top: 150px;
+    padding-bottom: 130px;
+    background: #F4F4F6;
+    & .logo {
+        position: absolute;
+        left: 30px;
+        top: 30px;
+    }
+}
