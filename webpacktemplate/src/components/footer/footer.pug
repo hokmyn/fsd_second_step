@@ -1,0 +1,47 @@
+include ../../components/logo/logo
+include ../../components/text-field/text-field
+include ../../components/arrow/arrow
+include ../../components/social/social
+
+mixin footer()
+	footer.footer
+		.footer__content
+			.footer__block.footer-logo
+				.field_smallMargin
+					+logo({imgType: 'h&f'})
+				.footer-logo__content
+					| Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta tortor ac eros fermentum porta tortor ac eros
+			.footer__block.navigation
+				ul
+					li.elem-title Navigation
+					li About us
+					li News
+					li Support
+					li Products
+			.footer__block.aboutus
+				ul
+					li.elem-title About us
+					li Who we are
+					li Our team
+					li Careers
+					li Investors
+			.footer__block.support
+				ul
+					li.elem-title Support
+					li Documentation
+					li Community
+					li Get in touch
+			.footer__block.subscription
+				.elem-title subcribe to our newsletter
+				.subscription__content
+					| Receive our latest news and promotion in your inbox
+				.field_smallMargin
+					+text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
+					+arrow({ name: "arrow_forward", color: "gradient"} )
+		.line
+		.footer__copyrights
+			.copyrights
+				| Copyright 2018 Toxin Ui kit. All rights reserved
+			+social()
+			
+			

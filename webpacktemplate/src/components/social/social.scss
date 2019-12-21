@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.social img {
+    @include size(24px);
+}
+
+.social__image {
+    margin-left: 20px;
+}

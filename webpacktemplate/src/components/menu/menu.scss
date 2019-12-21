@@ -2,15 +2,19 @@
 @import "../../styles/mixins";
 
 
-ul li {
+ul.standart-nav__menu li {
     display: inline-block;
-    font-size: 14px;
-    line-height: 17px;
-    color: $shade50-color;
+    
     margin-right: 30px;
     @media screen and (max-width: 1080px) {
         margin-right: 15px;
     }
+}
+
+ul li {
+    font-size: 14px;
+    line-height: 17px;
+    color: $shade50-color;
 }
 
 .active {

@@ -2,6 +2,7 @@ extends ../main/main
 
 include ../../components/logo/logo
 include ../../components/header/header
+include ../../components/footer/footer
 
 block title 
 	| Headers&footers
@@ -13,5 +14,7 @@ block content
 			+header({isAuth: false})
 		.field_bigMargin
 			+header({isAuth: true})
+		.field_bigMargin
+			+footer()
 			
 			
