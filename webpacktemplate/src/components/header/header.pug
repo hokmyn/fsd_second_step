@@ -1,9 +1,14 @@
 //-
+  options.listItems (array) - array of list items
   options.isAuth (bool) - guest authorized or not
+  options.links (array) - array of list items links
+  options.adds (array) - array of additional classes
+  
 
 include ../../components/logo/logo
 include ../../components/menu/menu
 include ../../components/button/button
+
 
 mixin header(options)
     if !options
@@ -12,8 +17,8 @@ mixin header(options)
     header.header
         +logo({imgType: 'h&f'})
         .standart-nav
-            +menu()
-            if(options.isAuth)
+            +menu({listItems: options.listItems, links: options.links, adds: options.adds})
+            if options.isAuth
                 .username Cosmin Negoita
             else
                 .enter-buttons

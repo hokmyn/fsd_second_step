@@ -1,0 +1,23 @@
+extends ../main/main
+
+include ../../components/header/header
+include ../../components/form-select/form-select
+include ../../components/footer/footer
+
+block title 
+	| Landing Page
+
+block content
+	section.landing-page
+		+header({isAuth: false,
+				listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
+				links: ["#", "#", "#", "#", "#"],
+				adds: ["", "expandable", "", "", "expandable"]
+			})
+		.landing-page__content
+			.content
+				.content__card.card
+					+form-select
+				.content__slogan.slogan
+					| Лучшие номера для вашей работы, отдыха и просто вдохновения
+		+footer

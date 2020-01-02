@@ -1,12 +1,26 @@
+//-  
+
 include ../../components/arrow/arrow
 
-mixin menu()
-    ul.standart-nav__menu
-        li.active Home
-        li About us
-        li.services Services
-            i.material-icons keyboard_arrow_down
-        li Careers
-        li News
-        li Documentation
+mixin menu(options)
+    -
+        let listItems = '';
+        let links = "";
+        let adds = "";
+
+        listItems += options.listItems;
+        links += options.links;
+        adds += options.adds;
+
+        let arrListItems = listItems.split(",");
+        let arrLinks = links.split(",");
+        let arrAdds = adds.split(",");
+        let arrLength = arrListItems.length;      
+
+    ul.standart-nav-menu
+        - for(let i = 0; i < arrLength; i++)            
+            li(class= arrAdds[i])
+                a(class="standart-nav-menu__link" href= arrLinks[i])= arrListItems[i]
+                if arrAdds[i] === "expandable"
+                    i.material-icons keyboard_arrow_down
     i.material-icons dehaze

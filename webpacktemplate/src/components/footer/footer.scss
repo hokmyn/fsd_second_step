@@ -9,6 +9,7 @@
     padding-left: 9.7%;
     padding-right: 9.7%;
     padding-top: 100px;
+    position: relative;
     @media screen and (max-width: 1020px) {
         padding-top: 43px;
     }
@@ -92,10 +93,7 @@
             display: flex;
             justify-content: center;            
         }
-    }
-    & .footer-logo__content {
-        
-    }
+    }    
 }
 
 .footer-logo__content {

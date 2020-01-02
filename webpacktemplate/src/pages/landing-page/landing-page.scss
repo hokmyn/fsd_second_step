@@ -1,0 +1,34 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+.landing-page__content {
+    max-width: 1440px;
+    height: 900px;
+}
+
+.content {
+    @include size(100%);
+    position: relative;
+    background-image: url("/src/pages/landing-page/images/image_bg.svg");
+}
+
+.content__card {
+    position: absolute;
+    top: 70px;
+    left: 140px;
+}
+
+.content__slogan {
+    position: absolute;
+    right: 134px;
+    bottom: 18px;
+}
+
+.slogan {
+    width: 297px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
+    text-align: right;
+}

@@ -1,7 +1,7 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
-.header {
+header.header {
     height: 70px;
     background: #fff;
     width: 100%;
@@ -41,7 +41,6 @@
         @include size(101px, 34px)
     }
     & i {
-        display: none;
         @media screen and (max-width: 777px) {
             display: inline-block;
             margin-right: 10px;

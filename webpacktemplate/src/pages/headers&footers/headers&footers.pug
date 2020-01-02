@@ -11,9 +11,18 @@ block content
 	section.headers-and-footers
 		+logo({imgType: 'pages'})
 		.field_bigMargin
-			+header({isAuth: false})
+			+header({isAuth: false,
+				listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+				links: ["#", "#", "#", "#", "#", "#"],
+				adds: ["active", "", "services", "", "", ""]
+			})
 		.field_bigMargin
-			+header({isAuth: true})
+			+header({
+				isAuth: true,
+				listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+				links: ["#", "#", "#", "#", "#", "#"],
+				adds: ["active", "", "services", "", "", ""]
+				})
 		.field_bigMargin
 			+footer()
 			
