@@ -23,7 +23,7 @@
     & li {
         margin-bottom: 20px;
     }
-    & .footer__block ul {
+    & .footer-content__list {
         margin-top: 4px;
         @media screen and (max-width: 1439px) {
             margin-right: 0;
@@ -34,30 +34,81 @@
     } 
 }
 
+footer.footer-rus {
+    @media screen and (max-width: 1200px) {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    & .footer__block:first-child {
+        margin-right: 40px;
+        @media screen and (max-width: 1439px) {
+            margin-right: 0;
+        }
+    }
+    & .footer__block:nth-child(2) ul {
+        margin-right: 57px;
+        & li:last-child {
+            margin-bottom: 0;
+        }
+        @media screen and (max-width: 1439px) {
+            margin-right: 0;
+        }
+    }
+    & .footer__block:nth-child(3) ul {
+        margin-right: 92px;
+        @media screen and (max-width: 1439px) {
+            margin-right: 0;
+        }
+        & li:last-child {
+            margin-bottom: 0;
+        }
+    }
+    & .footer__block:nth-child(4) ul {
+        margin-right: 51px;
+        @media screen and (max-width: 1439px) {
+            margin-right: 0;
+        }
+    }
+    & .footer-content {
+        @media screen and (max-width: 1439px) {
+            justify-content: space-between;
+        }
+    }
+
+}
+
+.footer__block:first-child {
+    margin-right: 40px;
+}
+
 .footer__block:nth-child(2) ul {
-    margin-right: 119px;
+    margin-right: 57px;
     & li:last-child {
         margin-bottom: 0;
     }
 }
 
 .footer__block:nth-child(3) ul {
-    margin-right: 118px;
-    width: 84px;
+    margin-right: 92px;
     & li:last-child {
         margin-bottom: 0;
     }
 }
 
 .footer__block:nth-child(4) ul {
-    margin-right: 87px;
+    margin-right: 51px;
 }
 
-.footer__content {
+.footer-content {
     display: flex;
     align-items: top;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.footer-list__link {
+    font-size: 14px;
+    line-height: 17px;
+    color: $shade50-color;
 }
 
 .footer__block {
@@ -101,7 +152,6 @@
     font-size: 14px;
     line-height: 24px;
     color: $shade75-color;
-    padding-right: 10px;
     @media screen and (max-width: 1020px) {
         width: 560px;
         margin: 0 auto;
@@ -127,9 +177,7 @@
     font-size: 14px;
     line-height: 24px;
     color: $shade50-color;
-    @media screen and (max-width: 1439px) {
-        width: 260px;
-    }
+    width: 260px;
 }
 
 .line {

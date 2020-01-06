@@ -1,4 +1,5 @@
-//-  
+//-
+    options.isRus (bool) - menu in Russian or not
 
 include ../../components/arrow/arrow
 
@@ -15,9 +16,12 @@ mixin menu(options)
         let arrListItems = listItems.split(",");
         let arrLinks = links.split(",");
         let arrAdds = adds.split(",");
-        let arrLength = arrListItems.length;      
+        let arrLength = arrListItems.length;
 
-    ul.standart-nav-menu
+        let classes = '';
+        classes += options.isRus ? " menu-rus" : '';     
+
+    ul.standart-nav-menu(class=classes)
         - for(let i = 0; i < arrLength; i++)            
             li(class= arrAdds[i])
                 a(class="standart-nav-menu__link" href= arrLinks[i])= arrListItems[i]

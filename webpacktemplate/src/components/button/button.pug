@@ -8,7 +8,7 @@ mixin button(options)
     if !options
         - options = {}
     -
-        var classes = '';
+        let classes = '';
         classes += options.type ? ' button_' + options.type : '';
         classes += options.size ? ' button_' + options.size : '';
         classes += options.isHovered ? ' button_hovered' : '';

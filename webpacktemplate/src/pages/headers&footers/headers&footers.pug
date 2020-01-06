@@ -21,9 +21,22 @@ block content
 				isAuth: true,
 				listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
 				links: ["#", "#", "#", "#", "#", "#"],
-				adds: ["active", "", "services", "", "", ""]
-				})
+				adds: ["active", "", "services", "", "", ""],
+				loginText: "login",
+				regText: "register"
+			})
 		.field_bigMargin
-			+footer()
+			+footer({
+				logoText: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque porta tortor ac eros fermentum porta tortor ac eros",
+				navItems: ["Navigation", "About us", "News", "Support", "Products"],
+				navLinks: ["#", "#", "#", "#", "#"],
+				aboutItems: ["About us", "Who we Are", "Our team", "Careers", "Investors"],
+				aboutLinks: ["#", "#", "#", "#", "#"],
+				supportItems: ["Support", "Documentation", "Community", "Get in touch"],
+				supportLinks: ["#", "#", "#", "#", "#"],
+				subscrTitle: "subcribe to our newsletter",
+				subscrText: "Receive our latest news and promotion in your inbox",
+				copyrightText: "Copyright 2018 Toxin UI Kit. All rights reserved."
+			})
 			
 			
