@@ -15,9 +15,12 @@
 }
 
 .checkboxes-content__item {
+    margin-bottom: 12px;
+}
+
+.content-item {
     position: relative;
     padding-left: 30px;
-    margin-bottom: 12px;
 }
 
 .checkboxes-label::before {
@@ -40,10 +43,14 @@ input[id^="checkbox"]:checked + label::after {
     top: 5px;
 }
 
-.label-descr {
+.content-item__descr {
     margin-top: 5px;
+}
+
+.descr {
     font-size: 12px;
     line-height: 14px;
+    color: $shade50-color;
 }
 
 .label-access {

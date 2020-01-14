@@ -34,7 +34,20 @@
     }
 }
 
+.pagination {
+    position: relative;
+}
+
 .pagination .arrow {
     top: -1px;
-    right: 0;
+    right: -3px;
+    z-index: 1;
+}
+
+.pagination-text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+    padding-left: 5px;
 }

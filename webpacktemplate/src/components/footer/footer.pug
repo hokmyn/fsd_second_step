@@ -47,6 +47,7 @@ mixin footer(options)
 
 	footer.footer(class=classes)
 		.footer-content
+			.line
 			.footer__block.footer-logo
 				.field_smallMargin
 					+logo({imgType: 'h&f'})
@@ -83,8 +84,8 @@ mixin footer(options)
 				.field_smallMargin
 					+text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
 					+arrow({ name: "arrow_forward", color: "gradient"} )
-		.line
 		.footer__copyrights
+			.line
 			.copyrights
 				span #{options.copyrightText}
 			+social()

@@ -53,11 +53,15 @@ $("input[class*='-arrival'").datepicker({
     }    
 });
 
-$("input[class*='-arrival'").datepicker().data('datepicker').$datepicker.children('.datepicker--buttons').on("click", (e) => {
-    if (e.target.dataset.action === 'clear') {
-        $("input[class*='-departure'").val("");
-    }
-});
+//if ($("input[class*='-arrival'")) {
+   // $("input[class*='-arrival'").datepicker().data('datepicker').$datepicker.children('.datepicker--buttons').on("click", (e) => {
+       // if (e.target.dataset.action === 'clear') {
+          //  $("input[class*='-departure'").val("");
+        //}
+   // });
+//}
+
+
 
 $(".datepicker--buttons").on('click', (e) => {
     if ($(e.target).hasClass("select-btns__submit")){

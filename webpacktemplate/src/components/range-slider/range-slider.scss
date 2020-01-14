@@ -3,6 +3,9 @@
 
 .range-slider {
     width: 266px;
+    & .range-slider__descr{
+        margin-top: 16px;
+    }
 }
 
 #slider-range {

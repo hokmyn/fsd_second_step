@@ -103,6 +103,9 @@ footer.footer-rus {
     display: flex;
     align-items: top;
     flex-wrap: wrap;
+    & .line {
+        top: 0;
+    }
 }
 
 .footer-list__link {
@@ -184,7 +187,6 @@ footer.footer-rus {
     @include size(100%, 1px);
     background-color: $shade5-color;
     position: absolute;
-    bottom: 72px;
     left: 0;
     @media screen and (max-width: 700px) {
         display: none;
@@ -208,6 +210,9 @@ footer.footer-rus {
         @media screen and (max-width: 700px) {
             display: none;
         }
+    }
+    & .line {
+        bottom: 72px;
     }
 }
 

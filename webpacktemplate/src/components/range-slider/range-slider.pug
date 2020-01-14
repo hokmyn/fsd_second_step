@@ -1,2 +1,9 @@
-mixin range-slider    
-    #slider-range
+//-
+	options.bottom_text - текст внизу слайдера
+
+mixin range-slider(options)
+	if !options
+		- options = {}
+
+	#slider-range
+	div.range-slider__descr.descr #{options.bottom_text}

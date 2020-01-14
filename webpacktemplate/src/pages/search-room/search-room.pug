@@ -1,0 +1,173 @@
+extends ../main/main
+
+include ../../components/header/header
+include ../../components/elem-title/elem-title
+include ../../components/dropdown/dropdown
+include ../../components/arrow/arrow
+include ../../components/range-slider/range-slider
+include ../../components/checkbox-expanded/checkbox-expanded
+include ../../components/dropdown-expanded/dropdown-expanded
+include ../../components/footer/footer
+include ../../components/checkbox-expandable/checkbox-expandable
+include ../../components/roomInfo-card/roomInfo-card
+include ../../components/pagination/pagination
+
+block title 
+	| Search room
+
+block header
+	+header({isAuth: false,
+				isRus: true,
+				listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
+				links: ["#", "#", "#", "#", "#"],
+				adds: ["", "expandable", "", "", "expandable"],
+				loginText: "войти",
+				regText: "зарегистрироваться"
+			})
+block content
+	section.search-room
+		.search-room__content.search-content
+			aside.search-content__left-block
+				div(class = "field_smallMargin")
+					+elem-title("даты пребывания в отеле")
+					+dropdown("field_mid", "19 авг - 23 авг", "date-list")
+					+arrow({ name: "keyboard_arrow_down", color: "black"})
+				div(class = "field_midMargin" )
+					+elem-title("гости")
+					+dropdown("field_mid", "3 гостя, 1 младенец", "guests-list")
+					+arrow({ name: "keyboard_arrow_down", color: "black"})
+				.field_bigMargin
+					.range-slider
+						div(class="range-slider__title slider-title") 
+							+elem-title("диапазон цены")
+							span.slider-title__values 5 000 &#8381; - 10 000 &#8381;
+						.range-slider__content
+							+range-slider({ bottom_text: "Стоимость за сутки пребывания в номере" })
+				div(class = "field_bigMargin")
+					.title-margin 
+						+elem-title("checkbox buttons")
+					+checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
+				div(class="field_midMargin")
+					.title-margin
+						+elem-title("доступность")
+					+checkbox-expanded({name: "accessibility", label_additional_class: "label-access", label_texts: ["Широкий коридор", "Помощник для инвалидов"], isExpandable: false, richCheckboxContent: ["Ширина коридоров в номере не менее 91 см", "На 1 этаже вас встретит специалист и проводит до номера"]})
+				div(class = "field_midMargin")
+					+elem-title("удобства номера")
+					+dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
+				div(class = "field_bigMargin checkboxes")
+					+checkbox-expandable({label_text: "дополнительные удобства"})
+			.search-content__right-block
+				.card__title Номера, которые мы для вас подобрали
+				.numbers
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image888.svg",
+							roomNumber:"888",
+							roomClass: "люкс",
+							roomPrice: "9 990",
+							markedStars: 5,
+							commentsNum: 145})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image840.svg",
+							roomNumber:"840",
+							roomClass: "",
+							roomPrice: "9 990",
+							markedStars: 4,
+							commentsNum: 65})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image980.svg",
+							roomNumber:"980",
+							roomClass: "люкс",
+							roomPrice: "9 990",
+							markedStars: 3,
+							commentsNum: 35})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image856.svg",
+							roomNumber:"856",
+							roomClass: "",
+							roomPrice: "7 300",
+							markedStars: 5,
+							commentsNum: 19})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image740.svg",
+							roomNumber:"740",
+							roomClass: "",
+							roomPrice: "6 000",
+							markedStars: 4,
+							commentsNum: 44})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image982.svg",
+							roomNumber:"982",
+							roomClass: "",
+							roomPrice: "5 800",
+							markedStars: 3,
+							commentsNum: 56})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image678.svg",
+							roomNumber:"678",
+							roomClass: "",
+							roomPrice: "5 500",
+							markedStars: 5,
+							commentsNum: 45})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image450.svg",
+							roomNumber:"450",
+							roomClass: "",
+							roomPrice: "5 300",
+							markedStars: 4,
+							commentsNum: 39})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image350.svg",
+							roomNumber:"350",
+							roomClass: "",
+							roomPrice: "5 000",
+							markedStars: 3,
+							commentsNum: 77})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image666.svg",
+							roomNumber:"666",
+							roomClass: "",
+							roomPrice: "5 000",
+							markedStars: 5,
+							commentsNum: 25})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image444.svg",
+							roomNumber:"444",
+							roomClass: "",
+							roomPrice: "5 000",
+							markedStars: 3,
+							commentsNum: 15})
+					.numbers__card
+						+roomInfo-card({
+							imageSrc:"../../assets/img/image352.svg",
+							roomNumber:"352",
+							roomClass: "",
+							roomPrice: "5 000",
+							markedStars: 3,
+							commentsNum: 55})
+				.search-content__pagination
+					+pagination
+block footer
+	+footer({
+			isRus: true,
+			logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+			navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
+			navLinks: ["#", "#", "#", "#", "#"],
+			aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+			aboutLinks: ["#", "#", "#", "#", "#"],
+			supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
+			supportLinks: ["#", "#", "#", "#"],
+			subscrTitle: "Подписка",
+			subscrText: "Получайте специальные предложения и новости сервиса",
+			copyrightText: "Copyright 2018 Toxin отель. Все права защищены"
+		})

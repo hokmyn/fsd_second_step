@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 html {  
   height: 100%;
@@ -30,4 +31,48 @@ ul, li, input {
   margin: 0;
   padding: 0;
   list-style-type: none;
+}
+
+.field_smallMargin {
+  margin-bottom: $marginSmall;
+  position: relative;
+}
+
+.field_midMargin {
+  margin-bottom: $marginMid;
+  position: relative;
+}
+
+.field_bigMargin {
+  margin-bottom: $marginBig;
+  position: relative;
+}
+
+.select-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.field_rightMargin {
+  margin-right: 20px;
+}
+
+.title-margin {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.field_small {
+  @include size(150px, 44px);
+  position: relative;
+}
+
+.field_mid {
+  @include size(266px, 44px);
+  position: relative;
+}
+
+.field_big {
+  @include size(320px, 44px);
+  position: relative;
 }

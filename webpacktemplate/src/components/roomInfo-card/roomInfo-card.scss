@@ -2,10 +2,11 @@
 @import "../../styles/mixins";
 
 .roomInfo-card {
-    @include size(271px, 257px);
+    @include size(270px, 257px);
     position: relative;
     &__image {
         border-radius: 4px 4px 0 0;
+        width: 100%;
     }
     & div.arrow {
         top: 54px;
@@ -72,4 +73,5 @@
 .comments-count {
     font-size: 14px;
     line-height: 18px;
+    color: $shade50-color;
 }

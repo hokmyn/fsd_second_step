@@ -1,0 +1,48 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.search-room__content {
+    min-width: 320px;
+    display: flex;
+    width: 100%;
+    padding-left: 9.7%;
+    padding-right: 9.7%;
+}
+
+.search-content {
+	padding-right: 9.7%;
+	padding-left: 9.7%;
+	padding-top: 30px;
+}
+
+.search-content__left-block {
+    display: flex;
+    flex-direction: column;
+    margin-right: 57px;
+}
+
+.numbers {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.numbers__card {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px $shade5-color;
+    border-radius: 4px;
+    width: 271px;
+    height: 257px;
+    margin-right: 12px;
+    margin-bottom: 20px;
+}
+
+.numbers__card:nth-child(3n) {    
+    margin-right: 0;
+}
+
+.search-content__pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 70px;
+}
+

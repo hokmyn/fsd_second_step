@@ -1,10 +1,11 @@
 import './range-slider.scss';
 import $ from 'jquery';
+require('webpack-jquery-ui/slider');
 
-if (!$.fn.slider) {
-    require('jquery-ui/ui/widgets/slider');
-    require('jquery-ui/themes/base/slider.css');
-}
+//if (!$.fn.slider) {
+    //require('jquery-ui/ui/widgets/slider');
+    //require('jquery-ui/themes/base/slider.css');
+//}
 
 $(function () {
     $("#slider-range").slider({

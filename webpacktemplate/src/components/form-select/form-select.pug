@@ -1,3 +1,4 @@
+include ../../components/dropdown-expanded/dropdown-expanded
 include ../../components/dropdown/dropdown
 include ../../components/elem-title/elem-title
 include ../../components/arrow/arrow
@@ -16,7 +17,7 @@ mixin form-select()
             +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-departure'})
         div(class = "select-wrap field_midMargin")
             +elem-title("гости")
-            +dropdown("field_big", "Сколько гостей", "guests-list")
+            +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label", list_name: "guests-list", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
             +arrow({ name: "keyboard_arrow_down", color: "black"})
         .field_big
             +button({text: 'подобрать номер', type: 'fill', size: 'big'})

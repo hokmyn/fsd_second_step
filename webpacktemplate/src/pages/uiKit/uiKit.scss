@@ -1,0 +1,135 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+@import "../../styles/fonts";
+
+body {
+  width: 100%;
+}
+
+.colors-and-types{
+  margin: 0 auto;
+  padding-top: 145px;
+  padding-left: 150px;
+  padding-right: 190px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+.colors-list {
+  font-family: "Quicksand-Bold", Opensans;
+  text-transform: capitalize;
+}
+
+.colors-list__item { 
+  margin-bottom: 20px;  
+}
+
+.types-list__item {
+  margin-bottom: 50px;  
+}
+
+.form-elements {
+  display: grid;
+  grid-template-columns: 320px 374px 1fr;
+  grid-template-rows: repeat(3,auto);
+  column-gap: 72px;
+  padding-top: 143px;
+  padding-left: 141px;
+  padding-right: 141px;
+}
+
+.form-elements__block {
+  margin-left: 54px;
+}
+
+.block-with-two-cols {
+  grid-column: 2 / span 2;
+  padding-top: 10px;
+}  
+
+.block-with-pad {
+  padding-top: 100px;
+}
+
+input[type="checkbox"], input[type="radio"] {
+  display: none;
+}    
+
+.block__checkboxes {
+  margin-top: 184px;
+}
+
+.checkboxes .arrow {
+  top: -15px;
+}
+
+.block__checkboxes-expanded {
+  margin-top: 49px;
+  height: 274px;
+  display: inline-block;
+}
+
+.number-content {
+    padding-left: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
+
+    &__title {    
+        font-family: "Montserrat-Bold";
+    }
+}
+
+  .spec-offer {    
+    max-width: 270px;
+  }
+
+  .checkbox-offer__label {
+    margin-bottom: 14px;
+  }
+
+  .like-buttons {
+    width: 90px;
+    display: flex;
+    justify-content: space-between;
+  }  
+
+  .block__select-guests {
+    margin-bottom: 98px;
+  }
+
+  .block__rich-checkbox {
+    margin-top: 168px;
+  } 
+
+  .range-slider__title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 23px;
+  }
+
+  .buttons-main {
+    width: 218px;
+  }
+
+  .buttons-main__row {    
+    margin-bottom: 30px;
+  }
+
+  .buttons-flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-elements__pagination {
+    position: relative;
+    margin-bottom: 10px;
+    width: 242px;
+  }  
+
+  .block__bullet-list {
+    margin-top: 168px;
+  }
