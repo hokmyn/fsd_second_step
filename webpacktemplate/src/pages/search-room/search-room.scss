@@ -5,25 +5,51 @@
     min-width: 320px;
     display: flex;
     width: 100%;
-    padding-left: 9.7%;
-    padding-right: 9.7%;
 }
 
 .search-content {
 	padding-right: 9.7%;
 	padding-left: 9.7%;
-	padding-top: 30px;
+    padding-top: 30px;
+    @media screen and (max-width: 1439px) {
+        padding-right: 5%;
+        padding-left: 5%;
+    }
+    @media screen and (max-width: 998px) {
+        flex-direction: column;
+    }
 }
 
 .search-content__left-block {
     display: flex;
     flex-direction: column;
     margin-right: 57px;
+    @media screen and (max-width: 1439px) {
+        margin-right: 0;
+    }
+    @media screen and (max-width: 998px) {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.search-content__right-block {
+    @media screen and (max-width: 1439px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 .numbers {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    @media screen and (max-width: 1439px) {
+        padding-left: 10px;
+    }
 }
 
 .numbers__card {
