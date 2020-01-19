@@ -7,11 +7,20 @@
 }
 
 .checkboxes-content {
+    width: 266px;
     display: block;
     font-size: 14px;
     line-height: 18px;
     color: $shade50-color;
     z-index: 100;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.checkbox-expandable {
+    position: absolute;
+    top: -10000px;
+    background: #fff;
 }
 
 .checkboxes-content__item {
