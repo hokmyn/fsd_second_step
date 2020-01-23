@@ -1,5 +1,10 @@
+//-
+	options.label_wrap (string) - class of wrapper
+	options.list_name (string) - title of list
+	options.label_text (string) - text of item
 
-
-mixin dropdown(label_wrap, label_text, list_name)  
-  div(class="select " + label_wrap)
-    label(for= list_name class="select-expanded__label") #{label_text}
+mixin dropdown(options)
+	if !options
+		- options = {}
+	div(class= "select "+ options.label_wrap)
+		label(for= options.list_name class="select-expanded__label") #{options.label_text}

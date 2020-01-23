@@ -1,0 +1,32 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.room-images {
+    display: flex;
+    justify-content: center;
+}
+
+.images-item:first-child {
+    width: 70.5%;
+}
+
+.images-item:last-child {
+    width: 33%;
+}
+
+img {
+    width: 100%;
+}
+
+.images-item__small {
+    display: block;
+}
+
+.images-item__small:last-child {
+    margin-top: -1px;
+}
+
+.room-content {
+    padding-right: 9.7%;
+    padding-left: 9.7%;
+}

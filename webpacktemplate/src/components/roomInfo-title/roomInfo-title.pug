@@ -15,4 +15,6 @@ mixin roomInfo-title(options)
                 span.number #{options.number}
             span.room-class #{options.class}
         .roomInfo-title_right
-            span.room-price #{options.price}&#8381; в сутки
+            span.room-price
+                strong #{options.price}&#8381;
+                |  в сутки
