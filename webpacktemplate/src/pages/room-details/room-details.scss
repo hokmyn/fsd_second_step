@@ -29,4 +29,59 @@ img {
 .room-content {
     padding-right: 9.7%;
     padding-left: 9.7%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 70px;
+    padding-bottom: 70px;
 }
+
+.room-content__descr {
+    flex: 0 0 64.66%;
+    padding-right: 70px;
+}
+
+.room-content__calc {
+    flex: 0 0 33.33%;
+}
+
+.roomInfo-title,
+.comments-title {
+    font-family: "Quicksand-Bold", "OpenSans-Bold";
+    font-size: 19px;
+    line-height: 24px;
+    color: $shade100-color;
+    margin-bottom: 20px;
+}
+
+.comments-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.num-comments {
+    font-family: Montserrat;
+    font-size: 14px;
+    line-height: 14px;
+    color: $shade50-color;
+}
+
+.rules {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rules__left-block {
+    flex-basis: 41%;
+}
+
+.rules__right-block {
+    flex-basis: 48%;
+}
+
+.rules__text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $shade75-color;
+}
+
