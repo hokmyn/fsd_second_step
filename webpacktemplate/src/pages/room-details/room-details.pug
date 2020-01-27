@@ -6,6 +6,7 @@ include ../../components/number-info__item/number-info__item
 include ../../components/form-booking/form-booking
 include ../../components/comments-item/comments-item
 include ../../components/bullet-list/bullet-list
+include ../../components/pie-chart/pie-chart
 
 block title
 	| Room details
@@ -29,15 +30,26 @@ block content
 				img(class="images-item__small" src="/src/pages/room-details/images/room3.jpg")
 		.room-content
 			.room-content__descr.description
+				.description__row
+					.field_midMargin
+						.description__title
+							span Сведения о номере
+						div(class="number-info")
+							+number-info__item({pic_text: "insert_emoticon", title: "Комфорт", text: "Шумопоглащающие стены"})
+							+number-info__item({pic_text: "location_city", title: "Удобство", text: "Окно в каждой из спален"})
+							+number-info__item({pic_text: "whatshot", title: "Уют", text: "Номер оснащён камином"})
+					.description__impression
+						.description__title
+							span Впечатления от номера
+						.pie-chart-wrap
+							+pie-chart
+							.pie-chart__legend.legend
+								span.legend__item Великолепно
+								span.legend__item Хорошо
+								span.legend__item Удовлетворительно
+								span.legend__item Разочарован
 				.field_midMargin
-					.roomInfo-title
-						span Сведения о номере
-					div(class="number-info")
-						+number-info__item({pic_text: "insert_emoticon", title: "Комфорт", text: "Шумопоглащающие стены"})
-						+number-info__item({pic_text: "location_city", title: "Удобство", text: "Окно в каждой из спален"})
-						+number-info__item({pic_text: "whatshot", title: "Уют", text: "Номер оснащён камином"})
-				.field_midMargin
-					.comments-title
+					.description__title.comments-title
 						span Отзывы посетителей номера
 						span.num-comments 2 отзыва
 					.comments

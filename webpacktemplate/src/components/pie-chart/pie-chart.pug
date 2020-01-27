@@ -1,0 +1,19 @@
+//-
+	options.pic_text (string) - picture name
+	options.title (string) - title of item
+	options.text (string) - text of item
+
+mixin pie-chart(options)
+	svg(width="120" height="120" viewBox="0 0 130 130" class="pie-chart")
+		linearGradient(id="linear-gradient")
+			stop(offset="0%" stop-color="#FFE39C")
+			stop(offset="100%" stop-color="#FFBA9C")
+		circle(class="pie-chart__hole" cx="65" cy="65" r="60" fill="#fff")
+		circle(class="pie-chart__segment" cx="65" cy="65" r="60" fill="transparent" stroke="#8BA4F9" stroke-width="10" stroke-dasharray="94.2 282.6" stroke-dashoffset="94.2")
+		circle(class="pie-chart__segment" cx="65" cy="65" r="60" fill="transparent" stroke="#66D2EA" stroke-width="10" stroke-dasharray="94.2 282.6")
+		circle(class="pie-chart__segment segment-great" cx="65" cy="65" r="60" fill="transparent" stroke="url(#linear-gradient)" stroke-width="10" stroke-dasharray="188.4 188.4" stroke-dashoffset="282.6" )
+		g.pie-chart__text.chart-text
+			text(x="34%" y="50%" class="chart-text__number")
+				| 260
+			text(x="30%" y="60%" class="chart-text__label")
+				| голосов

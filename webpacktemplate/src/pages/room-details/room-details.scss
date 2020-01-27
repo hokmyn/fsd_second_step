@@ -44,13 +44,35 @@ img {
     flex: 0 0 33.33%;
 }
 
-.roomInfo-title,
-.comments-title {
+.description__title {
     font-family: "Quicksand-Bold", "OpenSans-Bold";
     font-size: 19px;
     line-height: 24px;
     color: $shade100-color;
     margin-bottom: 20px;
+}
+
+.number-info__item-wrap:first-child .number-info-item {
+    padding-top: 0;
+}
+
+.description__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.description__impression {
+    padding-left: 70px;
+}
+
+.pie-chart-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.legend {
+    display: flex;
+    flex-direction: column;
 }
 
 .comments-title {
@@ -84,4 +106,6 @@ img {
     line-height: 24px;
     color: $shade75-color;
 }
+
+
 
