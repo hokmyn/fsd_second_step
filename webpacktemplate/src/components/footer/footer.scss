@@ -3,7 +3,6 @@
 @import "../../styles/fonts";
 
 .footer {
-    height: 443px;
     background: #fff;
     width: 100%;
     padding-left: 9.7%;
@@ -12,10 +11,6 @@
     position: relative;
     @media screen and (max-width: 1439px) {
         padding-top: 3%;
-    }
-    @media screen and (max-width: 700px) {
-        height: 367px;
-        padding: 100px 0 110px 0;
     }
     & .elem-title {
         margin-bottom: 21px;
@@ -32,6 +27,19 @@
             display: none;
         }
     } 
+}
+
+.headers-and-footers__footer {
+    height: 443px;
+    @media screen and (max-width: 700px) {
+        height: 367px;
+        padding: 100px 0 110px 0;
+    }
+    & .copyrights {
+        @media screen and (max-width: 700px) {
+            display: none;
+        }
+    }
 }
 
 footer.footer-rus {
@@ -73,7 +81,6 @@ footer.footer-rus {
             justify-content: space-between;
         }
     }
-
 }
 
 .footer__block:nth-child(2) {
@@ -102,9 +109,10 @@ footer.footer-rus {
     display: flex;
     align-items: top;
     flex-wrap: wrap;
-    & .line {
-        top: 0;
-    }
+}
+
+.footer-content__line {
+    top: 0;
 }
 
 .footer-list__link {
@@ -187,13 +195,10 @@ footer.footer-rus {
     background-color: $shade5-color;
     position: absolute;
     left: 0;
-    @media screen and (max-width: 700px) {
-        display: none;
-    }
 }
 
-.footer__copyrights {
-    height: 70px;
+.copyrights {
+    height: 67px;
     background: #fff;
     width: 100%;   
     display: flex;
@@ -202,21 +207,17 @@ footer.footer-rus {
     @media screen and (max-width: 700px) {
         height: 28px;
     }
-    & .copyrights {
-        font-size: 14px;
-        line-height: 17px;
-        color: $shade75-color;
-        @media screen and (max-width: 700px) {
-            display: none;
-        }
-    }
-    & .line {
-        bottom: 72px;
+}
+
+.copyrights__line {
+    bottom: 70px;
+    @media screen and (max-width: 700px) {
+        bottom: 30px;
     }
 }
 
-.social {
-    @media screen and (max-width: 700px) {
-        margin: 0 auto;
-    }
+.copyrights-text {
+    font-size: 14px;
+    line-height: 17px;
+    color: $shade75-color;
 }

@@ -10,6 +10,7 @@
 	options.subscrTitle - заголовок блока subscription (string)
 	options.subscrText - текст блока subscription (string)
 	options.copyrightText - текст блока copyright (string)
+	options.isUiKit - footer in uikit or not   (bool)
   
 include ../../components/logo/logo
 include ../../components/text-field/text-field
@@ -44,10 +45,11 @@ mixin footer(options)
 
 		let classes = '';
 		classes += options.isRus ? " footer-rus" : '';
+		classes += options.isUiKit ? " headers-and-footers__footer" : '';
 
 	footer.footer(class=classes)
 		.footer-content
-			.line
+			.footer-content__line.line
 			.footer__block.footer-logo
 				.field_smallMargin
 					+logo({imgType: 'h&f'})
@@ -84,9 +86,9 @@ mixin footer(options)
 				.field_smallMargin
 					+text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
 					+arrow({ name: "arrow_forward", color: "gradient"} )
-		.footer__copyrights
-			.line
-			.copyrights
+		.footer__copyrights.copyrights
+			.line.copyrights__line
+			.copyrights-text
 				span #{options.copyrightText}
 			+social()
 			
