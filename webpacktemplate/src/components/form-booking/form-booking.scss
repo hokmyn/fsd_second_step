@@ -2,6 +2,16 @@
 @import "../../styles/mixins";
 @import "../../styles/fonts";
 
+.form-booking__btn {
+    @media screen and (max-width: 420px) {
+        width: 80%;
+        margin: 0 auto;
+    }
+    & .arrow {
+        z-index: 1;
+    }
+}
+
 .roomPrice-calc {
     margin-bottom: 20px;
 }
@@ -16,6 +26,9 @@
     &__text {
         width: 214px;
         position: relative;
+        @media screen and (max-width: 420px) {
+            width: 65%;
+        }
     }
     &:nth-child(3) {
         line-height: 18px;

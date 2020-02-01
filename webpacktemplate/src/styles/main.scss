@@ -75,4 +75,7 @@ ul, li, input {
 .field_big {
   @include size(320px, 44px);
   position: relative;
+  @media screen and (max-width: 420px) {
+    width: 90%;
+  }
 }

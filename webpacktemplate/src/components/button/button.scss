@@ -7,6 +7,9 @@
 
 .button_big {
     @include size(320px, 44px);
+    @media screen and (max-width: 420px) {
+        width: 100%;
+    }
 }
 
 button {
@@ -18,11 +21,11 @@ button {
     cursor: pointer;
 }
 
-.button_fill, .button_transp {
+.button_filled, .button_transp {
     border-radius: 22px;
 }
 
-.button_fill {
+.button_filled {
     color: #fff;
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
 }
