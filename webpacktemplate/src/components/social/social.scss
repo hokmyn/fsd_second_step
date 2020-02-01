@@ -8,3 +8,7 @@
 .social__image {
     margin-left: 20px;
 }
+
+.social__image:first-child {
+    margin-left: 0;
+}

@@ -1,45 +1,62 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
+.room-details {
+    min-width: 320px;
+}
+
 .room-images {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .images-item:first-child {
-    width: 70.5%;
+    flex: 1 1 70.5%;
+    @media screen and (max-width: 600px) {
+        flex-basis: 100%;
+    }
 }
 
 .images-item:last-child {
-    width: 33%;
+    flex: 1 1 33%;
+    @media screen and (max-width: 600px) {
+        flex-basis: 100%;
+        display: flex;
+    }
+    @media screen and (max-width: 420px) {
+        flex-direction: column;        
+    }
 }
 
 img {
-    width: 100%;
+    width: 100%;    
 }
 
 .images-item__small {
     display: block;
+    @media screen and (max-width: 600px) {
+        width: 50%;
+        display: inline-block;
+        margin-top: -5px;
+    }
+    @media screen and (max-width: 420px) {
+        flex-direction: column;
+        width: 100%;
+    }
 }
 
 .images-item__small:last-child {
     margin-top: -1px;
+    @media screen and (max-width: 600px) {
+        margin-top: -5px;
+    }
 }
 
 .room-content {
     padding: 70px 9.7%;
     display: flex;
-    justify-content: space-between;
-    & .card {
-       @media screen and (max-width: 998px) {           
-           width: 353px;
-           padding-right: 15px;
-           padding-left: 15px;
-       }
-       @media screen and (max-width: 768px) {
-           margin: 0 auto;
-       }
-    }
+    justify-content: space-between;    
     & .bullet-list {
         @media screen and (max-width: 600px) {
             width: auto;
@@ -50,7 +67,7 @@ img {
     }
     @media screen and (max-width: 768px) {
         flex-direction: column;
-        justify-content: center;
+        align-items: center;
     }
 }
 
@@ -67,6 +84,28 @@ img {
     }
 }
 
+.room-details__card {
+    @media screen and (max-width: 998px) {
+        width: 353px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    @media screen and (max-width: 768px) {
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 420px) {
+        width: 90%;
+    }
+}
+
+div.room-details__card {
+    @media screen and (max-width: 420px) {
+        width: 90%;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+}
+
 .description__title {
     font-family: "Quicksand-Bold", "OpenSans-Bold";
     font-size: 19px;
@@ -79,8 +118,7 @@ img {
     margin-right: 70px;
     @media screen and (max-width: 1349px) {
         margin-right: 30px;
-    }
-    
+    }    
 }
 
 .number-info__item-wrap:first-child .number-info-item {
@@ -98,6 +136,9 @@ img {
     @media screen and (max-width: 657px) {
         justify-content: center;
     }
+    @media screen and (max-width: 360px) {
+        padding-left: 5px;
+    }
 }
 
 .description__comments {
@@ -107,6 +148,16 @@ img {
         padding-top: 15px;
         padding-right: 0;
     }
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    @media screen and (max-width: 360px) {
+        padding-left: 5px;
+    }
+}
+
+div.description__comments {
     @media screen and (max-width: 768px) {
         width: 100%;
         margin-bottom: 15px;
@@ -176,7 +227,10 @@ img {
 .comments-title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
+    @media screen and (max-width: 420px) {
+        flex-wrap: wrap;
+    }
 }
 
 .num-comments {

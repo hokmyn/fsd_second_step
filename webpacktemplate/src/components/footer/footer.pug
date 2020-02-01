@@ -88,8 +88,9 @@ mixin footer(options)
 					+arrow({ name: "arrow_forward", color: "gradient"} )
 		.footer__copyrights.copyrights
 			.line.copyrights__line
-			.copyrights-text
+			.copyrights__text
 				span #{options.copyrightText}
-			+social()
+			.copyrights__social
+				+social()
 			
 			

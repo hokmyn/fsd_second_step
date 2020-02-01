@@ -198,26 +198,41 @@ footer.footer-rus {
 }
 
 .copyrights {
-    height: 67px;
     background: #fff;
     width: 100%;   
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @media screen and (max-width: 700px) {
-        height: 28px;
+    @media screen and (max-width: 600px) {
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 5px;
     }
 }
 
 .copyrights__line {
-    bottom: 70px;
-    @media screen and (max-width: 700px) {
-        bottom: 30px;
+    bottom: 39px;
+    @media screen and (max-width: 600px) {
+        position: static;
+        order: 1;
     }
 }
 
-.copyrights-text {
+.copyrights__text {
     font-size: 14px;
     line-height: 17px;
     color: $shade75-color;
+    @media screen and (max-width: 600px) {
+        order: 3;
+    }
+    @media screen and (max-width: 420px) {
+        text-align: center;
+    }
+}
+
+.copyrights__social {
+    margin: 5px 0 5px 20px;
+    @media screen and (max-width: 600px) {
+        order: 2;
+    }
 }
