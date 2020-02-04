@@ -1,0 +1,19 @@
+@import "../../styles/vars";
+@import "../../styles/mixins";
+
+.registration-page {
+    max-width: 1920px;
+    min-width: 320px;
+}
+
+.content {
+    @include size(100%);
+    position: relative;
+    background-image: url("/src/pages/registration/images/image_bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px 5px 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
