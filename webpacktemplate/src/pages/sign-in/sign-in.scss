@@ -1,20 +1,15 @@
 @import "../../styles/mixins";
 
-.registration-page {
-    max-width: 1920px;
-    min-width: 320px;
-}
-
-.registration-page__content {
-    padding: 30px 5px 0 5px;
+.signin-page__content {
+    padding: 163px 5px 163px 5px;
     background-image: url("/src/pages/registration/images/image_bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.registration-content {
+.signin-content {
     @include size(100%);
-    position: relative;    
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;

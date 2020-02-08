@@ -1,11 +1,11 @@
 extends ../main/main
 
 include ../../components/header/header
-include ../../components/form-registration/form-registration
+include ../../components/form-enter/form-enter
 include ../../components/footer/footer
 
 block title 
-	| Registration
+	| Sign-in
 
 block header
 	+header({isAuth: false,
@@ -17,11 +17,11 @@ block header
 				regText: "зарегистрироваться"
 			})
 block content
-	section.registration-page
-		.registration-page__content
-			.registration-content
+	section.signin-page
+		.signin-page__content
+			.signin-content
 				.content__card.card
-					+form-registration
+					+form-enter
 				
 block footer
 	+footer({
