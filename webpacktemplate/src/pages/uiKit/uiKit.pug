@@ -63,26 +63,26 @@ block content
 				+text-field({type: "email", input_class: "input input_hover", placeholder_text: "This is pretty awesome"})
 			div(class = "field_smallMargin" )
 				+elem-title("dropdown")
-				+dropdown("field_big", "Сколько гостей", "guests-list")
+				+dropdown({label_wrap: "field_big", label_text: "Сколько гостей", list_name: "guests-list"})
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_bigMargin")
 				+elem-title("masked text field")
 				+text-field({type: "text", input_class: "input input_masked", placeholder_text: "ДД.ММ.ГГГГ"})
 			div(class = "select-wrap field_bigMargin field_rightMargin")
 				+elem-title("date dropdown")
-				+dropdown("field_small", "ДД.ММ.ГГГГ", "date-list")
+				+dropdown({label_wrap: "field_small", label_text: "ДД.ММ.ГГГГ", list_name: "date-list"})
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class = "select-wrap field_bigMargin")
 				+elem-title("date dropdown")
-				+dropdown("field_small", "19.08.2019", "date-list")
+				+dropdown({label_wrap: "field_small", label_text: "19.08.2019", list_name: "date-list"})
 				+arrow({ name: "keyboard_arrow_down", color: "black"})       
 			div(class = "select-wrap field_bigMargin")
 				+elem-title("filter date dropdown")
-				+dropdown("field_mid", "19 авг - 23 авг", "date-list")
+				+dropdown({label_wrap: "field_mid", label_text: "19 авг - 23 авг", list_name: "date-list"})
 				+arrow({ name: "keyboard_arrow_down", color: "black"})
 			div(class="field_mid")
 				+elem-title("subscription text field")
-				+text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
+				+text-field({type: "email", input_class: "input input_subscription", placeholder_text: "Email"})
 				+arrow({ name: "arrow_forward", color: "gradient"} )
 
 		.form-elements__block.block
@@ -116,9 +116,9 @@ block content
 				br
 				.rate-buttons
 					.rate-buttons_left
-						+rate-buttons(4)
+						+rate-buttons({marked_count: 4})
 					.rate-buttons_right
-						+rate-buttons(5)   
+						+rate-buttons({marked_count: 5})   
 
 		.block
 			.field_bigMargin
@@ -153,7 +153,7 @@ block content
 			.block-with-pad
 				div(class = "select-wrap field_smallMargin" )
 					+elem-title("dropdown")
-					+dropdown("field_mid", "2 спальни, 2 кровати...", "amenities-list")
+					+dropdown({label_wrap: "field_mid", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list"})
 					+arrow({ name: "keyboard_arrow_down", color: "black"})
 				div(class = "select-wrap")
 					+elem-title("dropdown")
@@ -187,10 +187,9 @@ block content
 		
 		.block
 			div(class="number-info")
-				+number-info__item("insert_emoticon", "Комфорт", "Шумопоглащающие стены")
-				+number-info__item("location_city", "Удобство", "Окно в каждой из спален")            
+				+number-info__item({pic_text: "insert_emoticon", title: "Комфорт", text: "Шумопоглащающие стены"})
+				+number-info__item({pic_text: "location_city", title: "Удобство", text: "Окно в каждой из спален"})         
 		
-		.block.form-elements__block
-			.block-with-two-cols
-				.comments
-					+comments-item({img_name: "image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
+		.block.form-elements__block.block-with-two-cols
+			.comments
+				+comments-item({img_name: "image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
