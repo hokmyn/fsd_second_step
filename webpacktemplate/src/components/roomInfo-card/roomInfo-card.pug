@@ -34,10 +34,10 @@ mixin roomInfo-card(options)
                 label
                     input(type="radio" name="slide-toggle" value="4")
                     span
-        .roomInfo-card__content.room-content
+        .roomInfo-card__content.roomInfo-content
             +roomInfo-title({number: options.roomNumber, class: options.roomClass, price: options.roomPrice})
-            .room-content__line
-            .room-content__rate
+            .roomInfo-content__line
+            .roomInfo-content__rate
                 +rate-buttons({marked_count: options.markedStars})
                 .comments-count
                     strong #{options.commentsNum}
