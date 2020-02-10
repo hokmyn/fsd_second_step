@@ -35,6 +35,12 @@ img {
     width: 100%;    
 }
 
+.images-item__big {
+    @media screen and (max-width: 420px) {
+        margin-bottom: 5px;
+    }
+}
+
 .images-item__small {
     display: block;
     @media screen and (max-width: 600px) {
@@ -45,6 +51,12 @@ img {
     @media screen and (max-width: 420px) {
         flex-direction: column;
         width: 100%;
+    }
+}
+
+.images-item__small:first-child {
+    @media screen and (max-width: 420px) {
+        margin-bottom: 10px;
     }
 }
 
@@ -154,10 +166,6 @@ div.room-details__card {
         padding-top: 15px;
         padding-right: 0;
     }
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-bottom: 15px;
-    }
     @media screen and (max-width: 360px) {
         padding-left: 5px;
     }
@@ -167,6 +175,9 @@ div.description__comments {
     @media screen and (max-width: 768px) {
         width: 100%;
         margin-bottom: 15px;
+    }
+    @media screen and (max-width: 420px) {
+        padding-right: 10px;
     }
 }
 

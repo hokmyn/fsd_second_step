@@ -50,11 +50,6 @@
     }
     & .button_fill {
         @include size(101px, 34px)
-    }
-    .logo__bg-img {
-        @media screen and (max-width: 1100px) {
-            background: url("/src/components/logo/images/logo-h&f_mobile.svg") no-repeat;
-        }
     }    
 }
 

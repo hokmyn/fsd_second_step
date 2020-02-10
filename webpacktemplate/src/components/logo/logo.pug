@@ -1,5 +1,6 @@
 //-
-	options.imgType (string) - logo type (pages, h&f, h&f_mobile) 
+	options.imgType (string) - logo type (pages, h&f, h&f_mobile)
+	options.isFooter - logo in footer or not
 
 mixin logo(options)
 	if !options
@@ -11,4 +12,7 @@ mixin logo(options)
 		.logo
 			img(src= '../../src/components/logo/images/logo-pages.svg'  alt="logo")
 	else
-		.logo__bg-img
+		if (options.isFooter)
+			.footer-logo__bg-img
+		else
+			.logo__bg-img

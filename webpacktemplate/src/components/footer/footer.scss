@@ -171,6 +171,9 @@ footer.footer-rus {
     @media screen and (max-width: 560px) {
         width: 320px;
     }
+    @media screen and (max-width: 420px) {
+        width: 90%;
+    }
 }
 
 .subscription {

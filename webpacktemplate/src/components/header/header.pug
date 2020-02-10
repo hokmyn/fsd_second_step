@@ -21,7 +21,7 @@ mixin header(options)
         classes += options.isRus ? " header-rus" : '';
 
     header.header(class=classes)
-        +logo({imgType: 'h&f'})
+        +logo({imgType: 'h&f', isFooter: false})
         .standart-nav
             +menu({listItems: options.listItems, links: options.links, adds: options.adds, isRus: true})
             if options.isAuth
