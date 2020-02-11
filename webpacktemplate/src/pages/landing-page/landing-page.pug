@@ -18,12 +18,12 @@ block header
 			})
 block content
 	section.landing-page
-		.landing-page__content
-			.content
-				.landing-page__card.card
-					+form-select
-				.content__slogan.slogan
-					| Лучшие номера для вашей работы, отдыха и просто вдохновения		
+		.landing-page__content.landing-content
+			img.landing-content__img(src="/src/pages/landing-page/images/image_bg.jpg" alt="landing background")
+			.landing-content__card.card
+				+form-select
+			.landing-content__slogan.slogan
+				| Лучшие номера для вашей работы, отдыха и просто вдохновения		
 block footer
 	+footer({
 			isRus: true,

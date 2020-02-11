@@ -48,6 +48,9 @@
 .guests-list,
 .guests-list_default {
     width: 320px;
+    @media screen and (max-width: 420px) {
+        width: 90%;
+    }
 }
 
 .options-list {

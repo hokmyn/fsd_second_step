@@ -18,7 +18,7 @@ mixin dropdown-expanded(options)
     
     div(class="select " + options.label_wrap)
         label(for= options.list_name id= options.label_id  class="select-expanded__label") #{options.label_text}
-    +arrow({ name: "keyboard_arrow_down", color: "black"})
+        +arrow({ name: "keyboard_arrow_down", color: "black"})
     div(class="select-expanded__options options-list " + options.list_name)
         each option_text, index in options.option_texts
             .options-list__item

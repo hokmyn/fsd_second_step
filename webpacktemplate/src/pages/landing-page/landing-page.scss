@@ -1,40 +1,50 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
-.landing-page__content {
+
+.landing-page {
     max-width: 1920px;
     min-width: 320px;
+    @media screen and (min-width: 1920px) {
+        margin: 0 auto;
+    }
 }
 
-.content {
+.landing-page__content { 
     @include size(100%);
     position: relative;
-    background-image: url("/src/pages/landing-page/images/image_bg.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    padding-top: 1px;
 }
 
-.landing-page__card {
+.landing-content {
+    
+}
+
+.landing-content__img {
+    width: 100%;
+    @media screen and (max-width: 800px) {
+        height: 500px;
+    }
+}
+
+.landing-content__card {
     position: absolute;
-    top: 70px;
     left: 140px;
-    @media screen and (max-width: 660px) {
-        position: static;
-        margin: 70px auto;
+    top: 70px;
+    @media screen and (max-width: 840px) {
+        top: 5%;
+        right: 5%;
+        left: auto;
     }
     @media screen and (max-width: 420px) {
-        padding-right: 5px;
-        padding-left: 5px;
-        width: 100%;
-        min-width: 320px;
+        padding: 5px;
+        width: 85%;
     }
     & .arrow {
         z-index: 1;
     }
 }
 
-.content__slogan {
+.landing-content__slogan {
     position: absolute;
     right: 134px;
     bottom: 18px;
