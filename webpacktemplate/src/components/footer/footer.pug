@@ -44,7 +44,7 @@ mixin footer(options)
 			arrSupportLinks = supportLinks.split(",");
 
 		let classes = '';
-		classes += options.isRus ? " footer-rus" : '';
+		classes += options.isRus ? " footer-rus" : 'footer-eng';
 		classes += options.isUiKit ? " headers-and-footers__footer" : '';
 
 	footer.footer(class=classes)
@@ -92,5 +92,3 @@ mixin footer(options)
 				span #{options.copyrightText}
 			.copyrights__social
 				+social()
-			
-			

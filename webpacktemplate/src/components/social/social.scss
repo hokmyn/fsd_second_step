@@ -1,6 +1,10 @@
 @import "../../styles/vars";
 @import "../../styles/mixins";
 
+.social {
+    line-height: 10px;
+}
+
 .social img {
     @include size(24px);
 }

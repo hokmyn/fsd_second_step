@@ -42,6 +42,10 @@
     }
 }
 
+.footer-eng .aboutus .footer-list__link {
+    letter-spacing: -.15px;
+}
+
 footer.footer-rus {
     @media screen and (max-width: 1200px) {
         padding-left: 10px;
@@ -205,10 +209,11 @@ footer.footer-rus {
 
 .copyrights {
     background: #fff;
-    width: 100%;   
+    @include size(100%, 70px);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -3px;
     @media screen and (max-width: 600px) {
         flex-direction: column;
         align-items: center;
@@ -217,7 +222,7 @@ footer.footer-rus {
 }
 
 .copyrights__line {
-    bottom: 39px;
+    bottom: 71px;
     @media screen and (max-width: 600px) {
         position: static;
         order: 1;
@@ -237,7 +242,7 @@ footer.footer-rus {
 }
 
 .copyrights__social {
-    margin: 5px 0 5px 20px;
+    margin: 23px 0 20px 23px;
     @media screen and (max-width: 600px) {
         order: 2;
     }
