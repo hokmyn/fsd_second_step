@@ -1,24 +1,24 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .bullet-list {
-    width: 253px;
+  width: 253px;
 }
 
 .bullet-list__item {
-    position: relative;
-    padding-left: 20px;
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
+  position: relative;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
 }
 
 .bullet-list__item:before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 0;
-    @include size(10px);
-    background-color: $shade25-color;
-    border-radius: 50%;
+  content: '';
+  position: absolute;
+  top: 7px;
+  left: 0;
+  @include size(10px);
+  background-color: $shade25-color;
+  border-radius: 50%;
 }

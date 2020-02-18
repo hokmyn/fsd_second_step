@@ -1,39 +1,39 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .radio-list {
-    display: flex;
+  display: flex;
 }
 
 .radio-list__item {
-    position: relative;
-    padding-left: 30px;
-    &:first-child {
-        margin-right: 20px;
-    }    
+  position: relative;
+  padding-left: 30px;
+  &:first-child {
+    margin-right: 20px;
+  }
 }
 
 .radio-item {
-    font-size: 14px;
-    line-height: 20px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
 .radio-item__label::before {
-    content: "";
-    position: absolute;
-    @include size(20px);
-    border: 1px solid $shade25-color;
-    border-radius: 50%;
-    left: 0;
-    line-height: 24px;
+  content: '';
+  position: absolute;
+  @include size(20px);
+  border: 1px solid $shade25-color;
+  border-radius: 50%;
+  left: 0;
+  line-height: 24px;
 }
 
-input[id^="radio"]:checked + label::after {
-    content: "";
-    @include size(12px);
-    position: absolute;
-    left: 4px;
-    top: 4px;
-    border-radius: 50%;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+input[id^='radio']:checked + label::after {
+  content: '';
+  @include size(12px);
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }

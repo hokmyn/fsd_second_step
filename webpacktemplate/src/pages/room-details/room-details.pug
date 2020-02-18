@@ -9,79 +9,79 @@ include ../../components/bullet-list/bullet-list
 include ../../components/pie-chart/pie-chart
 
 block title
-	| Room details
+  | Room details
 
 block header
-	+header({isAuth: false,
-				isRus: true,
-				listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
-				links: ["#", "#", "#", "#", "#"],
-				adds: ["", "expandable", "", "", "expandable"],
-				loginText: "войти",
-				regText: "зарегистрироваться"
-			})
+  +header({isAuth: false,
+    isRus: true,
+    listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
+    links: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
+    adds: ["", "expandable", "", "", "expandable"],
+    loginText: "войти",
+    regText: "зарегистрироваться"
+  })
 block content
-	section.room-details
-		.room-images
-			.images-item
-				img(class="images-item__big" src="/src/pages/room-details/images/room1.jpg")
-			.images-item
-				img(class="images-item__small" src="/src/pages/room-details/images/room2.jpg")
-				img(class="images-item__small" src="/src/pages/room-details/images/room3.jpg")
-		.room-content
-			.room-content__descr.description
-				.description__nums
-					.field_midMargin
-						.description__title
-							span Сведения о номере
-						div.number-info.description__number-info
-							+number-info__item({pic_text: "insert_emoticon", title: "Комфорт", text: "Шумопоглащающие стены"})
-							+number-info__item({pic_text: "location_city", title: "Удобство", text: "Окно в каждой из спален"})
-							+number-info__item({pic_text: "whatshot", title: "Уют", text: "Номер оснащён камином"})
-					.description__impression
-						.description__title
-							span Впечатления от номера
-						.pie-chart-wrap
-							+pie-chart
-							.pie-chart__legend.legend
-								span.legend__item Великолепно
-								span.legend__item Хорошо
-								span.legend__item Удовлетворительно
-								span.legend__item Разочарован
-				.description__comments
-					.description__title.comments-title
-						span Отзывы посетителей номера
-						span.num-comments 2 отзыва
-					.comments-content
-						.field_smallMargin
-							+comments-item({img_name: "image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
-						.field_midMargin
-							+comments-item({img_name: "image2", like_value: 2, btn_class: "", icon_name: "favorite_border", username: "Патрисия Стёклышкова", date: "неделю назад", comment_text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
-					.rules
-						.rules__left-block
-							.title-margin
-								+elem-title("Правила")
-							+bullet-list({texts:["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия - после 13.00, а выезд - до 12.00"]})
-						.rules__right-block
-							.title-margin
-								+elem-title("Отмена")
-							.rules__text
-								| Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
-			.room-content__calc
-				.card.room-details__card
-					+form-booking({room_number: "888", room_class: "люкс", room_price: "9 990", date_start: "19.08.2019", date_end: "23.08.2019", dropdown_text: "3 гостя"})
+  section.room-details
+    .room-images
+      .images-item
+        img(class="images-item__big" src="../img/room1.jpg")
+      .images-item
+        img(class="images-item__small" src="./img/room2.jpg")
+        img(class="images-item__small" src="/src/pages/room-details/img/room3.jpg")
+    .room-content
+      .room-content__descr.description
+        .description__nums
+          .field_midMargin
+            .description__title
+              span Сведения о номере
+            div.number-info.description__number-info
+              +number-info__item({pic_text: "insert_emoticon", title: "Комфорт", text: "Шумопоглащающие стены"})
+              +number-info__item({pic_text: "location_city", title: "Удобство", text: "Окно в каждой из спален"})
+              +number-info__item({pic_text: "whatshot", title: "Уют", text: "Номер оснащён камином"})
+          .description__impression
+            .description__title
+              span Впечатления от номера
+            .pie-chart-wrap
+              +pie-chart
+              .pie-chart__legend.legend
+                span.legend__item Великолепно
+                span.legend__item Хорошо
+                span.legend__item Удовлетворительно
+                span.legend__item Разочарован
+        .description__comments
+          .description__title.comments-title
+            span Отзывы посетителей номера
+            span.num-comments 2 отзыва
+          .comments-content
+            .field_smallMargin
+              +comments-item({img_name: "image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
+            .field_midMargin
+              +comments-item({img_name: "image2", like_value: 2, btn_class: "", icon_name: "favorite_border", username: "Патрисия Стёклышкова", date: "неделю назад", comment_text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+          .rules
+            .rules__left-block
+              .title-margin
+                +elem-title("Правила")
+              +bullet-list({texts:["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия - после 13.00, а выезд - до 12.00"]})
+            .rules__right-block
+              .title-margin
+                +elem-title("Отмена")
+              .rules__text
+                | Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+      .room-content__calc
+        .card.room-details__card
+          +form-booking({room_number: "888", room_class: "люкс", room_price: "9 990", date_start: "19.08.2019", date_end: "23.08.2019", dropdown_text: "3 гостя"})
 block footer
-	+footer({
-			isRus: true,
-			logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-			navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
-			navLinks: ["#", "#", "#", "#", "#"],
-			aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
-			aboutLinks: ["#", "#", "#", "#", "#"],
-			supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
-			supportLinks: ["#", "#", "#", "#"],
-			subscrTitle: "Подписка",
-			subscrText: "Получайте специальные предложения и новости сервиса",
-			copyrightText: "Copyright 2018 Toxin отель. Все права защищены",
-			isUiKit: false
-		})
+  +footer({
+    isRus: true,
+    logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
+    navLinks: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
+    aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+    aboutLinks: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
+    supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
+    supportLinks: ["/change/me", "/change/me", "/change/me", "/change/me"],
+    subscrTitle: "Подписка",
+    subscrText: "Получайте специальные предложения и новости сервиса",
+    copyrightText: "Copyright 2018 Toxin отель. Все права защищены",
+    isUiKit: false
+  })

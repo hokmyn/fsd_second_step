@@ -1,58 +1,57 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
-
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .landing-page {
-    max-width: 1920px;
-    min-width: 320px;
-    @media screen and (min-width: 1920px) {
-        margin: 0 auto;
-    }
+  max-width: 1920px;
+  min-width: 320px;
+  @media screen and (min-width: 1920px) {
+    margin: 0 auto;
+  }
 }
 
 .landing-page__content { 
-    @include size(100%);
-    position: relative;
+  @include size(100%);
+  position: relative;
 }
 
 .landing-content__img {
-    width: 100%;
-    @media screen and (max-width: 800px) {
-        height: 500px;
-    }
+  width: 100%;
+  @media screen and (max-width: 800px) {
+    height: 500px;
+  }
 }
 
 .landing-content__card {
-    position: absolute;
-    left: 140px;
-    top: 70px;
-    @media screen and (max-width: 840px) {
-        top: 5%;
-        right: 5%;
-        left: auto;
-    }
-    @media screen and (max-width: 420px) {
-        padding: 5px;
-        width: 85%;
-    }
-    & .arrow {
-        z-index: 1;
-    }
+  position: absolute;
+  left: 140px;
+  top: 70px;
+  @media screen and (max-width: 840px) {
+    top: 5%;
+    right: 5%;
+    left: auto;
+  }
+  @media screen and (max-width: 420px) {
+    padding: 5px;
+    width: 85%;
+  }
+  & .arrow {
+    z-index: 1;
+  }
 }
 
 .landing-content__slogan {
-    position: absolute;
-    right: 134px;
-    bottom: 18px;
-    @media screen and (max-width: 420px) {
-        right: 50px;
-    }
+  position: absolute;
+  right: 134px;
+  bottom: 18px;
+  @media screen and (max-width: 420px) {
+    right: 50px;
+  }
 }
 
 .slogan {
-    width: 297px;
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
-    text-align: right;
+  width: 297px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
+  text-align: right;
 }

@@ -1,69 +1,69 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
-@import "../../styles/fonts";
+@import '../../styles/vars';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
 
 .form-booking__btn {
-    @media screen and (max-width: 420px) {
-        width: 80%;
-        margin: 0 auto;
-    }
-    & .arrow {
-        z-index: 1;
-    }
+  @media screen and (max-width: 420px) {
+    width: 80%;
+    margin: 0 auto;
+  }
+  & .arrow {
+    z-index: 1;
+  }
 }
 
 .roomPrice-calc {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .calcPrice-item {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
+  margin-bottom: 10px;
+  &__text {
+    width: 214px;
+    position: relative;
+    @media screen and (max-width: 420px) {
+      width: 65%;
+    }
+  }
+  &:nth-child(3) {
+    line-height: 18px;
+  }
+  &:nth-child(3) &__text:after,
+  &:nth-child(2) &__text:after {
+    content: 'i';
+    position: absolute;
+    right: -25px;
+    @include size(20px);
+    border: 1px solid $shade25-color;
+    border-radius: 50%;
+    top: 0;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  &__total-text,
+  &__total-val {
+    font-family: 'OpenSans-Bold';
+    font-size: 19px;
     line-height: 24px;
-    color: $shade75-color;
-    margin-bottom: 10px;
-    &__text {
-        width: 214px;
-        position: relative;
-        @media screen and (max-width: 420px) {
-            width: 65%;
-        }
-    }
-    &:nth-child(3) {
-        line-height: 18px;
-    }
-    &:nth-child(3) &__text:after,
-    &:nth-child(2) &__text:after {
-        content: "i";
-        position: absolute;
-        right: -25px;
-        @include size(20px);
-        border: 1px solid $shade25-color;
-        border-radius: 50%;
-        top: 0;
-        text-align: center;
-        font-size: 12px;
-        line-height: 20px;
-    }
-    &__total-text,
-    &__total-val {
-        font-family: "OpenSans-Bold";
-        font-size: 19px;
-        line-height: 24px;
-    }
-    &__total-text {
-        padding-right: 5px;
-    }
-    &__total-val {
-        padding-left: 5px;
-    }
-    &__total-val span {
-        font-family: "Montserrat-Bold";
-    }
-    &__line {
-        border-bottom: 1px dashed $shade25-color;
-        flex-grow: 1;
-        height: 20px;
-    }
+  }
+  &__total-text {
+    padding-right: 5px;
+  }
+  &__total-val {
+    padding-left: 5px;
+  }
+  &__total-val span {
+    font-family: 'Montserrat-Bold';
+  }
+  &__line {
+    border-bottom: 1px dashed $shade25-color;
+    flex-grow: 1;
+    height: 20px;
+  }
 }

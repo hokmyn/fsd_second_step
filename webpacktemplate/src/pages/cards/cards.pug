@@ -9,37 +9,37 @@ include ../../components/form-datepicker/form-datepicker
 include ../../components/roomInfo-card/roomInfo-card
 
 block title 
-	| Cards
+  | Cards
 
 block content
-	section.cards
-		+logo({imgType: "pages"})
-		.cards__column
-			.card
-				+form-select
-			.card
-				+form-registration
-		.cards__column
-			.card
-				+form-booking({room_number: "888", room_class: "люкс", room_price: "9 990", date_start: "19.08.2019", date_end: "23.08.2019", dropdown_text: "3 гостя"})
-			.card
-				+form-enter
-		.cards__column
-			.field_bigMargin
-				+form-datepicker
-			.cards__roomInfo
-				+roomInfo-card({
-					imageSrc:"/src/pages/search-room/images/image888.jpg",
-					roomNumber:"888",
-					roomClass: "люкс",
-					roomPrice: "9 990",
-					markedStars: 5,
-					commentsNum: 145})
-			.cards__roomInfo
-				+roomInfo-card({
-					imageSrc:"/src/pages/search-room/images/image840.jpg",
-					roomNumber:"840",
-					roomClass: "",
-					roomPrice: "9 990",
-					markedStars: 4,
-					commentsNum: 65})
+  section.cards
+    +logo({imgType: "pages"})
+    .cards__column
+      .card
+        +form-select
+      .card
+        +form-registration
+    .cards__column
+      .card
+        +form-booking({room_number: "888", room_class: "люкс", room_price: "9 990", date_start: "19.08.2019", date_end: "23.08.2019", dropdown_text: "3 гостя"})
+      .card
+        +form-enter
+    .cards__column
+      .field_bigMargin
+        +form-datepicker
+      .cards__roomInfo
+        +roomInfo-card({
+          imageSrc:"/src/pages/search-room/images/image888.jpg",
+          roomNumber:"888",
+          roomClass: "люкс",
+          roomPrice: "9 990",
+          markedStars: 5,
+          commentsNum: 145})
+      .cards__roomInfo
+        +roomInfo-card({
+          imageSrc:"/src/pages/search-room/images/image840.jpg",
+          roomNumber:"840",
+          roomClass: "",
+          roomPrice: "9 990",
+          markedStars: 4,
+          commentsNum: 65})

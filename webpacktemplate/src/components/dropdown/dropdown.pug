@@ -1,10 +1,13 @@
 //-
-	options.label_wrap (string) - class of wrapper
-	options.list_name (string) - title of list
-	options.label_text (string) - text of item
+  options.label_wrap (string) - class of wrapper
+  options.list_name (string) - title of list
+  options.label_text (string) - text of item
+
+include ../../components/arrow/arrow
 
 mixin dropdown(options)
-	if !options
-		- options = {}
-	div(class= "select "+ options.label_wrap)
-		label(for= options.list_name class="select-expanded__label") #{options.label_text}
+  if !options
+    - options = {}
+  div(class= "select "+ options.label_wrap)
+    label(for= options.list_name class="select-expanded__label") #{options.label_text}
+    +arrow({ name: "keyboard_arrow_down", color: "black"})

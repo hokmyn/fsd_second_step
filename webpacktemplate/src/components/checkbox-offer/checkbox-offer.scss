@@ -1,47 +1,47 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .checkbox-offer {
-    position: relative;
+  position: relative;
 }
 
 .checkbox-offer__label {
-    margin-bottom: 6px;
+  margin-bottom: 6px;
 }
 
 
 .offer-label {
-    display: inline-block;
-    font-size: 14px;
-    line-height: 20px;
-    margin-left: 50px;
-    &::before {
-        content: "";
-        position: absolute;
-        @include size(40px, 20px);
-        border: 1px solid $shade25-color;
-        border-radius: 10px;
-        left: 0;
-        top: 2px;
-    }
-    &::after {
-        content: "";
-        @include size(12px);
-        position: absolute;
-        left: 4px;
-        top: 6px;
-        border-radius: 50%;
-        background: $shade25-color;
-    }
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+  margin-left: 50px;
+  &::before {
+    content: '';
+    position: absolute;
+    @include size(40px, 20px);
+    border: 1px solid $shade25-color;
+    border-radius: 10px;
+    left: 0;
+    top: 2px;
+  }
+  &::after {
+    content: '';
+    @include size(12px);
+    position: absolute;
+    left: 4px;
+    top: 6px;
+    border-radius: 50%;
+    background: $shade25-color;
+  }
 }
 
-input[id="offer"]:checked + label::after {    
-    left: 24px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+input[id='offer']:checked + label::after {    
+  left: 24px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
-input[id="offer"]:checked + label::before {    
-    border: 1px solid #BC9CFF;
+input[id='offer']:checked+label::before {
+  border: 1px solid #BC9CFF;
 }
 
 

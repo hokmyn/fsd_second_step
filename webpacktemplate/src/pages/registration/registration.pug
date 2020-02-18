@@ -5,35 +5,35 @@ include ../../components/form-registration/form-registration
 include ../../components/footer/footer
 
 block title 
-	| Registration
+  | Registration
 
 block header
-	+header({isAuth: false,
-				isRus: true,
-				listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
-				links: ["#", "#", "#", "#", "#"],
-				adds: ["", "expandable", "", "", "expandable"],
-				loginText: "войти",
-				regText: "зарегистрироваться"
-			})
+  +header({isAuth: false,
+    isRus: true,
+    listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
+    links: ["#", "#", "#", "#", "#"],
+    adds: ["", "expandable", "", "", "expandable"],
+    loginText: "войти",
+    regText: "зарегистрироваться"
+  })
 block content
-	section.registration-page
-		.registration-page__content
-			.registration-content
-				.content__card.card
-					+form-registration
-				
+  section.registration-page
+    .registration-page__content
+      .registration-content
+        .content__card.card
+          +form-registration
+        
 block footer
-	+footer({
-			isRus: true,
-			logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-			navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
-			navLinks: ["#", "#", "#", "#", "#"],
-			aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
-			aboutLinks: ["#", "#", "#", "#", "#"],
-			supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
-			supportLinks: ["#", "#", "#", "#"],
-			subscrTitle: "Подписка",
-			subscrText: "Получайте специальные предложения и новости сервиса",
-			copyrightText: "Copyright 2018 Toxin отель. Все права защищены"
-		})
+  +footer({
+    isRus: true,
+    logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
+    navLinks: ["#", "#", "#", "#", "#"],
+    aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+    aboutLinks: ["#", "#", "#", "#", "#"],
+    supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
+    supportLinks: ["#", "#", "#", "#"],
+    subscrTitle: "Подписка",
+    subscrText: "Получайте специальные предложения и новости сервиса",
+    copyrightText: "Copyright 2018 Toxin отель. Все права защищены"
+  })

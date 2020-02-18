@@ -5,37 +5,37 @@ include ../../components/form-select/form-select
 include ../../components/footer/footer
 
 block title 
-	| Landing Page
+  | Landing Page
 
 block header
-	+header({isAuth: false,
-				isRus: true,
-				listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
-				links: ["#", "#", "#", "#", "#"],
-				adds: ["", "expandable", "", "", "expandable"],
-				loginText: "войти",
-				regText: "зарегистрироваться"
-			})
+  +header({isAuth: false,
+    isRus: true,
+    listItems: ["О нас", "Услуги", "Вакансии", "Новости", "Соглашения"],
+    links: ["#", "#", "#", "#", "#"],
+    adds: ["", "expandable", "", "", "expandable"],
+    loginText: "войти",
+    regText: "зарегистрироваться"
+  })
 block content
-	section.landing-page
-		.landing-page__content.landing-content
-			img.landing-content__img(src="/src/pages/landing-page/images/image_bg.jpg" alt="landing background")
-			.landing-content__card.card
-				+form-select
-			.landing-content__slogan.slogan
-				| Лучшие номера для вашей работы, отдыха и просто вдохновения		
+  section.landing-page
+    .landing-page__content.landing-content
+      img.landing-content__img(src="/src/pages/landing-page/images/image_bg.jpg" alt="landing background")
+      .landing-content__card.card
+        +form-select
+      .landing-content__slogan.slogan
+        | Лучшие номера для вашей работы, отдыха и просто вдохновения		
 block footer
-	+footer({
-			isRus: true,
-			logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
-			navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
-			navLinks: ["#", "#", "#", "#", "#"],
-			aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
-			aboutLinks: ["#", "#", "#", "#", "#"],
-			supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
-			supportLinks: ["#", "#", "#", "#"],
-			subscrTitle: "Подписка",
-			subscrText: "Получайте специальные предложения и новости сервиса",
-			copyrightText: "Copyright 2018 Toxin отель. Все права защищены"
-		})
+  +footer({
+    isRus: true,
+    logoText: "Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    navItems: ["Навигация", "О нас", "Новости", "Служба поддержки", "Услуги"],
+    navLinks: ["/change/me/", "#", "#", "#", "#"],
+    aboutItems: ["О нас", "О сервисе", "Наша команда", "Вакансии", "Инвесторы"],
+    aboutLinks: ["#", "#", "#", "#", "#"],
+    supportItems: ["Служба поддержки", "Соглашения", "Сообщества", "Связь с нами"],
+    supportLinks: ["#", "#", "#", "#"],
+    subscrTitle: "Подписка",
+    subscrText: "Получайте специальные предложения и новости сервиса",
+    copyrightText: "Copyright 2018 Toxin отель. Все права защищены"
+  })
 

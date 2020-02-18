@@ -1,64 +1,64 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .button_small {
-    @include size(99px, 44px);
+  @include size(99px, 44px);
 }
 
 .button_big {
-    @include size(320px, 44px);
-    @media screen and (max-width: 420px) {
-        width: 100%;
-    }
+  @include size(320px, 44px);
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 }
 
 button {
-    text-transform: uppercase;
-    background-color: transparent;
-    outline: none;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
+  text-transform: uppercase;
+  background-color: transparent;
+  outline: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
 }
 
 .button_filled, .button_transp {
-    border-radius: 22px;
+  border-radius: 22px;
 }
 
 .button_filled {
-    color: #fff;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
+  color: #fff;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
 }
 
 .button_fill.button_hovered {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .button_transp {
-    background-color: #fff;
-    @include size(95px, 40px);
-    color: $purple-color;
+  background-color: #fff;
+  @include size(95px, 40px);
+  color: $purple-color;
 }
 
 .transp-wrap {
-    @include size(99px, 44px);
-    border-radius: 22px;
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+  @include size(99px, 44px);
+  border-radius: 22px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;    
 }
 
 .transp-wrap-hover {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .button_wthBoder {
-    color: $purple-color;
+  color: $purple-color;
 }
 
 .button_wthBoder.button_hovered {    
-    color: $shade50-color;
+  color: $shade50-color;
 }
 
 

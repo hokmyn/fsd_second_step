@@ -1,18 +1,18 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .social {
-    line-height: 10px;
+  line-height: 10px;
 }
 
 .social img {
-    @include size(24px);
+  @include size(24px);
 }
 
 .social__image {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 .social__image:first-child {
-    margin-left: 0;
+  margin-left: 0;
 }

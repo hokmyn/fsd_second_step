@@ -1,16 +1,16 @@
 //-
-	options.isRus (bool) - footer in Russian or not
-	options.logo-text - текст в блоке logo
-	options.navItems - пункты из списка навигация (string)
-	options.navLinks - ссылки пунктов из списка навигация  (string)
-	options.aboutItems - пункты из списка О нас (string)
-	options.aboutLinks - ссылки пунктов из списка О нас (string)
-	options.supportItems - пункты из списка Поддержка (string)
-	options.supportLinks - ссылки пунктов из списка Поддержка (string)
-	options.subscrTitle - заголовок блока subscription (string)
-	options.subscrText - текст блока subscription (string)
-	options.copyrightText - текст блока copyright (string)
-	options.isUiKit - footer in uikit or not   (bool)
+  options.isRus (bool) - footer in Russian or not
+  options.logo-text - текст в блоке logo
+  options.navItems - пункты из списка навигация (string)
+  options.navLinks - ссылки пунктов из списка навигация  (string)
+  options.aboutItems - пункты из списка О нас (string)
+  options.aboutLinks - ссылки пунктов из списка О нас (string)
+  options.supportItems - пункты из списка Поддержка (string)
+  options.supportLinks - ссылки пунктов из списка Поддержка (string)
+  options.subscrTitle - заголовок блока subscription (string)
+  options.subscrText - текст блока subscription (string)
+  options.copyrightText - текст блока copyright (string)
+  options.isUiKit - footer in uikit or not   (bool)
   
 include ../../components/logo/logo
 include ../../components/text-field/text-field
@@ -18,77 +18,77 @@ include ../../components/arrow/arrow
 include ../../components/social/social
 
 mixin footer(options)
-	if !options
-		- options = {}
-	-
-		let navItems = '',
-			navLinks = "",
-			aboutItems = '',
-			aboutLinks = "",
-			supportItems = '',
-			supportLinks = "";
+  if !options
+    - options = {}
+  -
+    let navItems = '',
+      navLinks = '',
+      aboutItems = '',
+      aboutLinks = '',
+      supportItems = '',
+      supportLinks = '';
 
-		navItems += options.navItems;
-		navLinks += options.navLinks;
-		aboutItems += options.aboutItems;
-		aboutLinks += options.aboutLinks;
-		supportItems += options.supportItems;
-		supportLinks += options.supportLinks;
+    navItems += options.navItems;
+    navLinks += options.navLinks;
+    aboutItems += options.aboutItems;
+    aboutLinks += options.aboutLinks;
+    supportItems += options.supportItems;
+    supportLinks += options.supportLinks;
 
 
-		let arrNavItems = navItems.split(","),
-			arrNavLinks = navLinks.split(","),
-			arrAboutItems = aboutItems.split(","),
-			arrAboutLinks = aboutLinks.split(","),
-			arrSupportItems = supportItems.split(","),
-			arrSupportLinks = supportLinks.split(",");
+    let arrNavItems = navItems.split(','),
+      arrNavLinks = navLinks.split(','),
+      arrAboutItems = aboutItems.split(','),
+      arrAboutLinks = aboutLinks.split(','),
+      arrSupportItems = supportItems.split(','),
+      arrSupportLinks = supportLinks.split(',');
 
-		let classes = '';
-		classes += options.isRus ? " footer-rus" : 'footer-eng';
-		classes += options.isUiKit ? " headers-and-footers__footer" : '';
+    let classes = '';
+    classes += options.isRus ? ' footer-rus' : 'footer-eng';
+    classes += options.isUiKit ? ' headers-and-footers__footer' : '';
 
-	footer.footer(class=classes)
-		.footer-content
-			.footer-content__line.line
-			.footer__block.footer-logo
-				.field_smallMargin
-					+logo({imgType: 'h&f', isFooter: true})
-				.footer-logo__content
-					span #{options.logoText}
-			.footer__block.navigation
-				ul.footer-content__list.footer-list
-					each val, index in arrNavItems
-						if (index === 0)
-							li.elem-title #{val}
-						else
-							li
-								a(href=""+arrNavLinks[index]+"" class="footer-list__link") #{val}
-			.footer__block.aboutus
-				ul.footer-content__list.footer-list
-					each val, index in arrAboutItems
-						if (index === 0)
-							li.elem-title #{val}
-						else
-							li
-								a(href=""+arrAboutLinks[index]+"" class="footer-list__link") #{val}
-			.footer__block.support
-				ul.footer-content__list.footer-list
-					each val, index in arrSupportItems
-						if (index === 0)
-							li.elem-title #{val}
-						else
-							li
-								a(href=""+arrSupportLinks[index]+"" class="footer-list__link") #{val}
-			.footer__block.subscription
-				.elem-title #{options.subscrTitle}
-				.subscription__content
-					span #{options.subscrText}
-				.field_smallMargin
-					+text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
-					+arrow({ name: "arrow_forward", color: "gradient"} )
-		.footer__copyrights.copyrights
-			.line.copyrights__line
-			.copyrights__text
-				span #{options.copyrightText}
-			.copyrights__social
-				+social()
+  footer.footer(class=classes)
+    .footer-content
+      .footer-content__line.line
+      .footer__block.footer-logo
+        .field_smallMargin
+          +logo({imgType: 'h&f', isFooter: true})
+        .footer-logo__content
+          span #{options.logoText}
+      .footer__block.navigation
+        ul.footer-content__list.footer-list
+          each val, index in arrNavItems
+            if (index === 0)
+              li.elem-title #{val}
+            else
+              li
+                a(href=""+arrNavLinks[index]+"" class="footer-list__link") #{val}
+      .footer__block.aboutus
+        ul.footer-content__list.footer-list
+          each val, index in arrAboutItems
+            if (index === 0)
+              li.elem-title #{val}
+            else
+              li
+                a(href=""+arrAboutLinks[index]+"" class="footer-list__link") #{val}
+      .footer__block.support
+        ul.footer-content__list.footer-list
+          each val, index in arrSupportItems
+            if (index === 0)
+              li.elem-title #{val}
+            else
+              li
+                a(href=""+arrSupportLinks[index]+"" class="footer-list__link") #{val}
+      .footer__block.subscription
+        .elem-title #{options.subscrTitle}
+        .subscription__content
+          span #{options.subscrText}
+        .field_smallMargin
+          +text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
+          +arrow({ name: "arrow_forward", color: "gradient"} )
+    .footer__copyrights.copyrights
+      .line.copyrights__line
+      .copyrights__text
+        span #{options.copyrightText}
+      .copyrights__social
+        +social()

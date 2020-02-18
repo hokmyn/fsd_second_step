@@ -12,35 +12,33 @@ include ../../components/rate-buttons/rate-buttons
 
 mixin roomInfo-card(options)
 
-    if !options
-        - options = {}
+  if !options
+    - options = {}
 
     .roomInfo-card
-        .roomInfo-card__slider.room-slider
-            img.roomInfo-card__image(src= options.imageSrc, alt= options.roomNumber)
-            .room-slider__control
-                +arrow({ name: "keyboard_arrow_down", color: "white"})
-                +arrow({ name: "keyboard_arrow_down", color: "white"})
-            .room-slider__toggle
-                label
-                    input(type="radio" name="slide-toggle" value="1" checked)
-                    span
-                label
-                    input(type="radio" name="slide-toggle" value="2")
-                    span
-                label
-                    input(type="radio" name="slide-toggle" value="3")
-                    span
-                label
-                    input(type="radio" name="slide-toggle" value="4")
-                    span
-        .roomInfo-card__content.roomInfo-content
-            +roomInfo-title({number: options.roomNumber, class: options.roomClass, price: options.roomPrice})
-            .roomInfo-content__line
-            .roomInfo-content__rate
-                +rate-buttons({marked_count: options.markedStars})
-                .comments-count
-                    strong #{options.commentsNum}
-                    | &nbsp;отзывов
-
-        
+      .roomInfo-card__slider.room-slider
+        img.roomInfo-card__image(src= options.imageSrc, alt= options.roomNumber)
+        .room-slider__control
+          +arrow({ name: "keyboard_arrow_down", color: "white"})
+          +arrow({ name: "keyboard_arrow_down", color: "white"})
+        .room-slider__toggle
+          label
+            input(type="radio" name="slide-toggle" value="1" checked)
+            span
+          label
+            input(type="radio" name="slide-toggle" value="2")
+            span
+          label
+            input(type="radio" name="slide-toggle" value="3")
+            span
+          label
+            input(type="radio" name="slide-toggle" value="4")
+            span
+      .roomInfo-card__content.roomInfo-content
+        +roomInfo-title({number: options.roomNumber, class: options.roomClass, price: options.roomPrice})
+        .roomInfo-content__line
+        .roomInfo-content__rate
+          +rate-buttons({marked_count: options.markedStars})
+          .comments-count
+            strong #{options.commentsNum}
+            | &nbsp;отзывов

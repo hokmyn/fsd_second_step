@@ -1,33 +1,33 @@
-@import "../../styles/vars";
+@import '../../styles/vars';
 
 .roomInfo-title {
-    font-family: "Montserrat-Bold";
-    line-height: 18px;
-    font-size: 14px;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;    
+  font-family: 'Montserrat-Bold';
+  line-height: 18px;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .room-number {
-    margin-right: 5px;
-    display: inline-block;
+  margin-right: 5px;
+  display: inline-block;
 }
 
 .number {
-    font-family: "OpenSans-Bold";
-    color: $shade100-color; 
-    font-size: 22px;
-    line-height: 10px;
-    font-weight: bold;
+  font-family: 'OpenSans-Bold';
+  color: $shade100-color; 
+  font-size: 22px;
+  line-height: 10px;
+  font-weight: bold;
 }
 
 .room-class {
-    font-size: 12px;
-    line-height: 15px;
-    color: $purple-color;
+  font-size: 12px;
+  line-height: 15px;
+  color: $purple-color;
 }
 
 .room-price {
-    color: $shade50-color;
+  color: $shade50-color;
 }

@@ -1,23 +1,27 @@
 //-
-	options.img_name - image name
-	options.like_value - quantity of likes
-	options.icon_name - icon name
-	options.username - user name
-	options.date - date of comment
-	options.comment_text - text of comment
+  options.img_name - image name
+  options.like_value - quantity of likes
+  options.icon_name - icon name
+  options.username - user name
+  options.date - date of comment
+  options.comment_text - text of comment
 
 
 include ../like-button/like-button
 
 mixin comments-item(options)
-	if !options
-		- options = {}
-	.comments-item
-		.comments-item__image.comments-image
-			.comments-image__wrap
-				img(src="/src/components/comments-item/images/" + options.img_name + ".jpg", class="comments__user-img")
-			+like-button(options.like_value, btn_class="", options.icon_name)
-		.comments-content.number-content
-			.comments-content__username.number-content__title #{options.username}
-			.comments-content__date #{options.date}
-			.comments-content__text #{options.comment_text}
+  if !options
+    - options = {}
+
+  -
+    const {img_name, like_value, icon_name, username, date, comment_text} = options
+
+  .comments-item
+    .comments-item__image.comments-image
+      .comments-image__wrap
+        img(src="/src/components/comments-item/images/" + img_name + ".jpg", class="comments__user-img")
+      +like-button({value: like_value, btn_class: "", icon_name: icon_name})
+    .comments-content.number-content
+      .comments-content__username.number-content__title #{username}
+      .comments-content__date #{date}
+      .comments-content__text #{comment_text}

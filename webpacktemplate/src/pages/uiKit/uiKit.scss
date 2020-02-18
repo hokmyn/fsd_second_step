@@ -52,6 +52,10 @@ body {
   padding-top: 100px;
 }
 
+.input_subscription+.arrow {
+  top: 20px;
+}
+
 input[type="checkbox"], input[type="radio"] {
   display: none;
 }    
@@ -76,12 +80,12 @@ input[type="checkbox"], input[type="radio"] {
     line-height: 24px;
     color: $shade75-color;
 
-    &__title {    
-        font-family: "Montserrat-Bold";
+    &__title {
+      font-family: 'Montserrat-Bold';
     }
 }
 
-  .spec-offer {    
+  .spec-offer {
     max-width: 270px;
   }
   

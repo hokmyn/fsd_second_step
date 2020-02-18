@@ -5,41 +5,39 @@ include ../../components/header/header
 include ../../components/footer/footer
 
 block title 
-	| Headers&footers
+  | Headers&footers
 
 block content
-	section.headers-and-footers
-		+logo({imgType: 'pages'})
-		.field_bigMargin
-			+header({isAuth: false,
-				listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
-				links: ["#", "#", "#", "#", "#", "#"],
-				adds: ["active", "", "services", "", "", ""],
-				loginText: "login",
-				regText: "register"
-			})
-		.field_bigMargin
-			+header({
-				isAuth: true,
-				listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
-				links: ["#", "#", "#", "#", "#", "#"],
-				adds: ["active", "", "services", "", "", ""],
-				loginText: "login",
-				regText: "register"
-			})
-		.field_bigMargin
-			+footer({
-				logoText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
-				navItems: ["Navigation", "About us", "News", "Support", "Products"],
-				navLinks: ["#", "#", "#", "#", "#"],
-				aboutItems: ["About us", "Who we are", "Our team", "Careers", "Investors"],
-				aboutLinks: ["#", "#", "#", "#", "#"],
-				supportItems: ["Support", "Documentation", "Community", "Get in touch"],
-				supportLinks: ["#", "#", "#", "#", "#"],
-				subscrTitle: "subcribe to our newsletter",
-				subscrText: "Receive our latest news and promotion in your inbox",
-				copyrightText: "Copyright 2018 Toxin UI Kit. All rights reserved.",
-				isUiKit: true
-			})
-			
-			
+  section.headers-and-footers
+    +logo({imgType: "pages"})
+    .field_bigMargin
+      +header({isAuth: false,
+        listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+        links: ["#", "#", "#", "#", "#", "#"],
+        adds: ["active", "", "services", "", "", ""],
+        loginText: "login",
+        regText: "register"
+      })
+    .field_bigMargin
+      +header({
+        isAuth: true,
+        listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+        links: ["#", "#", "#", "#", "#", "#"],
+        adds: ["active", "", "services", "", "", ""],
+        loginText: "login",
+        regText: "register"
+      })
+    .field_bigMargin
+      +footer({
+        logoText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+        navItems: ["Navigation", "About us", "News", "Support", "Products"],
+        navLinks: ["#", "#", "#", "#", "#"],
+        aboutItems: ["About us", "Who we are", "Our team", "Careers", "Investors"],
+        aboutLinks: ["#", "#", "#", "#", "#"],
+        supportItems: ["Support", "Documentation", "Community", "Get in touch"],
+        supportLinks: ["#", "#", "#", "#", "#"],
+        subscrTitle: "subcribe to our newsletter",
+        subscrText: "Receive our latest news and promotion in your inbox",
+        copyrightText: "Copyright 2018 Toxin UI Kit. All rights reserved.",
+        isUiKit: true
+      })

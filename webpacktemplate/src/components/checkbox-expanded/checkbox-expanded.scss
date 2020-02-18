@@ -1,68 +1,68 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
-@import "../../styles/fonts";
+@import '../../styles/vars';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
 
 .checkboxes {
-    width: 266px;
+  width: 266px;
 }
 
 .checkboxes-content {
-    width: 266px;
-    display: block;
-    font-size: 14px;
-    line-height: 18px;
-    color: $shade50-color;
-    z-index: 100;
-    padding-left: 5px;
-    padding-right: 5px;
+  width: 266px;
+  display: block;
+  font-size: 14px;
+  line-height: 18px;
+  color: $shade50-color;
+  z-index: 100;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .checkbox-expandable {
-    position: absolute;
-    top: -10000px;
-    background: #fff;
+  position: absolute;
+  top: -10000px;
+  background: #fff;
 }
 
 .checkboxes-content__item {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .content-item {
-    position: relative;
-    padding-left: 30px;
+  position: relative;
+  padding-left: 30px;
 }
 
 .checkboxes-label::before {
-    content: "";
-    position: absolute;
-    @include size(20px);
-    border: 1px solid $shade25-color;
-    border-radius: 4px;
-    left: 0;
+  content: '';
+  position: absolute;
+  @include size(20px);
+  border: 1px solid $shade25-color;
+  border-radius: 4px;
+  left: 0;
 }
 
-input[id^="checkbox"]:checked + label::after {
-    content: "";
-    @include size(8px, 6px);
-    transform: rotate(-45deg);
-    border-left: 1px solid $purple-color;
-    border-bottom: 1px solid $purple-color;
-    position: absolute;
-    left: 6px;
-    top: 5px;
+input[id^='checkbox']:checked + label::after {
+  content: '';
+  @include size(8px, 6px);
+  transform: rotate(-45deg);
+  border-left: 1px solid $purple-color;
+  border-bottom: 1px solid $purple-color;
+  position: absolute;
+  left: 6px;
+  top: 5px;
 }
 
 .content-item__descr {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 .descr {
-    font-size: 12px;
-    line-height: 14px;
-    color: $shade50-color;
+  font-size: 12px;
+  line-height: 14px;
+  color: $shade50-color;
 }
 
 .label-access {
-    font-family: "Montserrat-Bold";
-    color: $shade75-color;
+  font-family: 'Montserrat-Bold';
+  color: $shade75-color;
 }

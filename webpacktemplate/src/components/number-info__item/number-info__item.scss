@@ -1,25 +1,25 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .number-info-item {
-    display: flex;
-    justify-content: flex-start;
-    width: 280px;    
-    border-bottom: 1px solid rgba(31, 32, 65, 0.1);
-    padding-bottom: 17px;
-    padding-top: 20px;   
+  display: flex;
+  justify-content: flex-start;
+  width: 280px;    
+  border-bottom: 1px solid rgba(31, 32, 65, 0.1);
+  padding-bottom: 17px;
+  padding-top: 20px;   
 
-    &-wrap {
-        margin-bottom: 23px;
-    }
-  
-    &__pic {
-        @include size(48px);
-        color: $purple-color;
-    }
+  &-wrap {
+    margin-bottom: 23px;
+  }
+
+  &__pic {
+    @include size(48px);
+    color: $purple-color;
+  }
 }
 
 .face {
-    font-size: 48px;
+  font-size: 48px;
 }
 

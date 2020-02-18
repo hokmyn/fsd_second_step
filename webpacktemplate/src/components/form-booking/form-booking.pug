@@ -8,35 +8,33 @@ include ../../components/dropdown/dropdown
 
 
 mixin form-booking(options)
-    form.form-booking
-        .field_smallMargin
-            +roomInfo-title({number: options.room_number, class: options.room_class, price: options.room_price})
-        div(class = "datepicker-wrap field_smallMargin field_rightMargin")
-            +elem-title("прибытие")
-            +date-dropdown({placeholder_text: options.date_start, datepicker_class: 'booking-arrival'})
-        div(class = "datepicker-wrap field_smallMargin")
-            +elem-title("выезд")
-            +date-dropdown({placeholder_text: options.date_end, datepicker_class: 'booking-departure'})
-        div(class = "field_midMargin")
-            +elem-title("гости")
-            +dropdown({label_wrap: "field_big", label_text: options.dropdown_text, list_name: "guests-list"})
-            +arrow({ name: "keyboard_arrow_down", color: "black"})        
-        .roomPrice-calc
-            .calcPrice-item
-                .calcPrice-item__text 9900&#8381; &#215; 4
-                .calcPrice-item__val 39 960&#8381;
-            .calcPrice-item
-                .calcPrice-item__text Сбор за услуги: скидка 2179&#8381;
-                .calcPrice-item__val 0&#8381;
-            .calcPrice-item
-                .calcPrice-item__text Сбор за дополнительные услуги
-                .calcPrice-item__val 300&#8381;
-            .calcPrice-item
-                .calcPrice-item__total-text Итого
-                .calcPrice-item__line
-                .calcPrice-item__total-val 38 081<span>&#8381;</span>
-        .field_big.form-booking__btn
-            +button({text: 'забронировать', type: 'filled', size: 'big'})
-            +arrow({ name: "arrow_forward", color: "white"} )
-
-                
+  form.form-booking
+    .field_smallMargin
+      +roomInfo-title({number: options.room_number, class: options.room_class, price: options.room_price})
+    div(class = "datepicker-wrap field_smallMargin field_rightMargin")
+      +elem-title("прибытие")
+      +date-dropdown({placeholder_text: options.date_start, datepicker_class: "booking-arrival"})
+    div(class = "datepicker-wrap field_smallMargin")
+      +elem-title("выезд")
+      +date-dropdown({placeholder_text: options.date_end, datepicker_class: "booking-departure"})
+    div(class = "field_midMargin")
+      +elem-title("гости")
+      +dropdown({label_wrap: "field_big", label_text: options.dropdown_text, list_name: "guests-list"})
+      +arrow({ name: "keyboard_arrow_down", color: "black"})        
+    .roomPrice-calc
+      .calcPrice-item
+        .calcPrice-item__text 9900&#8381; &#215; 4
+        .calcPrice-item__val 39 960&#8381;
+      .calcPrice-item
+        .calcPrice-item__text Сбор за услуги: скидка 2179&#8381;
+        .calcPrice-item__val 0&#8381;
+      .calcPrice-item
+        .calcPrice-item__text Сбор за дополнительные услуги
+        .calcPrice-item__val 300&#8381;
+      .calcPrice-item
+        .calcPrice-item__total-text Итого
+        .calcPrice-item__line
+        .calcPrice-item__total-val 38 081<span>&#8381;</span>
+    .field_big.form-booking__btn
+      +button({text: "забронировать", type: "filled", size: "big"})
+      +arrow({ name: "arrow_forward", color: "white"} )

@@ -1,57 +1,57 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
-@import "../../styles/fonts";
+@import '../../styles/vars';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
 
 .types-list__item div:first-child {
-    display: flex;
+  display: flex;
 }
   
 .type-item__left {
-    text-transform: uppercase;
-    color: $shade25-color;
-    width: 38px;
-    display: flex;
-    justify-content: flex-end;
+  text-transform: uppercase;
+  color: $shade25-color;
+  width: 38px;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .type-item__right {
   margin-left: 30px;
 }
 
-  .type-item__h1 {
-    font-size: 24px;
-    line-height: 29px;
-    .type-item__right {
-      font-family: "Quicksand-Bold";
-      max-width: 336px;
-    }
+.type-item__h1 {
+  font-size: 24px;
+  line-height: 29px;
+  .type-item__right {
+    font-family: 'Quicksand-Bold';
+    max-width: 336px;
   }
+}
    
-  .type-item__h2 {
-    font-size: 19px;
-    line-height: 24px;
-    .type-item__right {
-      font-family: "Quicksand-Bold";
-      max-width: 282px;
-    }
+.type-item__h2 {
+  font-size: 19px;
+  line-height: 24px;
+  .type-item__right {
+    font-family: 'Quicksand-Bold';
+    max-width: 282px;
   }
-  
-  .type-item__h3 {
-    font-size: 12px;
-    line-height: 15px;
-    .type-item__right {
-      font-family: "Montserrat-Bold";
-    }
+}
+
+.type-item__h3 {
+  font-size: 12px;
+  line-height: 15px;
+  .type-item__right {
+    font-family: 'Montserrat-Bold';
   }
-  
-  .type-item__body {
-    font-size: 14px;
-    line-height: 24px;
-    .type-item__left {
-      text-transform: capitalize;
-    }  
-    .type-item__right {
-      max-width: 301px;
-      color: $shade75-color;
-    }
+}
+
+.type-item__body {
+  font-size: 14px;
+  line-height: 24px;
+  .type-item__left {
+    text-transform: capitalize;
+  }  
+  .type-item__right {
+    max-width: 301px;
+    color: $shade75-color;
   }
+}

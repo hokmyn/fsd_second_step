@@ -1,20 +1,20 @@
 //-
-    options.number - room number
-    options.class - room class
-    options.price - room price
+  options.number - room number
+  options.class - room class
+  options.price - room price
 
 mixin roomInfo-title(options)
 
-    if !options
-        - options = {}
+  if !options
+    - options = {}
 
-    .roomInfo-title
-        .roomInfo-title_left
-            .room-number
-                span №&nbsp;
-                span.number #{options.number}
-            span.room-class #{options.class}
-        .roomInfo-title_right
-            span.room-price
-                strong #{options.price}&#8381;
-                |  в сутки
+  .roomInfo-title
+    .roomInfo-title_left
+      .room-number
+        span №&nbsp;
+        span.number #{options.number}
+      span.room-class #{options.class}
+    .roomInfo-title_right
+      span.room-price
+        strong #{options.price}&#8381;
+        |  в сутки

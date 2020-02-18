@@ -2,115 +2,114 @@
 @import "../../styles/mixins";
 
 #datepickers-container .datepicker {
-    padding: 20px;
-    width: 278px;
+  padding: 20px;
+  width: 278px;
+  font-family: "Montserrat-Bold";
+  font-size: 12px;
+  line-height: 15px;
+  & .datepicker--pointer {
+    display: none;
+  }
+  & .material-icons {
+    color: #BC9CFF;        
+  }
+  & .datepicker--content {
+    padding: 0;
+    width: 280px;
+  }
+  & .datepicker--nav {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    border: none;
+    min-height: 24px;
+    margin-bottom: 32px;
+  }
+  & .datepicker--nav-action {
+    @include size(24px);
+  }
+  & .datepicker--nav-title {
+    font-family: "OpenSans-Bold";
+    font-weight: bold;
+    font-size: 19px;
+    line-height: 24px;
+    color: #1F2041;
+  }
+  & .datepicker--days-names {
+    margin: 0;
+  }
+  & .datepicker--day-name {
+    text-transform: capitalize;
+    color: $purple-color;
     font-family: "Montserrat-Bold";
+    @include size(40px);
     font-size: 12px;
-    line-height: 15px;
-    & .datepicker--pointer {
-        display: none;
-    }
-    & .material-icons {
-        color: #BC9CFF;        
-    }
-    & .datepicker--content {
-        padding: 0;
-        width: 280px;
-    }
-    & .datepicker--nav {
-        padding: 0;
-        display: flex;
-        align-items: center;
-        border: none;
-        min-height: 24px;
-        margin-bottom: 32px;
-    }
-    & .datepicker--nav-action {
-        @include size(24px);
-    }
-    & .datepicker--nav-title {
-        font-family: "OpenSans-Bold";
-        font-weight: bold;
-        font-size: 19px;
-        line-height: 24px;
-        color: #1F2041;
-    }
-    & .datepicker--days-names {
-        margin: 0;
-    }
-    & .datepicker--day-name {
-        text-transform: capitalize;
-        color: $purple-color;
-        font-family: "Montserrat-Bold";
-        @include size(40px);
-        font-size: 12px;
-    }
-    & .datepicker--cell {
-        @include size(40px);
-        font-family: Montserrat;
-        color: $shade50-color;
-    }
-    & .datepicker--cell:hover {
-        border-radius: 22px;
-    }
-    & .-other-month- {
-        color: $shade25-color;
-    }
-    & .-current- {
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        border-radius: 22px;
-        color: #fff;
-    }
-    & .-range-from-,
-    & .-range-to- {
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: 22px;
-        color: #fff;
-        position: relative;
-    }
-    & .-range-from-:after,
-    & .-range-to-:before {
-        content: "";
-        position: absolute;
-        @include size(20px, 40px);
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);        
-        opacity: 0.25;
-    }
-    & .-range-from-:after {
-        right: 0;
-    }
-    & .-range-to-:before {
-        left: 0;
-    }
-    & .-in-range- {
-        opacity: 0.25;
-        color: $shade75-color;
-        background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-        border-radius: none;
-    }
-    & .datepicker--buttons {
-        border-top: none;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;        
-        text-transform: uppercase;
-    }
-    & span[data-action="clear"] {        
-        height: 40px;
-        justify-content: flex-start;
-        color: $shade50-color;        
-    }
-    & span[data-action="clear"]:hover,
-    & .select-btns__submit:hover {
-        background: none;
-    }
-    & .select-btns__submit {
-        height: 40px;
-        justify-content: flex-end;
-    }
-    & .select-btns__submit:hover {
-        color: $purple-color;
-    }
-
+  }
+  & .datepicker--cell {
+    @include size(40px);
+    font-family: Montserrat;
+    color: $shade50-color;
+  }
+  & .datepicker--cell:hover {
+    border-radius: 22px;
+  }
+  & .-other-month- {
+    color: $shade25-color;
+  }
+  & .-current- {
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border-radius: 22px;
+    color: #fff;
+  }
+  & .-range-from-,
+  & .-range-to- {
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: 22px;
+    color: #fff;
+    position: relative;
+  }
+  & .-range-from-:after,
+  & .-range-to-:before {
+    content: '';
+    position: absolute;
+    @include size(20px, 40px);
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);        
+    opacity: 0.25;
+  }
+  & .-range-from-:after {
+    right: 0;
+  }
+  & .-range-to-:before {
+    left: 0;
+  }
+  & .-in-range- {
+    opacity: 0.25;
+    color: $shade75-color;
+    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+    border-radius: none;
+  }
+  & .datepicker--buttons {
+    border-top: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;        
+    text-transform: uppercase;
+  }
+  & span[data-action='clear'] {        
+    height: 40px;
+    justify-content: flex-start;
+    color: $shade50-color;        
+  }
+  & span[data-action='clear']:hover,
+  & .select-btns__submit:hover {
+    background: none;
+  }
+  & .select-btns__submit {
+    height: 40px;
+    justify-content: flex-end;
+  }
+  & .select-btns__submit:hover {
+    color: $purple-color;
+  }
 }

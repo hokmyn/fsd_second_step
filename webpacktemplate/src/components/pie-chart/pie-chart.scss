@@ -1,20 +1,20 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .segment-great {
-    fill: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  fill: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
 }
 
 .chart-text__number {
-    font-family: "Quicksand-Bold";
-    font-size: 24px;
-    line-height: 30px;
-    fill: $purple-color;
+  font-family: 'Quicksand-Bold';
+  font-size: 24px;
+  line-height: 30px;
+  fill: $purple-color;
 }
 
 .chart-text__label {
-    font-family: "Montserrat-Bold";
-    font-size: 12px;
-    line-height: 15px;
-    fill: $purple-color;
+  font-family: 'Montserrat-Bold';
+  font-size: 12px;
+  line-height: 15px;
+  fill: $purple-color;
 }

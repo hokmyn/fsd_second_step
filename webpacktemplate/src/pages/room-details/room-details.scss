@@ -1,288 +1,286 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .room-details {
-    min-width: 320px;
+  min-width: 320px;
 }
 
 .room-images {
-    display: flex;
-    justify-content: center;
-    @media screen and (max-width: 600px) {
-        flex-wrap: wrap;
-    }
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 600px) {
+    flex-wrap: wrap;
+  }
 }
 
 .images-item:first-child {
-    flex: 1 1 70.5%;
-    @media screen and (max-width: 600px) {
-        flex-basis: 100%;
-    }
+  flex: 1 1 70.5%;
+  @media screen and (max-width: 600px) {
+    flex-basis: 100%;
+  }
 }
 
 .images-item:last-child {
-    flex: 1 1 33%;
-    @media screen and (max-width: 600px) {
-        flex-basis: 100%;
-        display: flex;
-    }
-    @media screen and (max-width: 420px) {
-        flex-direction: column;        
-    }
-}
-
-img {
-    width: 100%;    
+  flex: 1 1 33%;
+  @media screen and (max-width: 600px) {
+    flex-basis: 100%;
+    display: flex;
+  }
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+  }
 }
 
 .images-item__big {
-    @media screen and (max-width: 420px) {
-        margin-bottom: 5px;
-    }
+  width: 100%;
+  @media screen and (max-width: 420px) {
+    margin-bottom: 5px;
+  }
 }
 
 .images-item__small {
-    display: block;
-    @media screen and (max-width: 600px) {
-        width: 50%;
-        display: inline-block;
-        margin-top: -5px;
-    }
-    @media screen and (max-width: 420px) {
-        flex-direction: column;
-        width: 100%;
-    }
+  width: 100%;
+  display: block;
+  @media screen and (max-width: 600px) {
+    width: 50%;
+    display: inline-block;
+    margin-top: -5px;
+  }
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .images-item__small:first-child {
-    @media screen and (max-width: 420px) {
-        margin-bottom: 10px;
-    }
+  @media screen and (max-width: 420px) {
+    margin-bottom: 10px;
+  }
 }
 
 .images-item__small:last-child {
-    margin-top: -1px;
-    @media screen and (max-width: 600px) {
-        margin-top: -5px;
-    }
+  margin-top: -1px;
+  @media screen and (max-width: 600px) {
+    margin-top: -5px;
+  }
 }
 
 .room-content {
-    padding: 70px 9.7%;
-    display: flex;
-    justify-content: space-between;    
-    & .bullet-list {
-        @media screen and (max-width: 600px) {
-            width: auto;
-        }
+  padding: 70px 9.7%;
+  display: flex;
+  justify-content: space-between;
+  & .bullet-list {
+    @media screen and (max-width: 600px) {
+      width: auto;
     }
-    @media screen and (max-width: 1439px) {
-        padding: 3% 5%;
-    }
-    @media screen and (max-width: 768px) {
-        flex-direction: column;
-        align-items: center;
-    }
+  }
+  @media screen and (max-width: 1439px) {
+    padding: 3% 5%;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .room-content__descr {
-    padding-right: 70px;
-    @media screen and (max-width: 1439px) {
-        padding-right: 0;
-    }
+  padding-right: 70px;
+  @media screen and (max-width: 1439px) {
+    padding-right: 0;
+  }
 }
 
 .room-content__calc {
-    @media screen and (max-width: 998px) {
-        margin-left: -8px;
-    }
+  @media screen and (max-width: 998px) {
+    margin-left: -8px;
+  }
 }
 
 .room-details__card {
-    @media screen and (max-width: 998px) {
-        width: 353px;
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    @media screen and (max-width: 768px) {
-        margin: 0 auto;
-    }
-    @media screen and (max-width: 420px) {
-        width: 90%;
-    }
+  @media screen and (max-width: 998px) {
+    width: 353px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+  }
+  @media screen and (max-width: 420px) {
+    width: 90%;
+  }
 }
 
 div.room-details__card {
-    @media screen and (max-width: 420px) {
-        width: 90%;
-        padding-right: 5px;
-        padding-left: 5px;
-    }
+  @media screen and (max-width: 420px) {
+    width: 90%;
+    padding-right: 5px;
+    padding-left: 5px;
+  }
 }
 
 .description__title {
-    font-family: "Quicksand-Bold", "OpenSans-Bold";
-    font-size: 19px;
-    line-height: 24px;
-    color: $shade100-color;
-    margin-bottom: 20px;
+  font-family: 'Quicksand-Bold', 'OpenSans-Bold';
+  font-size: 19px;
+  line-height: 24px;
+  color: $shade100-color;
+  margin-bottom: 20px;
 }
 
 .description__number-info {
-    margin-right: 70px;
-    @media screen and (max-width: 1349px) {
-        margin-right: 30px;
-    }    
+  margin-right: 70px;
+  @media screen and (max-width: 1349px) {
+    margin-right: 30px;
+  }
 }
 
 .number-info__item-wrap:first-child .number-info-item {
-    padding-top: 0;
+  padding-top: 0;
 }
 
 .description__nums {
-    display: flex;
-    @media screen and (max-width: 1349px) {
-        justify-content: flex-start;
-    }
-    @media screen and (max-width: 1100px) {
-        flex-direction: column;
-        align-items: center;
-    }
-    @media screen and (max-width: 768px) {
-        flex-direction: row;
-    }
-    @media screen and (max-width: 657px) {
-        justify-content: center;
-    }
-    @media screen and (max-width: 360px) {
-        padding-left: 5px;
-    }
+  display: flex;
+  @media screen and (max-width: 1349px) {
+    justify-content: flex-start;
+  }
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+  }
+  @media screen and (max-width: 657px) {
+    justify-content: center;
+  }
+  @media screen and (max-width: 360px) {
+    padding-left: 5px;
+  }
 }
 
 .description__comments {
-    padding-right: 15px;
-    @media screen and (max-width: 998px) {
-        width: 135%;
-        padding-top: 15px;
-        padding-right: 0;
-    }
-    @media screen and (max-width: 360px) {
-        padding-left: 5px;
-    }
+  padding-right: 15px;
+  @media screen and (max-width: 998px) {
+    width: 135%;
+    padding-top: 15px;
+    padding-right: 0;
+  }
+  @media screen and (max-width: 360px) {
+    padding-left: 5px;
+  }
 }
 
 div.description__comments {
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-bottom: 15px;
-    }
-    @media screen and (max-width: 420px) {
-        padding-right: 10px;
-    }
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  @media screen and (max-width: 420px) {
+    padding-right: 10px;
+  }
 }
 
 .description__impression {
-    margin-right: 30px;
-    @media screen and (max-width: 1100px) {
-        margin-bottom: 20px;
-    }
-    @media screen and (max-width: 998px) {
-        margin-right: 0;
-    }
+  margin-right: 30px;
+  @media screen and (max-width: 1100px) {
+    margin-bottom: 20px;
+  }
+  @media screen and (max-width: 998px) {
+    margin-right: 0;
+  }
 }
 
 .pie-chart-wrap {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .legend {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .legend__item {
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
-    padding-left: 45px;
-    position: relative;
-    @media screen and (max-width: 1200px) {
-        padding-left: 15px;
-    }
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
+  padding-left: 45px;
+  position: relative;
+  @media screen and (max-width: 1200px) {
+    padding-left: 15px;
+  }
 }
 
 .legend__item::before {
-    content: "";
-    position: absolute;
-    @include size(10px);
-    border-radius: 50%;
-    top: 25%;
-    left: 30px;
-    @media screen and (max-width: 1200px) {
-        left: 2%;
-    }
+  content: '';
+  position: absolute;
+  @include size(10px);
+  border-radius: 50%;
+  top: 25%;
+  left: 30px;
+  @media screen and (max-width: 1200px) {
+    left: 2%;
+  }
 }
 
 .legend__item:first-child::before {
-    background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
+  background: linear-gradient(180deg, #FFE39C 0%, #FFBA9C 100%);
 }
 
 .legend__item:nth-child(2)::before {
-    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
 }
 
 .legend__item:nth-child(3)::before {
-    background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
 .legend__item:last-child::before {
-    background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
+  background: linear-gradient(180deg, #919191 0%, #3D4975 100%);
 }
 
 .comments-title {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    @media screen and (max-width: 420px) {
-        flex-wrap: wrap;
-    }
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  @media screen and (max-width: 420px) {
+    flex-wrap: wrap;
+  }
 }
 
 .num-comments {
-    font-family: Montserrat;
-    font-size: 14px;
-    line-height: 14px;
-    color: $shade50-color;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 14px;
+  color: $shade50-color;
 }
 
 .rules {
-    display: flex;
-    justify-content: space-between;
-    @media screen and (max-width: 420px) {
-        flex-direction: column;
-    }
+  display: flex;
+  justify-content: space-between;
+  @media screen and (max-width: 420px) {
+    flex-direction: column;
+  }
 }
 
 .rules__left-block {
-    flex: 1 1 41%;
-    @media screen and (max-width: 1100px) {
-        margin-right: 10px;
-    }
+  flex: 1 1 41%;
+  @media screen and (max-width: 1100px) {
+    margin-right: 10px;
+  }
 }
 
 .rules__right-block {
-    flex: 1 1 48%;
-    @media screen and (max-width: 420px) {
-        margin-top: 15px;
-    }
+  flex: 1 1 48%;
+  @media screen and (max-width: 420px) {
+    margin-top: 15px;
+  }
 }
 
 .rules__text {
-    font-size: 14px;
-    line-height: 24px;
-    color: $shade75-color;
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
 }
 
 

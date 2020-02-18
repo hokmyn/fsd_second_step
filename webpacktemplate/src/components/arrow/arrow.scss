@@ -1,50 +1,50 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .arrow {
-	@include size(44px);
-	justify-content: center;
-	display: flex;
-	align-items: center;
-	position: absolute;
-	top: 0px;
-	right: 0px;
-	z-index: -1;
-	transition: transform .5s linear; 
+  @include size(44px);
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: -1;
+  transition: transform .5s linear; 
 }
 
 .material-icons {
-	font-family: 'Material Icons';
-	font-weight: normal;
-	font-style: normal;
-	font-size: 24px; /* Preferred icon size */
-	display: inline-block;
-	line-height: 1;
-	text-transform: none;
-	letter-spacing: normal;
-	word-wrap: normal;
-	white-space: nowrap;
-	direction: ltr;
-	/* Support for all WebKit browsers. */
-	-webkit-font-smoothing: antialiased;
-	/* Support for Safari and Chrome. */
-	text-rendering: optimizeLegibility;
-	/* Support for Firefox. */
-	-moz-osx-font-smoothing: grayscale;
-	/* Support for IE. */
-	font-feature-settings: 'liga';
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
 .arrow_black {
-	color: $shade50-color;
+  color: $shade50-color;
 }
 
 .arrow_gradient {
-	color: #8BA4F9;
+  color: #8BA4F9;
 }
 
 .arrow_white {
-	color: #fff;
-	top: 0;
+  color: #fff;
+  top: 0;
 }
 

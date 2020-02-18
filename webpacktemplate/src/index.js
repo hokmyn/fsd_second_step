@@ -2,7 +2,7 @@
 import './styles/main.scss';
 
 function requireAll(requireContext) {
-    return requireContext.keys().map(requireContext);
+  return requireContext.keys().map(requireContext);
 }
 
 requireAll(require.context('./components', true, /\.js$/));

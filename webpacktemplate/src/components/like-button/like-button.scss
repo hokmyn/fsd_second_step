@@ -1,24 +1,24 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .like-button {
-    @include size(40px, 20px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid $shade25-color;
-    border-radius: 10px;
-    font-size: 10px;
-    line-height: 12px;
-    padding-right: 12px;
-    padding-left: 4px;
-    color: $shade25-color;
-    &_marked {
-        border: 1px solid $purple-color;
-        padding-right: 10px;
-        color: $purple-color;    
-    }
-    &__heart {
-        font-size: 10px;    
-    }
+  @include size(40px, 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $shade25-color;
+  border-radius: 10px;
+  font-size: 10px;
+  line-height: 12px;
+  padding-right: 12px;
+  padding-left: 4px;
+  color: $shade25-color;
+  &_marked {
+    border: 1px solid $purple-color;
+    padding-right: 10px;
+    color: $purple-color;    
+  }
+  &__heart {
+    font-size: 10px;    
+  }
 }

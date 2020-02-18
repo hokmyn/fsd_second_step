@@ -1,31 +1,31 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .range-slider {
-    width: 266px;
-    & .range-slider__descr{
-        margin-top: 16px;
-    }
+  width: 266px;
+  & .range-slider__descr{
+    margin-top: 16px;
+  }
 }
 
 #slider-range {
-        @include size(266px, 6px);
-        background: #FFFFFF;
-        border: 1px solid $shade25-color;
-        box-sizing: border-box;
-        border-radius: 3px;   
+  @include size(266px, 6px);
+  background: #FFFFFF;
+  border: 1px solid $shade25-color;
+  box-sizing: border-box;
+  border-radius: 3px;   
 
-    & .ui-slider-range {
-        height: 6px;
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-    }
+  & .ui-slider-range {
+    height: 6px;
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  }
 
-    & .ui-slider-handle {
-        @include size(12px);
-        background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
-        border: 2px solid #FFFFFF;
-        border-radius: 10px;
-        top: -0.2em;
-        outline: none;
-    }
+  & .ui-slider-handle {
+    @include size(12px);
+    background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    border: 2px solid #FFFFFF;
+    border-radius: 10px;
+    top: -0.2em;
+    outline: none;
+  }
 }

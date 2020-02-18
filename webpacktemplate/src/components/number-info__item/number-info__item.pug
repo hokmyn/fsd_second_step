@@ -1,17 +1,17 @@
 //-
-	options.pic_text (string) - picture name
-	options.title (string) - title of item
-	options.text (string) - text of item
+  options.pic_text (string) - picture name
+  options.title (string) - title of item
+  options.text (string) - text of item
 
 mixin number-info__item(options)
-	if !options
-		- options = {}
+  if !options
+    - options = {}
 
-	.number-info__item-wrap
-		.number-info-item
-			.number-info-item__pic
-				<i class="material-icons face">#{options.pic_text}</i>
-			.number-info-item__content.number-content
-				span.number-content__title #{options.title}
-				br
-				span.number-content__text #{options.text}
+  .number-info__item-wrap
+    .number-info-item
+      .number-info-item__pic
+        <i class="material-icons face">#{options.pic_text}</i>
+      .number-info-item__content.number-content
+        span.number-content__title #{options.title}
+        br
+        span.number-content__text #{options.text}

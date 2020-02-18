@@ -1,129 +1,129 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .select {
-    appearance: none;
-    border: 1px solid $shade25-color;
-    color: $shade75-color;
-    font-size: 14px;
-    line-height: 24px;
-    outline: none;
-    font-family: $mainFont;
-    border-radius: 2px;
-    background: transparent;
+  appearance: none;
+  border: 1px solid $shade25-color;
+  color: $shade75-color;
+  font-size: 14px;
+  line-height: 24px;
+  outline: none;
+  font-family: $mainFont;
+  border-radius: 2px;
+  background: transparent;
 }
 
 .select-expanded__label {
-    padding-left: 15px;
-    display: block;
-    line-height: 42px;
-    font-size: 14px;
-    color: $shade75-color;
+  padding-left: 15px;
+  display: block;
+  line-height: 42px;
+  font-size: 14px;
+  color: $shade75-color;
 }
 
 .select-expanded__options {
-    position: absolute;
-    top: 77px;
-    margin-top: -13px;
+  position: absolute;
+  top: 77px;
+  margin-top: -13px;
 }
 
 .select-btns {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .select-btns__submit {
-    color: $purple-color;
+  color: $purple-color;
 }
 
 .options-list__btns {
-    margin-top: 20px;
-    margin-bottom: 13px;
+  margin-top: 20px;
+  margin-bottom: 13px;
 }
 
 .amenities-list {
-    @include size(266px, 122px);
+  @include size(266px, 122px);
 }
 
 .guests-list,
 .guests-list_default {
-    width: 320px;
-    @media screen and (max-width: 420px) {
-        width: 90%;
-    }
+  width: 320px;
+  @media screen and (max-width: 420px) {
+    width: 90%;
+  }
 }
 
 .options-list {
-    padding: 13px 7px 0 15px;
-    border: 1px solid $shade50-color;
-    border-bottom-left-radius: 2px;
-    border-bottom-right-radius: 2px;
-    border-top: none;
-    display: none;
-    z-index: 100;
-    box-shadow: 0px 10px 20px $shade5-color;
-    background-color: #fff;
-    text-transform: uppercase;
-    font-size: 12px;
-    line-height: 15px;
-    color: $shade100-color;
-    font-family: "Montserrat-Bold";
+  padding: 13px 7px 0 15px;
+  border: 1px solid $shade50-color;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  border-top: none;
+  display: none;
+  z-index: 100;
+  box-shadow: 0px 10px 20px $shade5-color;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 15px;
+  color: $shade100-color;
+  font-family: 'Montserrat-Bold';
 }
 
 .option-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .options-list__item {
-    margin-bottom: 7px;
+  margin-bottom: 7px;
 }
 
 .option-counter {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .option-counter__item {
-    display: inline-block;
-    @include size(30px, 30px);
-    border: 1px solid $shade50-color;
-    border-radius: 50%;
-    color: $shade50-color;
-    text-align: center;
-    line-height: 30px;
-    cursor: pointer;
-    user-select: none;
+  display: inline-block;
+  @include size(30px, 30px);
+  border: 1px solid $shade50-color;
+  border-radius: 50%;
+  color: $shade50-color;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  user-select: none;
 }
 
 .option-counter__number {
-    display: inline-block;
-    width: 32px;
-    text-align: center;
-    user-select: none;
+  display: inline-block;
+  width: 32px;
+  text-align: center;
+  user-select: none;
 }
 
 .counter_disabled {
-    border-color: $shade5-color;
-    color: $shade25-color;
-    cursor: not-allowed;
+  border-color: $shade5-color;
+  color: $shade25-color;
+  cursor: not-allowed;
 }
 
 span.button_disabled {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .select-btns__clear {
-    visibility: hidden;
+  visibility: hidden;
 }
 
 .select-btns__clear,
 .select-btns__submit {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .open {
-    display: block;
+  display: block;
 }
 

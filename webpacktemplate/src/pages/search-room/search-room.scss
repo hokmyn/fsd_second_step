@@ -1,117 +1,116 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .search-room__content {
-    min-width: 320px;
-    display: flex;
-    width: 100%;
+  min-width: 320px;
+  display: flex;
+  width: 100%;
 }
 
 .search-content {
-	padding-right: 9.7%;
-	padding-left: 9.7%;
+  padding-right: 9.7%;
+  padding-left: 9.7%;
     padding-top: 30px;
     @media screen and (max-width: 1439px) {
-        padding-right: 5%;
-        padding-left: 5%;
+      padding-right: 5%;
+      padding-left: 5%;
     }
     @media screen and (max-width: 998px) {
-        flex-direction: column;
+      flex-direction: column;
     }
 }
 
 .search-content__left-block {
-    display: flex;
-    flex-direction: column;
-    margin-right: 57px;
-    @media screen and (max-width: 1439px) {
-        margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  margin-right: 57px;
+  @media screen and (max-width: 1439px) {
+    margin-right: 0;
+  }
+  @media screen and (max-width: 998px) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  & div:nth-child(6) {
+    @media screen and (max-width: 887px) {
+      order: 1;
     }
-    @media screen and (max-width: 998px) {
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
+  }
+  & div:nth-child(4) {
+    @media screen and (max-width: 887px) {
+      order: 2;
     }
-    & div:nth-child(6) {
-        @media screen and (max-width: 887px) {
-           order: 1;
-        }
+  }
+  & div:nth-child(5) {
+    @media screen and (max-width: 887px) {
+      order: 3;
     }
-    & div:nth-child(4) {
-        @media screen and (max-width: 887px) {
-            order: 2;
-        }
+  }
+  & div:nth-child(7) {        
+    @media screen and (max-width: 887px) {
+      order: 4;
     }
-    & div:nth-child(5) {
-        @media screen and (max-width: 887px) {
-            order: 3;
-        }
-    }
-    & div:nth-child(7) {        
-        @media screen and (max-width: 887px) {
-            order: 4;
-        }
-    }
-        
-    @media screen and (max-width: 600px) {
-        justify-content: center;
-    }
+  }
+  @media screen and (max-width: 600px) {
+    justify-content: center;
+  }
 }
 
 .search-content__right-block {
-    @media screen and (max-width: 1439px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-    }
+  @media screen and (max-width: 1439px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .card__title {
-    @media screen and (max-width: 665px) {
-        text-align: center;
-    }
+  @media screen and (max-width: 665px) {
+    text-align: center;
+  }
 }
 
 .numbers {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    @media screen and (max-width: 1439px) {
-        padding-left: 10px;
-    }
-    @media screen and (max-width: 640px) {
-        padding-left: 0;
-    }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  @media screen and (max-width: 1439px) {
+    padding-left: 10px;
+  }
+  @media screen and (max-width: 640px) {
+    padding-left: 0;
+  }
 }
 
 .numbers__card {
-    background: #FFFFFF;
-    box-shadow: 0px 10px 20px $shade5-color;
-    border-radius: 4px;
-    width: 271px;
-    height: 257px;
-    margin-right: 12px;
-    margin-bottom: 20px;
-    &:nth-child(3n) {
-        margin-right: 0;
-        @media screen and (max-width: 630px) {
-            margin-right: 12px;
-        }
+  background: #FFFFFF;
+  box-shadow: 0px 10px 20px $shade5-color;
+  border-radius: 4px;
+  width: 271px;
+  height: 257px;
+  margin-right: 12px;
+  margin-bottom: 20px;
+  &:nth-child(3n) {
+    margin-right: 0;
+    @media screen and (max-width: 630px) {
+      margin-right: 12px;
     }
-    &:nth-child(2n) {
-        @media screen and (max-width: 630px) {
-           margin-right: 0;
-        }        
+  }
+  &:nth-child(2n) {
+    @media screen and (max-width: 630px) {
+      margin-right: 0;
     }
+  }
 }
 
 .search-content__pagination {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 70px;
-    @media screen and (max-width: 600px) {
-        margin-bottom: 20px;
-    }
+  display: flex;
+  justify-content: center;
+  margin-bottom: 70px;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 20px;
+  }
 }
 

@@ -1,6 +1,17 @@
+//-
+  options.text - текст кнопки
+  options.size - размер ('', 'small', 'big')
+  options.type - тип ('filled', 'transp', 'wthBoder')
+  options.isHovered - наведение курсора (bool)
 
+mixin like-button(options)
 
-mixin like-button(value, btn_class="", icon_name)
-    div(class="like-button " + btn_class)
-        <i class="material-icons like-button__heart">#{icon_name}</i>
-        span.like-button__value #{value}
+  if !options
+    - options = {}
+
+  -
+    const {value, btn_class="", icon_name} = options
+
+  div(class="like-button " + btn_class)
+    <i class="material-icons like-button__heart">#{icon_name}</i>
+    span.like-button__value #{value}

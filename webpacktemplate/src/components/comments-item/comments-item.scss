@@ -1,40 +1,36 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
+@import '../../styles/vars';
+@import '../../styles/mixins';
 
 .comments-item {
-    display: flex;
-    justify-content: flex-start;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .comments-image, .comments-content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .comments-image {
-    align-items: center;
-}  
+  align-items: center;
+}
 
 .comments-image__wrap {
-    @include size(48px);
-    overflow: hidden;
-    border-radius: 50%;
-    position: relative;    
-    box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
-    margin-bottom: 12px;
+  @include size(48px);
+  overflow: hidden;
+  border-radius: 50%;
+  position: relative;    
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+  margin-bottom: 12px;
 }
 
 .comments__user-img {
-    @include size(88px);
-    position: absolute;
-    top: -10px;
-    left: -20px;
+  @include size(88px);
+  position: absolute;
+  top: -10px;
+  left: -20px;
 }
 
 .comments-content__date {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
-//.comments-content__text {
-    //width: 653px;
-//}

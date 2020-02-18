@@ -7,17 +7,17 @@ include ../../components/text-field/text-field
 include ../../components/date-dropdown/date-dropdown
 
 mixin form-select()
-    form.form-select
-        .card__title Найдем номера под ваши пожелания
-        div(class = "datepicker-wrap field_smallMargin field_rightMargin")
-            +elem-title("прибытие")
-            +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-arrival'})
-        div(class = "datepicker-wrap field_smallMargin")
-            +elem-title("выезд")
-            +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: 'form_select-departure'})
-        div(class = "field_midMargin")
-            +elem-title("гости")
-            +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label", list_name: "guests-list", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
-        .field_big
-            +button({text: 'подобрать номер', type: 'filled', size: 'big'})
-            +arrow({ name: "arrow_forward", color: "white"} )
+  form.form-select
+    .card__title Найдем номера под ваши пожелания
+    div(class = "datepicker-wrap field_smallMargin field_rightMargin")
+      +elem-title("прибытие")
+      +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: "form_select-arrival"})
+    div(class = "datepicker-wrap field_smallMargin")
+      +elem-title("выезд")
+      +date-dropdown({placeholder_text: "ДД.ММ.ГГГГ", datepicker_class: "form_select-departure"})
+    div(class = "field_midMargin")
+      +elem-title("гости")
+      +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label", list_name: "guests-list", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+    .field_big
+      +button({text: "подобрать номер", type: "filled", size: "big"})
+      +arrow({ name: "arrow_forward", color: "white"} )

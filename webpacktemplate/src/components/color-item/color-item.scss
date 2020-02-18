@@ -1,43 +1,43 @@
-@import "../../styles/vars";
-@import "../../styles/mixins";
-@import "../../styles/fonts";
+@import '../../styles/vars';
+@import '../../styles/mixins';
+@import '../../styles/fonts';
 
 .color-item {
-	display: flex;
-	align-items: center;
-	font-size: 19px;
-	line-height: 29px;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  line-height: 29px;
 
-	&__content {
-		font-family: "Quicksand-Regular";
-	}
-	
-	&__image {
-		@include size(70px);
-		margin-right: 40px;
-		display: inline-block;
-		border-radius: 6px;	
+  &__content {
+    font-family: 'Quicksand-Regular';
+  }
+  
+  &__image {
+    @include size(70px);
+    margin-right: 40px;
+    display: inline-block;
+    border-radius: 6px;	
 
-		&_shade100 {
-			background-color: $shade100-color;
-		}
-		&_shade75 {
-			background-color: $shade75-color;
-		}
-		&_shade50 {
-			background-color: $shade50-color;
-		}
-		&_shade25 {
-			background-color: $shade25-color;
-		}
-		&_shade5 {
-			background-color: $shade5-color;
-		}
-		&_purple {
-			background-color: $purple-color;
-		}
-		&_green {  
-			background-color: $green-color;
-		}
-	}
+    &_shade100 {
+      background-color: $shade100-color;
+    }
+    &_shade75 {
+      background-color: $shade75-color;
+    }
+    &_shade50 {
+      background-color: $shade50-color;
+    }
+    &_shade25 {
+      background-color: $shade25-color;
+    }
+    &_shade5 {
+      background-color: $shade5-color;
+    }
+    &_purple {
+      background-color: $purple-color;
+    }
+    &_green {  
+      background-color: $green-color;
+    }
+  }
 }
