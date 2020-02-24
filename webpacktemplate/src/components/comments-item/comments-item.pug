@@ -19,7 +19,7 @@ mixin comments-item(options)
   .comments-item
     .comments-item__image.comments-image
       .comments-image__wrap
-        img(src="/src/components/comments-item/images/" + img_name + ".jpg", class="comments__user-img")
+        img(src="../../assets/img/" + img_name + ".jpg", class="comments__user-img")
       +like-button({value: like_value, btn_class: "", icon_name: icon_name})
     .comments-content.number-content
       .comments-content__username.number-content__title #{username}

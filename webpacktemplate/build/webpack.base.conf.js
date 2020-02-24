@@ -4,9 +4,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpack = require('webpack');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PATHS = {
-  src: path.join(__dirname, '../src'),
-  dist: path.join(__dirname, '../dist'),
+  src: path.resolve(__dirname, '../src'),
+  dist: path.resolve(__dirname, '../dist'),
   assets: 'assets/'
 }
 
@@ -31,8 +32,7 @@ module.exports = {
   },
   output: {
     filename: `${PATHS.assets}js/[name].js`,
-    path: PATHS.dist,
-    publicPath: '/'
+    path: PATHS.dist
   },
   module: {
     rules: [{
@@ -45,12 +45,16 @@ module.exports = {
     }, {
       test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
       loader: 'file-loader',
+      exclude: /(img)/,
       options: {
-        name: '[name].[ext]'
+        name: '[name].[ext]',
+        outputPath: 'assets/fonts',
+        publicPath: '../assets/fonts/'
       }
     }, {
       test: /\.(png|jpe?g|gif|svg)$/,
       loader: 'file-loader',
+      exclude: /(fonts)/,
       options: {
         name: '[name].[ext]'
       }
@@ -84,20 +88,20 @@ module.exports = {
           loader: 'postcss-loader',
           options: { sourceMap: true, config: { path: `./postcss.config.js` } }
         }
-      ]			
+      ]
     }]
   },
   devServer: {
     overlay: true
   },
   plugins: [
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: `${PATHS.assets}css/[name].css`
-        }),
-        new CopyWebpackPlugin([
-      { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img`},
-      { from: `${PATHS.src}/assets/fonts`, to: `${PATHS.assets}fonts`},
-            { from: `${PATHS.src}/static`, to: '' }
+      filename: `[name].css`
+    }),
+    new CopyWebpackPlugin([
+      { from: `${PATHS.src}/assets/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/static`, to: '' }
     ]),
     new webpack.ProvidePlugin({
       $: 'jquery',

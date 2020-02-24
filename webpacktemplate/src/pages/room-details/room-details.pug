@@ -24,10 +24,10 @@ block content
   section.room-details
     .room-images
       .images-item
-        img(class="images-item__big" src="../img/room1.jpg")
+        img(class="images-item__big" src="../../assets/img/room1.jpg")
       .images-item
-        img(class="images-item__small" src="./img/room2.jpg")
-        img(class="images-item__small" src="/src/pages/room-details/img/room3.jpg")
+        img(class="images-item__small" src="../../assets/img/room2.jpg")
+        img(class="images-item__small" src="../../assets/img/room3.jpg")
     .room-content
       .room-content__descr.description
         .description__nums
@@ -54,9 +54,9 @@ block content
             span.num-comments 2 отзыва
           .comments-content
             .field_smallMargin
-              +comments-item({img_name: "image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
+              +comments-item({img_name: "user-image1", like_value: 12, btn_class: "marked", icon_name: "favorite", username: "Мурад Сарафанов", date: "5 дней назад", comment_text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару - никто не жаловался из соседей"})
             .field_midMargin
-              +comments-item({img_name: "image2", like_value: 2, btn_class: "", icon_name: "favorite_border", username: "Патрисия Стёклышкова", date: "неделю назад", comment_text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
+              +comments-item({img_name: "user-image2", like_value: 2, btn_class: "", icon_name: "favorite_border", username: "Патрисия Стёклышкова", date: "неделю назад", comment_text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"})
           .rules
             .rules__left-block
               .title-margin

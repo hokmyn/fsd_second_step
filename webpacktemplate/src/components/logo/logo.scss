@@ -4,11 +4,11 @@
 .logo__bg-img,
 .footer-logo__bg-img {
   @include size(106px, 40px);
-  background: url('/src/components/logo/images/logo-h&f.svg') no-repeat;	
+  background: url('../../assets/img/logo-h&f.svg') no-repeat;	
 }
 
 .logo__bg-img {
   @media screen and (max-width: 1100px) {
-    background: url('/src/components/logo/images/logo-h&f_mobile.svg') no-repeat;
+    background: url('../../assets/img/logo-h&f_mobile.svg') no-repeat;
   }
 }
