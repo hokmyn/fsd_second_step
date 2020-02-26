@@ -1,0 +1,36 @@
+extends ../main/main
+
+include ../../components/color-item/color-item
+include ../../components/type-item/type-item
+include ../../components/logo/logo
+
+block title 
+  | Colors and types
+
+block content
+  section.colors-and-types
+    +logo({imgType: 'pages'})
+    .colors-list
+      .colors-list__item
+        +color-item("Dark Shade 100%", "#1F2041", "shade100")
+      .colors-list__item
+        +color-item("Dark Shade 75%", "#1F2041", "shade75")
+      .colors-list__item
+        +color-item("Dark Shade 50%", "#1F2041", "shade50")
+      .colors-list__item
+        +color-item("Dark Shade 25%","#1F2041", "shade25")
+      .colors-list__item                
+        +color-item("Dark Shade 5%", "#1F2041", "shade5")
+      .colors-list__item
+        +color-item("purple", "#BC9CFF", "purple")                
+      .colors-list__item
+        +color-item("green", "#6FCF97", "green")
+    .types-list
+      .types-list__item
+        +type-item("h1", "This one is the sub-section or widget title")                
+      .types-list__item
+        +type-item("h2", "Next one is the item title inside widgets")
+      .types-list__item
+        +type-item("h3", "This is a label or cta text")
+      .types-list__item
+        +type-item("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")

@@ -1,1 +1,0 @@
-import './uiKit.scss'

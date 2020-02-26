@@ -10,13 +10,14 @@
 
   &__content {
     font-family: 'Quicksand-Regular';
+    letter-spacing: -1px;
   }
   
   &__image {
     @include size(70px);
     margin-right: 40px;
     display: inline-block;
-    border-radius: 6px;	
+    border-radius: 6px;  
 
     &_shade100 {
       background-color: $shade100-color;
@@ -40,4 +41,9 @@
       background-color: $green-color;
     }
   }
+}
+
+.color-item__title {
+  letter-spacing: -.8px;
+  font-size: 20px;
 }

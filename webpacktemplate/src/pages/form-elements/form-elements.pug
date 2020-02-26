@@ -3,18 +3,16 @@ extends ../main/main
 include ../../components/arrow/arrow
 include ../../components/checkbox-expandable/checkbox-expandable 
 include ../../components/checkbox-expanded/checkbox-expanded 
-include ../../components/color-item/color-item 
 include ../../components/comments-item/comments-item 
 include ../../components/dropdown/dropdown
 include ../../components/dropdown-expanded/dropdown-expanded
 include ../../components/elem-title/elem-title 
 include ../../components/like-button/like-button 
-include ../../components/logo/logo 
+include ../../components/logo/logo
 include ../../components/number-info__item/number-info__item
 include ../../components/radio-items/radio-items 
 include ../../components/rate-buttons/rate-buttons 
-include ../../components/text-field/text-field 
-include ../../components/type-item/type-item
+include ../../components/text-field/text-field
 include ../../components/checkbox-offer/checkbox-offer
 include ../../components/range-slider/range-slider
 include ../../components/button/button
@@ -25,35 +23,9 @@ include ../../components/bullet-list/bullet-list
 block title 
   | Form Elements
 
-block content
-  section.colors-and-types
-    +logo({imgType: 'pages'})     
-    .colors-list
-      .colors-list__item
-        +color-item("Dark Shade 100%", "#1F2041", "shade100")
-      .colors-list__item
-        +color-item("Dark Shade 75%", "#1F2041", "shade75")
-      .colors-list__item
-        +color-item("Dark Shade 50%", "#1F2041", "shade50")
-      .colors-list__item
-        +color-item("Dark Shade 25%","#1F2041", "shade25")
-      .colors-list__item                
-        +color-item("Dark Shade 5%", "#1F2041", "shade5")
-      .colors-list__item
-        +color-item("purple", "#BC9CFF", "purple")                
-      .colors-list__item
-        +color-item("green", "#6FCF97", "green")
-    .types-list
-      .types-list__item
-        +type-item("h1", "This one is sub-section or widget title")                
-      .types-list__item
-        +type-item("h2", "Next one is the item title inside widgets")
-      .types-list__item
-        +type-item("h3", "This is a label or cta text")
-      .types-list__item
-        +type-item("body", "This is the body text which is used for most of the design, like paragraphs, lists, etc.")
-  
+block content  
   section.form-elements
+    +logo({imgType: 'pages'})
     .block
       div(class="field_smallMargin")
         +elem-title("text field")

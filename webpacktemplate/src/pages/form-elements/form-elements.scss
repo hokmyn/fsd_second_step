@@ -6,29 +6,6 @@ body {
   width: 100%;
 }
 
-.colors-and-types{
-  margin: 0 auto;
-  padding-top: 145px;
-  padding-left: 150px;
-  padding-right: 190px;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-}
-
-.colors-list {
-  font-family: "Quicksand-Bold", Opensans;
-  text-transform: capitalize;
-}
-
-.colors-list__item { 
-  margin-bottom: 20px;  
-}
-
-.types-list__item {
-  margin-bottom: 50px;  
-}
-
 .form-elements {
   display: grid;
   grid-template-columns: 320px 374px 1fr;
@@ -37,6 +14,11 @@ body {
   padding-top: 143px;
   padding-left: 141px;
   padding-right: 141px;
+  & .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
 }
 
 .form-elements__block {

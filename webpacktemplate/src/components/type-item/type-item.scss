@@ -16,11 +16,12 @@
 
 .type-item__right {
   margin-left: 30px;
+  letter-spacing: -.5px;
 }
 
 .type-item__h1 {
   font-size: 24px;
-  line-height: 29px;
+  line-height: 30px;
   .type-item__right {
     font-family: 'Quicksand-Bold';
     max-width: 336px;
@@ -41,6 +42,8 @@
   line-height: 15px;
   .type-item__right {
     font-family: 'Montserrat-Bold';
+    text-transform: uppercase;
+    letter-spacing: 0px;
   }
 }
 
@@ -53,5 +56,6 @@
   .type-item__right {
     max-width: 301px;
     color: $shade75-color;
+    letter-spacing: 0px;
   }
 }
