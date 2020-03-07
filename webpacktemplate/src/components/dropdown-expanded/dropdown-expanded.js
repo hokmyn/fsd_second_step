@@ -35,12 +35,12 @@ let rightEndings = (num, arrForms) => {
 }
     
 
-$(document).ready(function () {    
-  $('body').on('click', (e)=> {
-    if (!($(e.target).hasClass('select-expanded__label')) && !($(e.target).parents().is('.select-expanded__options')) && $('.select-expanded__options').hasClass('open')) {            
-      $('.select-expanded__options').removeClass('open');
-    }
-  });
+$(document).ready(function () {
+ // $('body').on('click', (e)=> {
+    //if (!($(e.target).hasClass('select-expanded__label')) && !($(e.target).parents().is('.select-expanded__options')) && $('.select-expanded__options').hasClass('open')) {            
+      //$('.select-expanded__options').removeClass('open');
+    //}
+  //});
   
   $('.select').on('click', () => {
     $('.select-expanded__options').toggleClass('open');

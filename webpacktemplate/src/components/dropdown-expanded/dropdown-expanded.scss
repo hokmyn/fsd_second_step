@@ -11,14 +11,16 @@
   font-family: $mainFont;
   border-radius: 2px;
   background: transparent;
+  padding-top: 1px;
 }
 
 .select-expanded__label {
-  padding-left: 15px;
+  padding-left: 14px;
   display: block;
-  line-height: 42px;
+  line-height: 38px;
   font-size: 14px;
   color: $shade75-color;
+  letter-spacing: 0px;
 }
 
 .select-expanded__options {
@@ -42,7 +44,7 @@
 }
 
 .amenities-list {
-  @include size(266px, 122px);
+  @include size(266px, 116px);
 }
 
 .guests-list,
@@ -54,7 +56,7 @@
 }
 
 .options-list {
-  padding: 13px 7px 0 15px;
+  padding: 3px 6px 0 14px;
   border: 1px solid $shade50-color;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -65,7 +67,7 @@
   background-color: #fff;
   text-transform: uppercase;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 16px;
   color: $shade100-color;
   font-family: 'Montserrat-Bold';
 }
@@ -77,7 +79,7 @@
 }
 
 .options-list__item {
-  margin-bottom: 7px;
+  margin-bottom: 6px;
 }
 
 .option-counter {
@@ -95,6 +97,7 @@
   line-height: 30px;
   cursor: pointer;
   user-select: none;
+  margin-top: 1px;
 }
 
 .option-counter__number {

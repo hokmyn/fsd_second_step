@@ -13,8 +13,11 @@
   line-height: 18px;
   color: $shade50-color;
   z-index: 100;
-  padding-left: 5px;
   padding-right: 5px;
+}
+
+.checkbox-buttons {
+  width: 251px;
 }
 
 .checkbox-expandable {
@@ -32,6 +35,10 @@
   padding-left: 30px;
 }
 
+.content-item:first-child .descr {
+  max-width: 190px;
+}
+
 .checkboxes-label::before {
   content: '';
   position: absolute;
@@ -39,6 +46,7 @@
   border: 1px solid $shade25-color;
   border-radius: 4px;
   left: 0;
+  top: -1px;
 }
 
 input[id^='checkbox']:checked + label::after {
@@ -53,13 +61,14 @@ input[id^='checkbox']:checked + label::after {
 }
 
 .content-item__descr {
-  margin-top: 5px;
+  margin-top: 6px;
 }
 
 .descr {
   font-size: 12px;
   line-height: 14px;
   color: $shade50-color;
+  width: 224px;
 }
 
 .label-access {

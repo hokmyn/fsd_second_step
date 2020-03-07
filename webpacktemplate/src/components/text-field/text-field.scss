@@ -11,7 +11,7 @@
   -webkit-appearance: none;
   outline: 0;
   box-shadow: none;
-  padding-left: 15px;
+  padding-left: 14px;
   font-family: $mainFont;
   @media screen and (max-width: 420px) {
     width: 100%;
@@ -27,18 +27,21 @@
   
 .input_hover {
   border: 1px solid $shade50-color;
-  line-height: 24px;  
 }
-  
-.input_hover::placeholder {
+
+.input_hover::-webkit-input-placeholder {
   color: $shade75-color;
+  letter-spacing: -.2px;
+  font-size: 14px;
+}
+input:-moz-placeholder {
+  color: $shade75-color;
+  letter-spacing: -.2px;
+  font-size: 14px;
 }
 
 .input_date {
   width: 100%;
-  &::placeholder {
-    line-height: 24px;
-  }
 }
 
 .input_subscription {

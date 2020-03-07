@@ -21,22 +21,31 @@
     @include size(40px, 20px);
     border: 1px solid $shade25-color;
     border-radius: 10px;
-    left: 0;
-    top: 2px;
+    left: 0px;
+    top: 1px;
   }
   &::after {
     content: '';
     @include size(12px);
     position: absolute;
     left: 4px;
-    top: 6px;
+    top: 5px;
     border-radius: 50%;
     background: $shade25-color;
   }
 }
 
+.checkbox-offer__label:first-child .offer-label::before {
+  left: 1px;
+  top: -1px;
+}
+
+.checkbox-offer__label:first-child .offer-label::after {
+  top: 3px;
+}
+
 input[id='offer']:checked + label::after {    
-  left: 24px;
+  left: 25px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 
