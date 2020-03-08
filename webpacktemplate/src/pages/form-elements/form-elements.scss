@@ -99,15 +99,30 @@ input[type="checkbox"], input[type="radio"] {
     justify-content: space-between;
     font-size: 12px;
     line-height: 15px;
-    margin-bottom: 23px;
+    margin-bottom: 18px;
+  }
+
+  .buttons {
+    padding-top: 3px;
   }
 
   .buttons-main {
-    width: 218px;
+    width: 219px;
+    margin-top: -1px;
   }
 
-  .buttons-main__row {    
+  .buttons-main__row {
     margin-bottom: 30px;
+    padding-left: 2px;
+  }
+
+  .buttons-main__row:nth-child(2) {
+    margin-bottom: 28px;
+  }
+
+  .buttons-main__row:nth-child(3) {
+    padding-left: 0;
+    margin-bottom: 29px;
   }
 
   .buttons-flex {

@@ -7,6 +7,10 @@
 
 .button_big {
   @include size(320px, 44px);
+  padding-top: 1px;
+  padding-left: 9px;
+  font-size: 11px;
+  letter-spacing: 1.2px;
   @media screen and (max-width: 420px) {
     width: 100%;
   }
@@ -19,6 +23,8 @@ button {
   font-weight: bold;
   border: none;
   cursor: pointer;
+  font-size: 12px;
+  padding-left: 3px;
 }
 
 .button_filled, .button_transp {
@@ -27,17 +33,20 @@ button {
 
 .button_filled {
   color: #fff;
-  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);    
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  
 }
 
-.button_fill.button_hovered {
+.button_hovered {
   opacity: 0.5;
+  padding-left: 6px;
 }
 
 .button_transp {
   background-color: #fff;
   @include size(95px, 40px);
   color: $purple-color;
+  opacity: 1;
 }
 
 .transp-wrap {
@@ -55,9 +64,16 @@ button {
 
 .button_wthBoder {
   color: $purple-color;
+  letter-spacing: .3px;
 }
 
-.button_wthBoder.button_hovered {    
+.button_wthBoder:first-child {
+  font-size: 11px;
+  letter-spacing: .9px;
+  padding-right: 14px;
+}
+
+.button_wthBoder .button_hovered {    
   color: $shade50-color;
 }
 

@@ -65,7 +65,7 @@ block content
           +radio-items("Мужчина", "Женщина")
       div(class = "field_bigMargin")
         .title-margin
-          +elem-title("toggle")
+          +elem-title("toggle", "add_spacing")
         .spec-offer
           .checkbox-offer__label
             +checkbox-offer("checked")
@@ -90,8 +90,8 @@ block content
       .field_bigMargin
         .range-slider
           div(class="range-slider__title slider-title")
-            +elem-title("range slider")
-            span.slider-title__values 5 000 &#8381; - 10 000 &#8381;
+            +elem-title("range slider", "pp-range-slider-title")
+            span.slider-title__values#amount 5 000 &#8381; - 10 000 &#8381;
           .range-slider__content
             +range-slider
       .buttons
