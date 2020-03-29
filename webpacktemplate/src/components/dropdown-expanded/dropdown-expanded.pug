@@ -27,9 +27,10 @@ mixin dropdown-expanded(options)
           .option-counter
             span.option-counter__item.minus(class={counter_disabled: options.number_values[index] === 0}) -
             span(class= (index === 0) ? "option-counter__number numAdults" : "option-counter__number") #{options.number_values[index]}                        
-            span.option-counter__item.plus +
-    if (options.list_name === "guests-list" || options.list_name === "guests-list_default") 
+            span.option-counter__item.plus + 
+    if (options.list_name === "guests-list" || options.list_name === "guests-list_default")
       .options-list__btns
         .select-btns
           span.select-btns__clear очистить
           span.select-btns__submit применить
+

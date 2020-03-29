@@ -16,8 +16,9 @@
   border-radius: 3px;   
 
   & .ui-slider-range {
-    height: 6px;
+    height: 5px;
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+    top: -1px;
   }
 
   & .ui-slider-handle {
@@ -25,12 +26,14 @@
     background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
     border: 2px solid #FFFFFF;
     border-radius: 10px;
-    top: -0.25em;
+    top: -6px;
     outline: none;
   }
 }
 
 .slider-title__values {
-  letter-spacing: .5px;
-  font-size: 10px;
+  letter-spacing: .1px;
+  font-size: 11px;
 }
+
+

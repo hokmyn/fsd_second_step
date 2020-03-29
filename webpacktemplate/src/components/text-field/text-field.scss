@@ -19,8 +19,8 @@
 }
   
 .input::placeholder {
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 20px;
   font-family: $mainFont;
   color: $shade25-color;
 }
@@ -34,18 +34,28 @@
   letter-spacing: -.2px;
   font-size: 14px;
 }
-input:-moz-placeholder {
+.input_hover:-moz-placeholder {
   color: $shade75-color;
   letter-spacing: -.2px;
   font-size: 14px;
 }
 
-.input_date {
-  width: 100%;
+.input-subscription::-webkit-input-placeholder {
+  font-size: 15px;
+  letter-spacing: -.4px;
 }
 
-.input_subscription {
+.input-subscription:-moz-placeholder {
+  font-size: 15px;
+  letter-spacing: -.4px;
+}
+
+.input-subscription {
   @include size(266px, 44px);
   background: transparent;
+}
+
+.subscription-text-field {
+  margin-bottom: 3px;
 }
 

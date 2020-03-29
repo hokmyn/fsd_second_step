@@ -2,7 +2,7 @@
 @import '../../styles/mixins';
 
 #pagination {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   & ul {
     display: flex;
     align-items: center;
@@ -17,9 +17,8 @@
   & .active {
     background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
     color: #fff;
-    font-weight: normal;
     font-size: 12px;
-    line-height: 15px;
+    line-height: 12px;
   }
   & .page-link {
     color: $shade50-color;
@@ -36,11 +35,12 @@
 
 .pagination {
   position: relative;
+  padding-left: 1px;
 }
 
 .pagination .arrow {
-  top: -1px;
-  right: -3px;
+  top: -2px;
+  right: -2px;
   z-index: 1;
 }
 

@@ -11,7 +11,16 @@
   font-family: $mainFont;
   border-radius: 2px;
   background: transparent;
-  padding-top: 1px;
+  padding-top: 2px;
+}
+
+.dropdownSelect-wtht-pad {
+  padding-top: 0;
+}
+
+.pp-dropdown-select {
+  font-size: 12px;
+  letter-spacing: 1.1px;
 }
 
 .select-expanded__label {
@@ -29,6 +38,10 @@
   margin-top: -13px;
 }
 
+.select-expanded .arrow {
+  top: -1px;
+}
+
 .select-btns {
   display: flex;
   justify-content: space-between;
@@ -39,8 +52,8 @@
 }
 
 .options-list__btns {
-  margin-top: 20px;
-  margin-bottom: 13px;
+  margin-top: 21px;
+  margin-bottom: 12px;
 }
 
 .amenities-list {
@@ -56,7 +69,7 @@
 }
 
 .options-list {
-  padding: 3px 6px 0 14px;
+  padding: 4px 6px 0 14px;
   border: 1px solid $shade50-color;
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
@@ -76,15 +89,31 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  line-height: 30px;
+  &>span {
+    font-size: 11px;
+    letter-spacing: .9px;
+  }
 }
 
 .options-list__item {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 .option-counter {
   display: flex;
   align-items: center;
+  position: absolute;
+  right: 0;
+  top: 0;
+  & .plus {
+    line-height: 26px;
+  }
+}
+
+.options-list__item:nth-child(3) .option-counter {
+  top: 1px;
 }
 
 .option-counter__item {
@@ -105,6 +134,8 @@
   width: 32px;
   text-align: center;
   user-select: none;
+  font-size: 13px;
+  line-height: 31px;
 }
 
 .counter_disabled {

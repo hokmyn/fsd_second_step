@@ -7,7 +7,7 @@
   width: 280px;    
   border-bottom: 1px solid rgba(31, 32, 65, 0.1);
   padding-bottom: 17px;
-  padding-top: 20px;   
+  padding-top: 22px;   
 
   &-wrap {
     margin-bottom: 23px;
@@ -16,6 +16,17 @@
   &__pic {
     @include size(48px);
     color: $purple-color;
+  }
+}
+
+.number-content {
+  padding-left: 9px;
+  font-size: 14px;
+  line-height: 24px;
+  color: $shade75-color;
+
+  &__title {
+    font-family: 'Montserrat-Bold';
   }
 }
 

@@ -6,7 +6,7 @@
 }
 
 .checkbox-offer__label {
-  margin-bottom: 6px;
+  margin-bottom: 7px;
 }
 
 
@@ -35,17 +35,8 @@
   }
 }
 
-.checkbox-offer__label:first-child .offer-label::before {
-  left: 1px;
-  top: -1px;
-}
-
-.checkbox-offer__label:first-child .offer-label::after {
-  top: 3px;
-}
-
 input[id='offer']:checked + label::after {    
-  left: 25px;
+  left: 24px;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
 }
 

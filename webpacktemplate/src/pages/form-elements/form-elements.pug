@@ -28,58 +28,58 @@ block content
     +logo({imgType: 'pages'})
     .block
       div(class="field_smallMargin")
-        +elem-title("text field")
+        +elem-title("text field", "pp-text-field-title")
         +text-field({type: "email", input_class: "input", placeholder_text: "Email"})
-      div(class="field_smallMargin")
-        +elem-title("text field")
+      div(class="field_smallMargin pp-textField-bottomMargin")
+        +elem-title("text field", "pp-add-spacing")
         +text-field({type: "email", input_class: "input input_hover", placeholder_text: "This is pretty awesome"})
-      div(class = "field_smallMargin" )
-        +elem-title("dropdown")
+      div(class = "field_smallMargin pp-dropdown-bottomMargin" )
+        +elem-title("dropdown", "pp-range-slider-title")
         +dropdown({label_wrap: "field_big", label_text: "Сколько гостей", list_name: "guests-list"})
       div(class="field_bigMargin")
-        +elem-title("masked text field", "add_spacing")
+        +elem-title("masked text field", "pp-add-spacing")
         +text-field({type: "text", input_class: "input input_masked", placeholder_text: "ДД.ММ.ГГГГ"})
-      div(class = "select-wrap field_bigMargin field_rightMargin")
-        +elem-title("date dropdown")
-        +dropdown({label_wrap: "field_small", label_text: "ДД.ММ.ГГГГ", list_name: "date-list"})
+      div(class = "select-wrap pp-date-dropdown-margin field_rightMargin")
+        +elem-title("date dropdown", "pp-date-dropdown")
+        +dropdown({label_wrap: "field_small dropdownSelect-wtht-pad", label_text: "ДД.ММ.ГГГГ", list_name: "date-list"})
+      div(class = "select-wrap pp-date-dropdown-margin")
+        +elem-title("date dropdown", "pp-date-dropdown")
+        +dropdown({label_wrap: "field_small dropdownSelect-wtht-pad", label_text: "19.08.2019", list_name: "date-list"})
       div(class = "select-wrap field_bigMargin")
-        +elem-title("date dropdown")
-        +dropdown({label_wrap: "field_small", label_text: "19.08.2019", list_name: "date-list"})
-      div(class = "select-wrap field_bigMargin")
-        +elem-title("filter date dropdown")
-        +dropdown({label_wrap: "field_mid", label_text: "19 авг - 23 авг", list_name: "date-list"})
-      div(class="select-wrap")
-        +elem-title("subscription text field")
-        +text-field({type: "email", input_class: "input input_subscription", placeholder_text: "Email"})
+        +elem-title("filter date dropdown", "pp-add-spacing")
+        +dropdown({label_wrap: "field_mid dropdownSelect-wtht-pad", label_text: "19 авг - 23 авг", list_name: "date-list"})
+      div(class="subscription-wrap")
+        +elem-title("subscription text field", "pp-add-spacing block__subscription-title")
+        +text-field({type: "email", input_class: "input input-subscription block__pp-negative-margin", placeholder_text: "Email"})
         +arrow({ name: "arrow_forward", color: "gradient"} )
 
     .form-elements__block.block
       div(class = "field_bigMargin")
-        .title-margin 
-          +elem-title("checkbox buttons")
+        .title-margin.pp-checkbox-buttons-margin
+          +elem-title("checkbox buttons", "pp-checkbox-buttons-title")
         +checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
-      div(class = "field_bigMargin")
-        .title-margin 
-          +elem-title("radio buttons")
-        .radio-list
+      div(class = "field_bigMargin pp-radio-buttons-margin")
+        .title-margin.pp-radio-buttons-title-margin
+          +elem-title("radio buttons", "pp-add-spacing")
+        .form-elements__radio-list
           +radio-items("Мужчина", "Женщина")
-      div(class = "field_bigMargin")
-        .title-margin
-          +elem-title("toggle", "add_spacing")
+      div(class = "field_bigMargin pp-toggle-margin")
+        .title-margin.pp-toggle-title-margin
+          +elem-title("toggle", "pp-add-spacing")
         .spec-offer
           .checkbox-offer__label
             +checkbox-offer("checked")
           .checkbox-offer__label
             +checkbox-offer("")
-      div(class = "field_bigMargin")
+      div(class = "field_bigMargin pp-like-buttons-margin")
         .title-margin.block__like-button
-          +elem-title("like button")
+          +elem-title("like button", "pp-buttons-title")
         .like-buttons
           +like-button({value: 2, btn_class: "", icon_name: "favorite_border"})
           +like-button({value: 12, btn_class: "like-button_marked", icon_name: "favorite"})
       div(class = "field_bigMargin")
-        .title-margin 
-          +elem-title("rate button")
+        .title-margin.pp-rate-button-title-margin
+          +elem-title("rate button", "pp-buttons-title")
         .rate-buttons
           .rate-buttons_left
             +rate-buttons({marked_count: 4})
@@ -87,7 +87,7 @@ block content
             +rate-buttons({marked_count: 5})
 
     .block
-      .field_bigMargin
+      .block__pp-bigMargin
         .range-slider
           div(class="range-slider__title slider-title")
             +elem-title("range slider", "pp-range-slider-title")
@@ -110,32 +110,32 @@ block content
           .field_bigMargin
             +button({text: 'перейти к оплате', type: "filled", size: "big"})
             +arrow({ name: "arrow_forward", color: "white"})
-        .title-margin 
-          +elem-title("pagination")
+      .title-margin.pp-title-margin-pagination
+        +elem-title("pagination")
       .form-elements__pagination
         +pagination
 
     .block
-      .block-with-pad
-        div(class = "select-wrap field_smallMargin" )
-          +elem-title("dropdown", "")
-          +dropdown({label_wrap: "field_mid", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list open"})
-        div(class = "select-wrap")
-          +elem-title("dropdown", "pp__dropdown-class")
+      .block-with-dropdowns
+        div(class = "select-wrap block__pp-smallMargin block__pp-negative-margin" )
+          +elem-title("dropdown", "pp-dropdown-title")
+          +dropdown({label_wrap: "field_mid pp-dropdown-select", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list open"})
+        div(class = "select-wrap block__pp-negative-margin")
+          +elem-title("dropdown", "pp-dropdown-title2")
           +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list open", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
         div(class = "select-wrap checkboxes block__checkboxes")
-          +elem-title("expandable checkbox list", "add_spacing")
+          +elem-title("expandable checkbox list", "pp-add-spacing")
           +arrow({ name: "keyboard_arrow_down", color: "black"})
-        div(class = "field_midMargin checkboxes block__checkboxes-expanded")
+        div(class = "block__pp-midMargin checkboxes block__checkboxes-expanded block__pp-negative-margin")
           +checkbox-expandable({label_text: "expandable checkbox list"})
     .block.form-elements__block
       .block-with-pad
         div(class = "select-wrap block__select-guests select-expanded")
-          +elem-title("dropdown")
-          +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label_default", list_name: "guests-list_default open", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+          +elem-title("dropdown", "pp-dropdown-title1")
+          +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label_default", list_name: "guests-list_default open pp-buttons-title", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
         div(class="block__rich-checkbox")
           .title-margin
-            +elem-title("rich checkbox buttons", "add_spacing")
+            +elem-title("rich checkbox buttons", "pp-buttons-title")
           +checkbox-expanded({name: "accessibility", label_additional_class: "label-access", label_texts: ["Широкий коридор", "Помощник для инвалидов"], isExpandable: false, richCheckboxContent: ["Ширина коридоров в номере не менее 91 см", "На 1 этаже вас встретит специалист и проводит до номера"]})
     
     .block

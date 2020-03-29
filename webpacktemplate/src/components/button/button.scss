@@ -5,17 +5,6 @@
   @include size(99px, 44px);
 }
 
-.button_big {
-  @include size(320px, 44px);
-  padding-top: 1px;
-  padding-left: 9px;
-  font-size: 11px;
-  letter-spacing: 1.2px;
-  @media screen and (max-width: 420px) {
-    width: 100%;
-  }
-}
-
 button {
   text-transform: uppercase;
   background-color: transparent;
@@ -27,6 +16,11 @@ button {
   padding-left: 3px;
 }
 
+.pp-button {
+  font-size: 11px;
+  letter-spacing: .7px;
+}
+
 .button_filled, .button_transp {
   border-radius: 22px;
 }
@@ -34,7 +28,6 @@ button {
 .button_filled {
   color: #fff;
   background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
-  
 }
 
 .button_hovered {
@@ -65,16 +58,28 @@ button {
 .button_wthBoder {
   color: $purple-color;
   letter-spacing: .3px;
+  font-size: 12px;
 }
 
-.button_wthBoder:first-child {
-  font-size: 11px;
-  letter-spacing: .9px;
+.button_wthBoder:first-child {  
+  letter-spacing: .3px;
   padding-right: 14px;
+  padding-left: 2px;
 }
 
 .button_wthBoder .button_hovered {    
   color: $shade50-color;
+}
+
+.button_big {
+  @include size(320px, 44px);
+  padding-top: 1px;
+  padding-left: 9px;
+  font-size: 12px;
+  letter-spacing: .8px;
+  @media screen and (max-width: 420px) {
+    width: 100%;
+  }
 }
 
 

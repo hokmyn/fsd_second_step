@@ -15,9 +15,9 @@ mixin button(options)
   if (options.type === 'transp')
     if(!options.isHovered)
       .transp-wrap
-        button.button(class=classes)= options.text
+        button.button.pp-button(class=classes)= options.text
     else
       div(class="transp-wrap transp-wrap-hover")
-        button.button(class=classes)= options.text
+        button.button.pp-button(class=classes)= options.text
   else
-    button.button(class=classes)= options.text
+    button.button.pp-button(class=classes)= options.text

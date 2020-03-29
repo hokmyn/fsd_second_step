@@ -27,16 +27,26 @@
 }
 
 .checkboxes-content__item {
+  line-height: 18px;
   margin-bottom: 12px;
+  font-size: 12px;
+  letter-spacing: 1.2px;
+}
+
+.checkboxes-content__item:nth-child(3) {
+  line-height: 18px;
+  letter-spacing: 1.1px;
 }
 
 .content-item {
   position: relative;
-  padding-left: 30px;
+  padding-left: 31px;
 }
 
+
+
 .content-item:first-child .descr {
-  max-width: 190px;
+  max-width: 205px;
 }
 
 .checkboxes-label::before {
@@ -69,9 +79,12 @@ input[id^='checkbox']:checked + label::after {
   line-height: 14px;
   color: $shade50-color;
   width: 224px;
+  letter-spacing: 0px;
 }
 
 .label-access {
   font-family: 'Montserrat-Bold';
   color: $shade75-color;
+  font-size: 13px;
+  letter-spacing: 0.7px;
 }
