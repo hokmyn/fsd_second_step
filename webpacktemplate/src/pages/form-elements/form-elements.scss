@@ -31,7 +31,7 @@ body {
 }  
 
 .block-with-pad {
-  padding-top: 100px;
+  padding-top: 101px;
 }
 
 .block-with-dropdowns {
@@ -106,7 +106,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .block__rich-checkbox {
-  margin-top: 160px;
+  margin-top: 159px;
   & .checkboxes-content__item {
     margin-bottom: 9px;
   }
@@ -160,7 +160,7 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .block__bullet-list {
-  margin-top: 160px;
+  margin-top: 159px;
 }
 
 .block__like-button {
@@ -193,4 +193,8 @@ input[type="checkbox"], input[type="radio"] {
 
 .pp-rate-button-title-margin {
   margin-bottom: 17px;
+}
+
+.pp-bullet-title-margin {
+  margin-bottom: 13px;
 }

@@ -54,7 +54,7 @@ block content
         +arrow({ name: "arrow_forward", color: "gradient"} )
 
     .form-elements__block.block
-      div(class = "field_bigMargin")
+      div(class = "field_bigMargin checkboxes-buttons")
         .title-margin.pp-checkbox-buttons-margin
           +elem-title("checkbox buttons", "pp-checkbox-buttons-title")
         +checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
@@ -119,12 +119,12 @@ block content
       .block-with-dropdowns
         div(class = "select-wrap block__pp-smallMargin block__pp-negative-margin" )
           +elem-title("dropdown", "pp-dropdown-title")
-          +dropdown({label_wrap: "field_mid pp-dropdown-select", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list open"})
+          +dropdown({label_wrap: "field_mid pp-dropdown-select", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list"})
         div(class = "select-wrap block__pp-negative-margin")
           +elem-title("dropdown", "pp-dropdown-title2")
           +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list open", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
         div(class = "select-wrap checkboxes block__checkboxes")
-          +elem-title("expandable checkbox list", "pp-add-spacing")
+          +elem-title("expandable checkbox list", "pp-checkbox-list-title")
           +arrow({ name: "keyboard_arrow_down", color: "black"})
         div(class = "block__pp-midMargin checkboxes block__checkboxes-expanded block__pp-negative-margin")
           +checkbox-expandable({label_text: "expandable checkbox list"})
@@ -144,8 +144,8 @@ block content
           +elem-title("dropdown")
           +dropdown-expanded({label_text: "3 гостя", label_wrap: "field_big", label_id: "guests-label",list_name: "guests-list open", number_values: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"]})
         div(class="block__bullet-list")
-          .title-margin
-            +elem-title("bullet-list")
+          .title-margin.pp-bullet-title-margin
+            +elem-title("bullet list", "pp-bullet-title")
           +bullet-list({texts:["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия - после 13.00, а выезд - до 12.00"]})
       
     

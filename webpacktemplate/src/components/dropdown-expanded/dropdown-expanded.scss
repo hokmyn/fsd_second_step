@@ -49,15 +49,17 @@
 
 .select-btns__submit {
   color: $purple-color;
+  font-size: 11px;
+  letter-spacing: .8px;
 }
 
 .options-list__btns {
   margin-top: 21px;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
 }
 
 .amenities-list {
-  @include size(266px, 116px);
+  @include size(266px, 117px);
 }
 
 .guests-list,

@@ -13,9 +13,9 @@ mixin checkbox-expanded(options)
     var classes = '';
 
     if(options.isExpandable)
-      classes += " checkbox-expandable"; 
+      classes += " checkbox-expandable";
 
-  div.checkboxes-content.checkbox-buttons(class=classes)
+  div.checkboxes-content(class=classes)
     each label_text, index in options.label_texts
       .checkboxes-content__item.content-item
         input(type="checkbox" id="checkbox_" + options.name + "_" + index name= options.name value= options.label_text)

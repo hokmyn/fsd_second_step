@@ -22,6 +22,6 @@ mixin comments-item(options)
         img(src="../../assets/img/" + img_name + ".jpg", class="comments__user-img")
       +like-button({value: like_value, btn_class: "", icon_name: icon_name})
     .comments-content.number-content
-      .comments-content__username.number-content__title #{username}
+      .comments-content__username #{username}
       .comments-content__date #{date}
       .comments-content__text #{comment_text}

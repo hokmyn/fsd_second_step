@@ -7,16 +7,30 @@
 
 .bullet-list__item {
   position: relative;
-  padding-left: 20px;
-  font-size: 14px;
+  padding-left: 22px;
+  font-size: 12px;
   line-height: 24px;
   color: $shade75-color;
+  margin-bottom: 12px;
+  &:first-child {
+    letter-spacing: 1.3px;
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  &:nth-child(2) {
+    letter-spacing: 1.3px;
+    margin-bottom: 10px;
+  }
+  &:nth-child(3) {
+    font-size: 13px;
+    letter-spacing: .8px;
+  }
 }
 
 .bullet-list__item:before {
   content: '';
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 0;
   @include size(10px);
   background-color: $shade25-color;
