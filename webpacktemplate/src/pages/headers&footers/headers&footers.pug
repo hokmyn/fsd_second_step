@@ -10,27 +10,29 @@ block title
 block content
   section.headers-and-footers
     +logo({imgType: "pages"})
-    .field_bigMargin
+    .pp-header-bottom-margin
       +header({isAuth: false,
-        listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+        listItems: ["Home", "About Us", "Services", "Careers", "News", "Documentation"],
         links: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
         adds: ["active", "", "services", "", "", ""],
         loginText: "login",
-        regText: "register"
+        regText: "register",
+        isRus: false
       })
-    .field_bigMargin
+    .pp-header-bottom-margin
       +header({
         isAuth: true,
-        listItems: ["Home", "About us", "Services", "Careers", "News", "Documentation"],
+        listItems: ["Home", "About Us", "Services", "Careers", "News", "Documentation"],
         links: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
-        adds: ["active", "", "services", "", "", ""],
+        adds: ["active", "about", "services", "", "", ""],
         loginText: "login",
-        regText: "register"
+        regText: "register",
+        isRus: false
       })
     .field_bigMargin
       +footer({
         logoText: "Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
-        navItems: ["Navigation", "About us", "News", "Support", "Products"],
+        navItems: ["Navigation", "About Us", "News", "Support", "Products"],
         navLinks: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],
         aboutItems: ["About us", "Who we are", "Our team", "Careers", "Investors"],
         aboutLinks: ["/change/me", "/change/me", "/change/me", "/change/me", "/change/me"],

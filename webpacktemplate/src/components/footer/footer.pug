@@ -51,9 +51,9 @@ mixin footer(options)
     .footer-content
       .footer-content__line.line
       .footer__block.footer-logo
-        .field_smallMargin
+        .pp-footer-logo-bottomMargin
           +logo({imgType: 'h&f', isFooter: true})
-        .footer-logo__content
+        .logo-content
           span #{options.logoText}
       .footer__block.navigation
         ul.footer-content__list.footer-list
@@ -84,7 +84,7 @@ mixin footer(options)
         .subscription__content
           span #{options.subscrText}
         .field_smallMargin
-          +text-field({type: "email", input_class: "input input_subscrition", placeholder_text: "Email"})
+          +text-field({type: "email", input_class: "input input_subscription", placeholder_text: "Your email address"})
           +arrow({ name: "arrow_forward", color: "gradient"} )
     .footer__copyrights.copyrights
       .line.copyrights__line

@@ -11,8 +11,9 @@
 }
 
 .standart-nav-menu__link {
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 12px;
+  line-height: 19px;
+  letter-spacing: 1px;
   color: $shade50-color;
 }
 
@@ -26,18 +27,38 @@
   }
 }
 
-.active {
-  font-family: "Montserrat-Bold";
-  color: $shade75-color;
+.header-reg {
+  & .standart-nav-menu__link {
+    letter-spacing: 1.3px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+  & li {
+    margin-right: 29px;
+  }
+  & .about {
+    margin-right: 27px;
+  }
+  & .services {
+    margin-right: 41px;
+  }
+  & li.active {
+    margin-right: 29px;
+  }
 }
 
-.expandable {
+.standart-nav-menu .active {
+  font-family: "Montserrat-Bold";
+  color: $shade75-color;
+  margin-right: 32px;
+}
+
+li.services {
   position: relative;
   margin-right: 44px;
   & i {
     position: absolute;
-    top: -2px;
-    right: -24px;
+    right: -22px;
     color: $shade50-color;
   }
   @media screen and (max-width: 1080px) {

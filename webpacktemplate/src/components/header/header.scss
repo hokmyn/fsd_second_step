@@ -39,8 +39,9 @@
   }
   & .username {
     padding-left: 30px;
-    border-left: 1px solid $shade25-color;
     color: $shade25-color;
+    font-size: 12px;
+    letter-spacing: 1.3px;
   }
   & .transp-wrap {
     @include size(79px, 34px)
@@ -51,6 +52,11 @@
   & .button_fill {
     @include size(101px, 34px)
   }
+}
+
+.header-line {
+  @include size(1px, 30px);
+  background-color: $shade25-color;
 }
 
 .header-rus {
