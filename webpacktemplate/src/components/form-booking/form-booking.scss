@@ -13,7 +13,8 @@
 }
 
 .roomPrice-calc {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
+  padding-left: 1px;
 }
 
 .calcPrice-item {
@@ -30,8 +31,12 @@
       width: 65%;
     }
   }
+  &:nth-child(2) {
+    margin-bottom: 13px;
+  }
   &:nth-child(3) {
     line-height: 18px;
+    margin-bottom: 30px;
   }
   &:nth-child(3) &__text:after,
   &:nth-child(2) &__text:after {
@@ -57,6 +62,7 @@
   }
   &__total-val {
     padding-left: 5px;
+    margin-right: -5px;
   }
   &__total-val span {
     font-family: 'Montserrat-Bold';
@@ -65,5 +71,31 @@
     border-bottom: 1px dashed $shade25-color;
     flex-grow: 1;
     height: 20px;
+  }
+}
+
+.form-booking__field_midMargin {
+  margin-bottom: 17px;
+}
+
+.form-booking__select {
+  padding-top: 1px;
+}
+
+.form-booking__btn button {
+  padding-left: 5px;
+  letter-spacing: 1.6px;
+  font-size: 11px;
+}
+
+.form-booking {
+  & .number {
+    font-size: 23px;
+    letter-spacing: 1px;
+    margin-left: 1px;
+  }
+  & .roomInfo-title_right {
+    margin-right: 0;
+    line-height: 18px;
   }
 }

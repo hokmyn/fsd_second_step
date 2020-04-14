@@ -59,3 +59,16 @@
   margin-bottom: 3px;
 }
 
+.input_date {
+  width: 150px;
+}
+
+.booking-arrival::-webkit-input-placeholder,
+.booking-departure::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.booking-arrival::-moz-placeholder,
+.booking-departure::-moz-placeholder {
+  font-size: 14px;
+}

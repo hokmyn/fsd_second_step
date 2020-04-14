@@ -125,7 +125,6 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .buttons-main {
-  width: 219px;
   margin-top: -1px;
 }
 
@@ -143,9 +142,14 @@ input[type="checkbox"], input[type="radio"] {
   margin-bottom: 29px;
 }
 
+.buttons-main__row:first-child button,
+.buttons-main__row .transp-wrap:first-child {
+  margin-right: 19px;
+}
+
 .buttons-flex {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .form-elements__pagination {

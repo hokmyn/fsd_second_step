@@ -9,6 +9,11 @@
   width: 100%;
 }
 
+.roomInfo-title_right {
+  margin-right: -2px;
+  line-height: 17px;
+}
+
 .room-number {
   margin-right: 5px;
   display: inline-block;
@@ -22,12 +27,26 @@
   font-weight: bold;
 }
 
+.pp-number {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
 .room-class {
   font-size: 12px;
   line-height: 15px;
   color: $purple-color;
 }
 
+.pp-room-class {
+  font-size: 14px;
+}
+
 .room-price {
   color: $shade50-color;
+  font-size: 11px;
+  letter-spacing: .1px;
+  & strong {
+    font-size: 14px;
+  }
 }

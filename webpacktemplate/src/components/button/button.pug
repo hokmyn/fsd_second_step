@@ -19,5 +19,7 @@ mixin button(options)
     else
       div(class="transp-wrap transp-wrap-hover")
         button.button.pp-button(class=classes)= options.text
-  else
+  else    
     button.button.pp-button(class=classes)= options.text
+    if (options.size === "big")
+      +arrow({ name: "arrow_forward", color: "white"})

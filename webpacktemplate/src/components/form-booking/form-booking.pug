@@ -17,16 +17,15 @@ mixin form-booking(options)
     div(class = "datepicker-wrap field_smallMargin")
       +elem-title("выезд")
       +date-dropdown({placeholder_text: options.date_end, datepicker_class: "booking-departure"})
-    div(class = "field_midMargin")
+    div(class = "form-booking__field_midMargin")
       +elem-title("гости")
-      +dropdown({label_wrap: "field_big", label_text: options.dropdown_text, list_name: "guests-list"})
-      +arrow({ name: "keyboard_arrow_down", color: "black"})        
+      +dropdown({label_wrap: "form-booking__select field_big", label_text: options.dropdown_text, list_name: "guests-list"})
     .roomPrice-calc
       .calcPrice-item
-        .calcPrice-item__text 9900&#8381; &#215; 4
+        .calcPrice-item__text 9 990&#8381; &#215; 4 суток
         .calcPrice-item__val 39 960&#8381;
       .calcPrice-item
-        .calcPrice-item__text Сбор за услуги: скидка 2179&#8381;
+        .calcPrice-item__text Сбор за услуги: скидка 2 179&#8381;
         .calcPrice-item__val 0&#8381;
       .calcPrice-item
         .calcPrice-item__text Сбор за дополнительные услуги

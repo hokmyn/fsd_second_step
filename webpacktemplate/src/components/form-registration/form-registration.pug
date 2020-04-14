@@ -10,23 +10,22 @@ mixin form-registration()
       .card__title Регистрация аккаунта
       .card__input
         +text-field({type: "text", input_class: "input", placeholder_text: "Имя"})
-      .card__input
+      .card__input.pp-card__input
         +text-field({type: "text", input_class: "input", placeholder_text: "Фамилия"})
-      .field_smallMargin
+      .field_smallMargin.pp-field_smallMargin
         +radio-items("Мужчина", "Женщина")
-      .field_smallMargin
+      .field_smallMargin.pp-field_smallMargin2
         +elem-title("дата рождения")
-        +text-field({type: "text", input_class: "input input_date", placeholder_text: "ДД.ММ.ГГГГ"})
-      .field_smallMargin
-        +elem-title("данные для входа в сервис")
+        +text-field({type: "text", input_class: "input", placeholder_text: "ДД.ММ.ГГГГ"})
+      .field_smallMargin.pp-field_smallMargin3
+        +elem-title("данные для входа в сервис", "pp-add-spacing")
         .card__input
           +text-field({type: "email", input_class: "input", placeholder_text: "Email"})
-        .card__input
+        .card__input.pp-card__input2
           +text-field({type: "password", input_class: "input", placeholder_text: "Пароль"})
         +checkbox-offer("")
       .field_midMargin
-        +button({text: "перейти к оплате", type: "filled", size: "big"})
-        +arrow({ name: "arrow_forward", color: "white"} )
+        +button({text: "перейти к оплате", type: "filled", size: "big"})        
       .account
         .account__text Уже есть аккаунт на Toxin
         +button({text: "войти", type: "transp", size: "small"})

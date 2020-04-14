@@ -3,7 +3,7 @@
 @import '../../styles/fonts';
 
 .datepicker-here .datepicker {
-  padding: 20px;
+  padding: 19px 20px 10px 20px;
   width: 278px;
   font-family: 'Montserrat-Bold';
   font-size: 12px;
@@ -24,7 +24,7 @@
     align-items: center;
     border: none;
     min-height: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
   }
 
   & .datepicker--nav-action {
@@ -36,10 +36,12 @@
     font-size: 19px;
     line-height: 24px;
     color: #1F2041;
+    letter-spacing: -.8px;
   }
 
   & .datepicker--days-names {
     margin: 0;
+    line-height: 16px;
   }
 
   & .datepicker--day-name {
@@ -109,7 +111,10 @@
     justify-content: space-between;
     align-items: center;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin-top: 12px;
+    line-height: 12px;
+    margin-left: -1px;
+    margin-right: -1px;
   }
 
   & span[data-action="clear"] {

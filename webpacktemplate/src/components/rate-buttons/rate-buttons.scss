@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   width: 120px;
+  margin-top: -1px;
   &_left, &_right {
     @include size(120px, 24px);
   }
