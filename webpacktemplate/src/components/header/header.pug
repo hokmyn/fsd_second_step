@@ -31,5 +31,5 @@ mixin header(options)
       else
         .enter-buttons
           +button({text: options.loginText, type: "transp", size: ""})
-          +button({text: options.regText, type: "filled", size: ""})
+          +button({text: options.regText, type: "filled", size: "", isRus: options.isRus})
         i.material-icons perm_identity

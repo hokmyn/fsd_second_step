@@ -1,0 +1,21 @@
+.form-select {
+  & .card__title {
+    margin-bottom: 21px;
+  }
+  & .date-dropdown .keyboard_arrow_down {
+    top: 1px;
+    right: 0;
+  }
+  & .select .keyboard_arrow_down {
+    top: -1px;
+  }
+  .button_big {
+    padding-left: 3px;
+    margin-top: 1px;
+  }
+}
+
+.form_select-arrival::-webkit-input-placeholder,
+.form_select-departure::-webkit-input-placeholder {
+  letter-spacing: .7px;
+}

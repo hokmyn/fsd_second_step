@@ -12,6 +12,7 @@ mixin button(options)
     classes += options.type ? ' button_' + options.type : '';
     classes += options.size ? ' button_' + options.size : '';
     classes += options.isHovered ? ' button_hovered' : '';
+    classes += options.isRus ? ' button_rus' : '';
   if (options.type === 'transp')
     if(!options.isHovered)
       .transp-wrap

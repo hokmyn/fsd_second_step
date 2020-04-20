@@ -73,6 +73,10 @@ li.services {
 }
 
 .menu-rus {
+  & .standart-nav-menu__link {
+    font-size: 13px;
+    letter-spacing: .7px;
+  }
   @media screen and (max-width: 998px) {
     width: 405px;
   }
@@ -88,6 +92,11 @@ li.services {
       margin-right: 30px;
     }
   }
+}
+
+.expandable i {
+  position: absolute;
+  font-size: 23px;
 }
 
 

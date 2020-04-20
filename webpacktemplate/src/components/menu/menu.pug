@@ -25,6 +25,6 @@ mixin menu(options)
     - for(let i = 0; i < arrLength; i++)
       li(class= arrAdds[i])
         a(class="standart-nav-menu__link" href= arrLinks[i])= arrListItems[i]
-        if arrAdds[i] === 'services'
+        if (arrAdds[i] === 'services' || arrAdds[i] === 'expandable')
           i.material-icons keyboard_arrow_down
   i.material-icons dehaze
