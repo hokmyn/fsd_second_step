@@ -4,7 +4,7 @@
 .range-slider {
   width: 266px;
   & .range-slider__descr{
-    margin-top: 16px;
+    margin-top: 14px;
   }
 }
 
@@ -29,6 +29,13 @@
     top: -6px;
     outline: none;
   }
+}
+
+.range-slider-descr {
+  width: 265px;
+  font-size: 12px;
+  line-height: 14px;
+  color: $shade50-color;
 }
 
 .slider-title__values {

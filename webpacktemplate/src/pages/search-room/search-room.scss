@@ -5,10 +5,22 @@
   min-width: 320px;
   display: flex;
   width: 100%;
+  & .card__title {
+    letter-spacing: .1px;
+    margin-bottom: 21px;
+  }
+  & .roomInfo-card {
+    height: 271px;
+  }
+  & .roomInfo-card__content {
+    padding-top: 24px;
+    padding-left: 21px;
+    padding-bottom: 17px;
+  }
 }
 
 .search-content {
-  padding-right: 9.7%;
+  padding-right: 9.6%;
   padding-left: 9.7%;
     padding-top: 30px;
     @media screen and (max-width: 1439px) {
@@ -20,10 +32,27 @@
     }
 }
 
+.search-room__title {
+  font-size: 12px;
+  letter-spacing: 0px;
+  margin-bottom: 5px;
+}
+
+.search-room__title1 {
+  letter-spacing: .8px;
+  margin-bottom: 17px;
+}
+
+.search-room__title2 {
+  font-size: 12px;
+  letter-spacing: 0px;
+  margin-bottom: 4px;
+}
+
 .search-content__left-block {
   display: flex;
   flex-direction: column;
-  margin-right: 57px;
+  margin-right: 59px;
   @media screen and (max-width: 1439px) {
     margin-right: 0;
   }
@@ -90,7 +119,7 @@
   border-radius: 4px;
   width: 271px;
   height: 257px;
-  margin-right: 12px;
+  margin-right: 11px;
   margin-bottom: 20px;
   &:nth-child(3n) {
     margin-right: 0;
@@ -103,14 +132,28 @@
       margin-right: 0;
     }
   }
+  &:nth-child(8) {    
+    margin-bottom: 22px;    
+  }
 }
 
 .search-content__pagination {
   display: flex;
   justify-content: center;
   margin-bottom: 70px;
+  padding-top: 21px;
+  margin-left: -16px;
   @media screen and (max-width: 600px) {
     margin-bottom: 20px;
   }
+}
+
+.search-room .label-access {
+  font-size: 13px;
+  letter-spacing: .7px;
+}
+
+.search-room+footer {
+  padding-top: 103px;
 }
 

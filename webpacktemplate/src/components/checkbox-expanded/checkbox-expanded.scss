@@ -98,15 +98,23 @@ input[id^='checkbox']:checked + label::after {
   top: 5px;
 }
 
+.rich-checkbox .checkboxes-content__item {
+  margin-bottom: 9px;
+}
+
 .content-item__descr {
   margin-top: 6px;
 }
 
-.descr {
+.content-item:last-child .access-descr {
+  width: 225px;
+}
+
+.access-descr {
   font-size: 12px;
   line-height: 14px;
   color: $shade50-color;
-  width: 224px;
+  width: 205px;
   letter-spacing: 0px;
 }
 

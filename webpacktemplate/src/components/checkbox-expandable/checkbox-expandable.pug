@@ -1,5 +1,6 @@
 //-
   options.label_text - заголовок
+  options.add_class - additional classes
 
 include ../arrow/arrow
 include ../checkbox-expanded/checkbox-expanded
@@ -7,9 +8,12 @@ include ../checkbox-expanded/checkbox-expanded
 mixin checkbox-expandable(options)
   if !options
     - options = {}
+  -
+    let classes = '';
+    classes += options.add_class;
 
   .title-margin    
-    label(for="expandableCheckboxTitle" class="elem-title checkboxes-title pp-add-spacing") #{options.label_text}
+    label(for="expandableCheckboxTitle" class="elem-title " + classes) #{options.label_text}
   input(type="checkbox" id="expandableCheckboxTitle" checked)
   +arrow({ name: "keyboard_arrow_down", color: "black"})
   +checkbox-expanded({name: "additional-amenities", label_additional_class: "", label_texts: ["Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"], isExpandable: true})

@@ -28,32 +28,32 @@ block content
   section.search-room
     .search-room__content.search-content
       aside.search-content__left-block
-        div(class = "field_smallMargin")
-          +elem-title("даты пребывания в отеле")
+        div(class = "pp-field_smallMargin2")
+          +elem-title("даты пребывания в отеле", "search-room__title")
           +dropdown({label_wrap: "field_mid", label_text: "19 авг - 23 авг", list_name: "date-list"})
-        div(class = "field_midMargin" )
-          +elem-title("гости")
+        div(class = "pp-field_midMargin" )
+          +elem-title("гости", "search-room__title2")
           +dropdown({label_wrap: "field_mid", label_text: "3 гостя, 1 младенец", list_name: "guests-list"})
-        .field_bigMargin
+        .field_midMargin
           .range-slider
-            div(class="range-slider__title slider-title") 
-              +elem-title("диапазон цены")
+            div(class="range-slider__title") 
+              +elem-title("диапазон цены", "search-room-title")
               span.slider-title__values 5 000 &#8381; - 10 000 &#8381;
             .range-slider__content
               +range-slider({ bottom_text: "Стоимость за сутки пребывания в номере" })
-        div(class = "field_bigMargin")
+        div(class = "pp-textField-bottomMargin checkboxes-buttons")
           .title-margin 
-            +elem-title("checkbox buttons")
+            +elem-title("checkbox buttons", "search-room__title1")
           +checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
-        div(class="field_midMargin")
+        div(class="pp-field_smallMargin4")
           .title-margin
             +elem-title("доступность")
           +checkbox-expanded({name: "accessibility", label_additional_class: "label-access", label_texts: ["Широкий коридор", "Помощник для инвалидов"], isExpandable: false, richCheckboxContent: ["Ширина коридоров в номере не менее 91 см", "На 1 этаже вас встретит специалист и проводит до номера"]})
         div(class = "field_midMargin")
-          +elem-title("удобства номера")
+          +elem-title("удобства номера", "search-room-title")
           +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
         div(class = "field_bigMargin checkboxes")
-          +checkbox-expandable({label_text: "дополнительные удобства"})
+          +checkbox-expandable({label_text: "дополнительные удобства", add_class: "search-room-title"})
       .search-content__right-block
         .card__title Номера, которые мы для вас подобрали
         .numbers

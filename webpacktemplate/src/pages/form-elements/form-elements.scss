@@ -106,11 +106,8 @@ input[type="checkbox"], input[type="radio"] {
 }
 
 .block__rich-checkbox {
-  margin-top: 159px;
-  & .checkboxes-content__item {
-    margin-bottom: 9px;
-  }
-} 
+  margin-top: 159px;  
+}
 
 .range-slider__title {
   display: flex;

@@ -57,8 +57,17 @@ ul, li, input {
   margin-bottom: 18px;
 }
 
+.pp-field_smallMargin4 {
+  margin-bottom: 22px;
+}
+
 .field_midMargin {
   margin-bottom: $marginMid;
+  position: relative;
+}
+
+.pp-field_midMargin {
+  margin-bottom: 31px;
   position: relative;
 }
 
