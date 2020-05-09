@@ -121,17 +121,17 @@ block content
           +dropdown({label_wrap: "field_mid pp-dropdown-select", label_text: "2 спальни, 2 кровати...", list_name: "amenities-list"})
         div(class = "select-wrap block__pp-negative-margin")
           +elem-title("dropdown", "pp-dropdown-title2")
-          +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list open", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
+          +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"], isOpened: true})
         div(class = "select-wrap checkboxes block__checkboxes")
           +elem-title("expandable checkbox list", "pp-checkbox-list-title")
           +arrow({ name: "keyboard_arrow_down", color: "black"})
         div(class = "block__pp-midMargin checkboxes block__checkboxes-expanded block__pp-negative-margin")
-          +checkbox-expandable({label_text: "expandable checkbox list", add_class: "pp-add-spacing"})
+          +checkbox-expandable({label_text: "expandable checkbox list", add_class: "pp-add-spacing", isChecked: true})
     .block.form-elements__block
       .block-with-pad
         div(class = "select-wrap block__select-guests select-expanded")
           +elem-title("dropdown", "pp-dropdown-title1")
-          +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label_default", list_name: "guests-list_default open pp-buttons-title", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+          +dropdown-expanded({label_text: "Сколько гостей", label_wrap: "field_big", label_id: "guests-label_default", list_name: "guests-list_default pp-buttons-title", number_values: [0, 0, 0], option_texts: ["взрослые", "дети", "младенцы"], isOpened: true})
         div(class="block__rich-checkbox")
           .title-margin
             +elem-title("rich checkbox buttons", "pp-buttons-title")
@@ -141,7 +141,7 @@ block content
       .block-with-pad
         div(class = "select-wrap block__select-guests select-expanded")
           +elem-title("dropdown")
-          +dropdown-expanded({label_text: "3 гостя", label_wrap: "field_big", label_id: "guests-label",list_name: "guests-list open", number_values: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"]})
+          +dropdown-expanded({label_text: "3 гостя", label_wrap: "field_big", label_id: "guests-label",list_name: "guests-list", number_values: [2, 1, 0], option_texts: ["взрослые", "дети", "младенцы"], isOpened: true})
         div(class="block__bullet-list")
           .title-margin.pp-bullet-title-margin
             +elem-title("bullet list", "pp-bullet-title")

@@ -4,6 +4,8 @@
   options.label_id - id label'a ("guests-label", "guests-label_default", "amenities-label")
   options.list_name - класс основной части dropdown ('guests-list_default', 'guests-list', 'amenities-list')
   options.option_texts - массив со значениями option'ов
+  options.isOpened - select is opened or not
+
   
 
 include ../arrow/arrow
@@ -15,13 +17,15 @@ mixin dropdown-expanded(options)
   if !options
     - options = {}
   -
-    const {label_text, label_wrap, label_id, list_name, option_texts, number_values} = options;
-  
+    const {label_text, label_wrap, label_id, list_name, option_texts, number_values, isOpened} = options;    
+    let classes = '';
+    classes += list_name ? list_name : '';
+    classes += options.isOpened ? ' open' : '';
   
   div(class="select " + label_wrap)
     label(for= list_name id= label_id  class="select-expanded__label") #{label_text}
     +arrow({ name: "keyboard_arrow_down", color: "black"})
-  div(class="select-expanded__options options-list " + list_name)
+  div(class="select-expanded__options options-list " + classes)
     each option_text, index in option_texts
       .options-list__item
         .option-item

@@ -28,7 +28,7 @@ block content
   section.search-room
     .search-room__content.search-content
       aside.search-content__left-block
-        div(class = "pp-field_smallMargin2")
+        div(class = "field_smallMargin")
           +elem-title("даты пребывания в отеле", "search-room__title")
           +dropdown({label_wrap: "field_mid", label_text: "19 авг - 23 авг", list_name: "date-list"})
         div(class = "pp-field_midMargin" )
@@ -45,15 +45,15 @@ block content
           .title-margin 
             +elem-title("checkbox buttons", "search-room__title1")
           +checkbox-expanded({name: "amenities", label_additional_class: "", label_texts: ["Можно курить", "Можно с питомцами", "Можно пригласить гостей (до 10 человек)"], isExpandable: false})
-        div(class="pp-field_smallMargin4")
+        div(class="pp-textField-bottomMargin")
           .title-margin
             +elem-title("доступность")
           +checkbox-expanded({name: "accessibility", label_additional_class: "label-access", label_texts: ["Широкий коридор", "Помощник для инвалидов"], isExpandable: false, richCheckboxContent: ["Ширина коридоров в номере не менее 91 см", "На 1 этаже вас встретит специалист и проводит до номера"]})
         div(class = "field_midMargin")
           +elem-title("удобства номера", "search-room-title")
-          +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"]})
+          +dropdown-expanded({label_text: "2 спальни, 2 кровати...", label_wrap: "field_mid", label_id: "amenities-label", list_name: "amenities-list", number_values: [2, 2, 0], option_texts: ["спальни", "кровати", "ванные комнаты"], isOpened: false})
         div(class = "field_bigMargin checkboxes")
-          +checkbox-expandable({label_text: "дополнительные удобства", add_class: "search-room-title"})
+          +checkbox-expandable({label_text: "дополнительные удобства", add_class: "search-room-title", isChecked: true})
       .search-content__right-block
         .card__title Номера, которые мы для вас подобрали
         .numbers

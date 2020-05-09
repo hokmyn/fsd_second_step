@@ -57,10 +57,6 @@ ul, li, input {
   margin-bottom: 18px;
 }
 
-.pp-field_smallMargin4 {
-  margin-bottom: 22px;
-}
-
 .field_midMargin {
   margin-bottom: $marginMid;
   position: relative;
@@ -73,6 +69,11 @@ ul, li, input {
 
 .field_bigMargin {
   margin-bottom: $marginBig;
+  position: relative;
+}
+
+.field_bigMargin2 {
+  margin-bottom: 39px;
   position: relative;
 }
 

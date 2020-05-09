@@ -1,6 +1,7 @@
 //-
   options.label_text - заголовок
   options.add_class - additional classes
+  options.isChecked - checkbox is opened or closed
 
 include ../arrow/arrow
 include ../checkbox-expanded/checkbox-expanded
@@ -14,6 +15,6 @@ mixin checkbox-expandable(options)
 
   .title-margin    
     label(for="expandableCheckboxTitle" class="elem-title " + classes) #{options.label_text}
-  input(type="checkbox" id="expandableCheckboxTitle" checked)
+  input(type="checkbox" id="expandableCheckboxTitle" checked= options.isChecked)
   +arrow({ name: "keyboard_arrow_down", color: "black"})
   +checkbox-expanded({name: "additional-amenities", label_additional_class: "", label_texts: ["Завтрак", "Писменный стол", "Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"], isExpandable: true})
