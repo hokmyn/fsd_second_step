@@ -8,7 +8,7 @@
 .registration-page__content {
   padding: 30px 5px 0 5px;
   background-image: url('../../assets/img/sign-image-bg.jpg');
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
@@ -18,4 +18,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  & .card {
+    margin-bottom: 25px;
+  }
+  & .account {
+    margin-top: -2px;
+  }
 }

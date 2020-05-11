@@ -90,6 +90,21 @@ footer.footer-rus {
       justify-content: center;
     }
   }
+  & .footer-list li:nth-child(3) {
+    margin-bottom: 17px;
+  }
+  & .logo-content {
+    letter-spacing: 0;
+  }
+  & .footer__block {
+    margin-bottom: 98px;
+  }
+  & .copyrights {
+    padding-top: 1px;
+  }
+  & .copyrights__text {
+    letter-spacing: -.1px;
+  }
 }
 
 .footer__block:nth-child(2) {
