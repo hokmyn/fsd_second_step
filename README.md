@@ -1,5 +1,12 @@
 # Верстка тестового шаблона FSD
 
+Установка проекта ```npm i```
+
+Запуск сервера ```npm run start```
+
+Сборка проекта ```npm run build```
+
+Деплой на github pages ```npm run deploy```
 
 ## UIKit
 [Form Elements](https://hokmyn.github.io/fsd_second_step/form-elements.html)
