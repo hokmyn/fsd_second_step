@@ -6,6 +6,8 @@
 
 [Colors and Types](https://hokmyn.github.io/fsd_second_step/colors&types.html)
 
+[Cards](https://hokmyn.github.io/fsd_second_step/cards.html)
+
 [Headers and Footers](https://hokmyn.github.io/fsd_second_step/headers&footers.html)
 
 ## Pages
